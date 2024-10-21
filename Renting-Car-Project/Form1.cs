@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Renting_Car_Project
@@ -15,6 +10,36 @@ namespace Renting_Car_Project
         public Form1()
         {
             InitializeComponent();
+        }
+
+        // تابع برای اتصال به دیتابیس
+        public void ConnectToDatabase()
+        {
+            // رشته اتصال
+            string connectionString = "Server=localhost;Database=RentingCARDB;Integrated Security=True;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    MessageBox.Show("Connected to database successfully!");
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show($"SQL Error: {sqlEx.Message}");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}");
+                }
+            }
+        }
+
+        // رویداد بارگذاری فرم
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ConnectToDatabase(); // فراخوانی تابع اتصال
         }
     }
 }
