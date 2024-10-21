@@ -12,34 +12,32 @@ namespace Renting_Car_Project
             InitializeComponent();
         }
 
-        // تابع برای اتصال به دیتابیس
         public void ConnectToDatabase()
         {
-            // رشته اتصال
             string connectionString = "Server=localhost;Database=RentingCARDB;Integrated Security=True;";
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                try
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    MessageBox.Show("Connected to database successfully!");
-                }
-                catch (SqlException sqlEx)
-                {
-                    MessageBox.Show($"SQL Error: {sqlEx.Message}");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
+                    // عملیات مورد نظر
                 }
             }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show($"SQL Error: {sqlEx.Message}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
         }
 
-        // رویداد بارگذاری فرم
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConnectToDatabase(); // فراخوانی تابع اتصال
+            ConnectToDatabase();
         }
     }
 }
