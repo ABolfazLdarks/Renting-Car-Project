@@ -42,3 +42,4 @@ C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-.1F628550.Up2Date
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.exe
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.pdb
+C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting_Car_Project.Forms.LoginForm.resources

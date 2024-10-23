@@ -59,15 +59,5 @@ namespace Renting_Car_Project.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Sailor_Solitude_by_Mike_Koubou {
-            get {
-                object obj = ResourceManager.GetObject("Sailor Solitude by Mike Koubou", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
