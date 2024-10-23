@@ -44,9 +44,6 @@ C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.pdb
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting_Car_Project.Forms.LoginForm.resources
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\Fonts\IRANSansXBlack.ttf
-C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\BouncyCastle.Cryptography.dll
-C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\MailKit.dll
-C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\MimeKit.dll
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Buffers.dll
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Formats.Asn1.dll
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Memory.dll
