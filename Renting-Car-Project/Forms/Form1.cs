@@ -35,7 +35,6 @@ namespace Renting_Car_Project
             }
         }
 
-        // رویداد بارگذاری فرم
         private void Form1_Load(object sender, EventArgs e)
         {
             ConnectToDatabase(); // فراخوانی تابع اتصال
