@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Renting_Car_Project.Forms;
+using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Drawing.Text;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Renting_Car_Project
@@ -10,6 +14,7 @@ namespace Renting_Car_Project
         public Form1()
         {
             InitializeComponent();
+            FontManager.ApplyCustomFont(this.Controls);
         }
 
         // تابع برای اتصال به دیتابیس
@@ -38,6 +43,13 @@ namespace Renting_Car_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             ConnectToDatabase(); // فراخوانی تابع اتصال
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoginForm form2 = new LoginForm();
+            form2.Show();
+            this.Hide();
         }
     }
 }

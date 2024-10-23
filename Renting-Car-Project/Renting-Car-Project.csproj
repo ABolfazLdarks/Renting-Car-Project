@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FontManager.cs" />
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,17 @@
     </Compile>
     <None Include="Configs\appsettings.json" />
     <None Include="Configs\packages.config" />
+    <Content Include="Fonts\IRANSansXBlack.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Fonts\IRANSansXBold.ttf" />
+    <None Include="Fonts\IRANSansXDemiBold.ttf" />
+    <None Include="Fonts\IRANSansXExtraBold.ttf" />
+    <None Include="Fonts\IRANSansXLight.ttf" />
+    <None Include="Fonts\IRANSansXMedium.ttf" />
+    <None Include="Fonts\IRANSansXRegular.ttf" />
+    <None Include="Fonts\IRANSansXThin.ttf" />
+    <None Include="Fonts\IRANSansXUltraLight.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

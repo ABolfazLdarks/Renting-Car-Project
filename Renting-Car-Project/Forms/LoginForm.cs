@@ -15,6 +15,13 @@ namespace Renting_Car_Project.Forms
         public LoginForm()
         {
             InitializeComponent();
+            FontManager.ApplyCustomFont(this.Controls);
+
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
