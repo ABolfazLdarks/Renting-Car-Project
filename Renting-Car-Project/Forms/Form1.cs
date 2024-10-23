@@ -45,12 +45,6 @@ namespace Renting_Car_Project
             ConnectToDatabase(); // فراخوانی تابع اتصال
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            LoginForm form2 = new LoginForm();
-            form2.Show();
-            this.Hide();
-        }
     }
 }
     
