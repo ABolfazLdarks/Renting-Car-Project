@@ -29,34 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.AnimateWindow = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Form1Borderless = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.SuspendLayout();
             // 
-            // AnimateWindow
+            // label1
             // 
-            this.AnimateWindow.AnimationType = Guna.UI2.WinForms.Guna2AnimateWindow.AnimateWindowType.AW_BLEND;
-            this.AnimateWindow.Interval = 1000;
-            this.AnimateWindow.TargetForm = this;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 31F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(244, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 59);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "به نام خدا";
+            // 
+            // Form1Borderless
+            // 
+            this.Form1Borderless.AnimationInterval = 800;
+            this.Form1Borderless.BorderRadius = 35;
+            this.Form1Borderless.ContainerControl = this;
+            this.Form1Borderless.DockIndicatorTransparencyValue = 0.6D;
+            this.Form1Borderless.TransparentWhileDrag = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2AnimateWindow AnimateWindow;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm Form1Borderless;
     }
 }
 
