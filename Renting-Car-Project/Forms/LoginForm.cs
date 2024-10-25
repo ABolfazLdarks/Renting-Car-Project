@@ -13,11 +13,18 @@ namespace Renting_Car_Project.Forms
     public partial class LoginForm : Form
     {
         bool sideBar_Expand = true;
+        private Timer hoverTimer;
+        private Control currentHoverControl;
+        private int colorStep = 5;
+        private int currentColorValue = 40;
 
         public LoginForm()
         {
             InitializeComponent();
             FontManager.ApplyCustomFont(this.Controls);
+            hoverTimer = new Timer();
+            hoverTimer.Interval = 30;
+            hoverTimer.Tick += HoverTimer_Tick;
 
         }
 
@@ -51,6 +58,44 @@ namespace Renting_Car_Project.Forms
         {
             Timer_Sidebar_Menu.Start();
 
+        }
+
+        private void guna2Panel4_MouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                currentHoverControl = control;
+                currentColorValue = 40;
+                hoverTimer.Start();
+            }
+        }
+
+        private void guna2Panel4_MouseLeave(object sender, EventArgs e)
+        {
+            hoverTimer.Stop();
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                control.ForeColor = SystemColors.ButtonFace;    
+                control.BackColor = Color.FromArgb(35, 40, 45);
+                    }
+        }
+
+        private void HoverTimer_Tick(object sender, EventArgs e)
+        {
+            if (currentHoverControl != null)
+            {
+                currentColorValue += colorStep; 
+                if (currentColorValue > 255) currentColorValue = 255; 
+
+                currentHoverControl.ForeColor = Color.FromArgb(currentColorValue, currentColorValue, currentColorValue); 
+            }
+        }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

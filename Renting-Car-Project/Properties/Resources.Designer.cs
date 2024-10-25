@@ -83,6 +83,16 @@ namespace Renting_Car_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap multiply_48px_____ {
+            get {
+                object obj = ResourceManager.GetObject("multiply_48px_____", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap signin {
             get {
                 object obj = ResourceManager.GetObject("signin", resourceCulture);
