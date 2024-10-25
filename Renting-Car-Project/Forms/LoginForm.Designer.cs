@@ -126,7 +126,7 @@
             // 
             this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(3, 56);
+            this.guna2Panel6.Location = new System.Drawing.Point(9, 56);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(49, 44);
             this.guna2Panel6.TabIndex = 1;
