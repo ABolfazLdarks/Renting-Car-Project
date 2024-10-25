@@ -52,5 +52,6 @@ namespace Renting_Car_Project.Forms
             Timer_Sidebar_Menu.Start();
 
         }
+
     }
 }
