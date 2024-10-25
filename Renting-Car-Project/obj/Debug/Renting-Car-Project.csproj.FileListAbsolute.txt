@@ -65,3 +65,6 @@ C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.ValueTuple.xml
+C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\MailKit.dll
+C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\MimeKit.dll
