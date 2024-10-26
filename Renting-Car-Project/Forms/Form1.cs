@@ -44,8 +44,8 @@ namespace Renting_Car_Project
         {
             ConnectToDatabase(); // فراخوانی تابع اتصال
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+    
+        private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             LoginForm form2 = new LoginForm();
             form2.Show();

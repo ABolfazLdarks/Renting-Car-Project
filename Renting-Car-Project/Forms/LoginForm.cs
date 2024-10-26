@@ -95,7 +95,7 @@ namespace Renting_Car_Project.Forms
 
         private void Closebtn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }
