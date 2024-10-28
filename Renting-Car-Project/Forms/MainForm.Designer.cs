@@ -1,6 +1,6 @@
 ﻿namespace Renting_Car_Project
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.TpMyAds = new System.Windows.Forms.TabPage();
             this.TpMyAccout = new System.Windows.Forms.TabPage();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.BorderlessFormMain = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Form1TabControl.SuspendLayout();
             this.TpMain.SuspendLayout();
             this.SuspendLayout();
@@ -46,11 +46,11 @@
             this.Form1TabControl.Controls.Add(this.TpMyAds);
             this.Form1TabControl.Controls.Add(this.TpMyAccout);
             this.Form1TabControl.ItemSize = new System.Drawing.Size(180, 40);
-            this.Form1TabControl.Location = new System.Drawing.Point(3, -2);
+            this.Form1TabControl.Location = new System.Drawing.Point(-2, -2);
             this.Form1TabControl.Name = "Form1TabControl";
             this.Form1TabControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Form1TabControl.SelectedIndex = 0;
-            this.Form1TabControl.Size = new System.Drawing.Size(1049, 711);
+            this.Form1TabControl.Size = new System.Drawing.Size(1052, 709);
             this.Form1TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.White;
             this.Form1TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Form1TabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -78,7 +78,7 @@
             this.TpMain.Location = new System.Drawing.Point(4, 4);
             this.TpMain.Name = "TpMain";
             this.TpMain.Padding = new System.Windows.Forms.Padding(3);
-            this.TpMain.Size = new System.Drawing.Size(861, 703);
+            this.TpMain.Size = new System.Drawing.Size(864, 701);
             this.TpMain.TabIndex = 0;
             this.TpMain.Text = "صفحه اصلی";
             this.TpMain.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this.TpMyAds.Location = new System.Drawing.Point(4, 4);
             this.TpMyAds.Name = "TpMyAds";
             this.TpMyAds.Padding = new System.Windows.Forms.Padding(3);
-            this.TpMyAds.Size = new System.Drawing.Size(766, 703);
+            this.TpMyAds.Size = new System.Drawing.Size(861, 703);
             this.TpMyAds.TabIndex = 1;
             this.TpMyAds.Text = "آگهی های من";
             this.TpMyAds.UseVisualStyleBackColor = true;
@@ -112,29 +112,29 @@
             // 
             this.TpMyAccout.Location = new System.Drawing.Point(4, 4);
             this.TpMyAccout.Name = "TpMyAccout";
-            this.TpMyAccout.Size = new System.Drawing.Size(766, 703);
+            this.TpMyAccout.Size = new System.Drawing.Size(861, 703);
             this.TpMyAccout.TabIndex = 2;
             this.TpMyAccout.Text = "حساب کاربری من";
             this.TpMyAccout.UseVisualStyleBackColor = true;
             // 
-            // guna2BorderlessForm1
+            // BorderlessFormMain
             // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.BorderRadius = 32;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockForm = false;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.ResizeForm = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.BorderlessFormMain.AnimateWindow = true;
+            this.BorderlessFormMain.BorderRadius = 18;
+            this.BorderlessFormMain.ContainerControl = this;
+            this.BorderlessFormMain.DockForm = false;
+            this.BorderlessFormMain.DockIndicatorTransparencyValue = 0.6D;
+            this.BorderlessFormMain.ResizeForm = false;
+            this.BorderlessFormMain.TransparentWhileDrag = true;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1051, 709);
             this.Controls.Add(this.Form1TabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Form1TabControl.ResumeLayout(false);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.TabPage TpMyAds;
         private System.Windows.Forms.TabPage TpMyAccout;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessFormMain;
     }
 }
 

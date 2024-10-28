@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Renting_Car_Project
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             FontManager.ApplyCustomFont(this.Controls);
