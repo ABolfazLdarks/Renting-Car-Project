@@ -50,7 +50,7 @@
             this.Form1TabControl.Name = "Form1TabControl";
             this.Form1TabControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Form1TabControl.SelectedIndex = 0;
-            this.Form1TabControl.Size = new System.Drawing.Size(1052, 709);
+            this.Form1TabControl.Size = new System.Drawing.Size(1052, 713);
             this.Form1TabControl.TabButtonHoverState.BorderColor = System.Drawing.Color.White;
             this.Form1TabControl.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.Form1TabControl.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -78,7 +78,7 @@
             this.TpMain.Location = new System.Drawing.Point(4, 4);
             this.TpMain.Name = "TpMain";
             this.TpMain.Padding = new System.Windows.Forms.Padding(3);
-            this.TpMain.Size = new System.Drawing.Size(864, 701);
+            this.TpMain.Size = new System.Drawing.Size(864, 705);
             this.TpMain.TabIndex = 0;
             this.TpMain.Text = "صفحه اصلی";
             this.TpMain.UseVisualStyleBackColor = true;
