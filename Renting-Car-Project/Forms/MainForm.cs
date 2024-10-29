@@ -27,15 +27,10 @@ namespace Renting_Car_Project
                 try
                 {
                     connection.Open();
-                    MessageBox.Show("Connected to database successfully!");
                 }
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show($"SQL Error: {sqlEx.Message}");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
                 }
             }
         }
