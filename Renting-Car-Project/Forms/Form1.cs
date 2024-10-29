@@ -47,9 +47,26 @@ namespace Renting_Car_Project
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("به خودروچی خوش آمدید", "خودروچی",MessageBoxButtons.OK,MessageBoxIcon.Information);
             LoginForm form2 = new LoginForm();
             form2.Show();
             this.Hide();
+        }
+
+        private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("به امید دیدار", "خودروچی", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
