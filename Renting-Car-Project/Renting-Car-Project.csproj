@@ -103,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\image3.jpg" />
+    <None Include="Resources\image1.jpg" />
+    <None Include="Resources\image2.jpg" />
     <None Include="Resources\img\multiply_48px_____.png" />
     <None Include="Resources\img\material-symbols--menu.png" />
     <None Include="Resources\img\signin.png" />
