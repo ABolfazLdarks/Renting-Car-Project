@@ -50,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,7 +58,6 @@
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -273,7 +271,6 @@
             this.guna2Panel5.Controls.Add(this.label6);
             this.guna2Panel5.Controls.Add(this.label5);
             this.guna2Panel5.Controls.Add(this.label4);
-            this.guna2Panel5.Controls.Add(this.guna2Button2);
             this.guna2Panel5.Controls.Add(this.guna2Button1);
             this.guna2Panel5.Controls.Add(this.guna2TextBox3);
             this.guna2Panel5.Controls.Add(this.guna2TextBox1);
@@ -331,23 +328,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "نام کاربری:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(211, 162);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(84, 45);
-            this.guna2Button2.TabIndex = 6;
-            this.guna2Button2.Text = "بازگشت";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -435,7 +415,6 @@
             this.guna2Panel7.Controls.Add(this.guna2CheckBox2);
             this.guna2Panel7.Controls.Add(this.label8);
             this.guna2Panel7.Controls.Add(this.label9);
-            this.guna2Panel7.Controls.Add(this.guna2Button3);
             this.guna2Panel7.Controls.Add(this.guna2Button4);
             this.guna2Panel7.Controls.Add(this.guna2TextBox4);
             this.guna2Panel7.Controls.Add(this.guna2TextBox5);
@@ -482,23 +461,6 @@
             this.label9.Size = new System.Drawing.Size(103, 29);
             this.label9.TabIndex = 5;
             this.label9.Text = "نام کاربری:";
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(211, 127);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(84, 45);
-            this.guna2Button3.TabIndex = 6;
-            this.guna2Button3.Text = "بازگشت";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button4
             // 
@@ -606,7 +568,6 @@
         private System.Windows.Forms.Timer HoverTimer;
         private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
         private System.Windows.Forms.Label label4;
@@ -619,7 +580,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;

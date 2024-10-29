@@ -61,6 +61,7 @@ namespace Renting_Car_Project
             MessageBox.Show("به خودروچی خوش آمدید", "خودروچی",MessageBoxButtons.OK,MessageBoxIcon.Information);
             LoginForm form2 = new LoginForm();
             form2.Show();
+            
             this.Hide();
         }
 
