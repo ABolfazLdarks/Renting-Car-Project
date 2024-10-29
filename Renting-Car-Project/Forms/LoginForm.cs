@@ -97,5 +97,20 @@ namespace Renting_Car_Project.Forms
         {
             this.Close();
         }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            guna2Panel5.Visible = true;
+        }
+
+        private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+      
+        }
     }
 }
