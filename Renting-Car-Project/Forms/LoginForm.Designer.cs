@@ -309,7 +309,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(286, 95);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 29);
+            this.label6.Size = new System.Drawing.Size(114, 29);
             this.label6.TabIndex = 6;
             this.label6.Text = " تکرار کلمه عبور: ";
             // 
