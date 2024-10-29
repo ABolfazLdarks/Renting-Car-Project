@@ -97,5 +97,126 @@ namespace Renting_Car_Project.Forms
         {
             Application.Exit();
         }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            guna2Panel5.Visible = true;
+        }
+
+        private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+          
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox1.Checked == true)
+            {
+                guna2TextBox2.PasswordChar = '\0';
+                guna2TextBox3.PasswordChar = '\0';
+            }
+            else
+            {
+                guna2TextBox2.PasswordChar = '*';
+                guna2TextBox3.PasswordChar = '*';
+            }
+           
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            guna2Panel5.Hide();
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            guna2TextBox2.PasswordChar = '*';
+        
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+            
+            guna2TextBox3.PasswordChar = '*';
+        }
+
+        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox4_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox5_TextChanged(object sender, EventArgs e)
+        {
+            guna2TextBox5.PasswordChar = '*';
+        }
+
+        private void guna2CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox2.Checked == true)
+            {
+                guna2TextBox5.PasswordChar = '\0';
+               
+            }
+            else
+            {
+                guna2TextBox5.PasswordChar = '*';
+          
+            }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            guna2Panel7.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            guna2Panel7.Visible = true;
+        }
+
+        private void guna2TextBox4_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
