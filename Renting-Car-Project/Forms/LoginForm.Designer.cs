@@ -156,7 +156,6 @@
             this.guna2Panel6.TabIndex = 1;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
             this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -199,7 +198,6 @@
             this.guna2Panel4.Size = new System.Drawing.Size(41, 43);
             this.guna2Panel4.TabIndex = 1;
             this.guna2Panel4.Tag = "RPText";
-            this.guna2Panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel4_Paint);
             this.guna2Panel4.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel4.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -260,7 +258,6 @@
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            this.Closebtn.Paint += new System.Windows.Forms.PaintEventHandler(this.Closebtn_Paint);
             // 
             // guna2Panel5
             // 
@@ -330,7 +327,6 @@
             this.label4.Size = new System.Drawing.Size(103, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "نام کاربری:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // guna2Button2
             // 
@@ -403,7 +399,6 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(264, 29);
             this.guna2TextBox1.TabIndex = 1;
-            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // guna2TextBox2
             // 
@@ -510,12 +505,12 @@
             this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(301, 127);
+            this.guna2Button4.Location = new System.Drawing.Point(401, 156);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(84, 45);
+            this.guna2Button4.Size = new System.Drawing.Size(112, 55);
             this.guna2Button4.TabIndex = 5;
             this.guna2Button4.Text = "ورود";
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2TextBox4
             // 
@@ -535,7 +530,6 @@
             this.guna2TextBox4.SelectedText = "";
             this.guna2TextBox4.Size = new System.Drawing.Size(264, 29);
             this.guna2TextBox4.TabIndex = 1;
-            this.guna2TextBox4.TextChanged += new System.EventHandler(this.guna2TextBox4_TextChanged_2);
             // 
             // guna2TextBox5
             // 
