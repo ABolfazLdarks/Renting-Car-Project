@@ -100,6 +100,8 @@ namespace Renting_Car_Project.Forms
         private void label2_Click(object sender, EventArgs e)
         {
             guna2Panel5.Visible = true;
+            guna2Panel7.Visible = false;
+
         }
         private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -158,6 +160,10 @@ namespace Renting_Car_Project.Forms
         private void label1_Click(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
+            guna2Panel5.Visible = false;
+
         }
+
+
     }
 }
