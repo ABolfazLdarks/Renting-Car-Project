@@ -30,7 +30,7 @@ namespace Renting_Car_Project.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            guna2Panel7.Visible = true;
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace Renting_Car_Project.Forms
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            guna2Panel5.Hide();
+         
         }
 
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
@@ -152,7 +152,7 @@ namespace Renting_Car_Project.Forms
         }
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            guna2Panel7.Hide();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
