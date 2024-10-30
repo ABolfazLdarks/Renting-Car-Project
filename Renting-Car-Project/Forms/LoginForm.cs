@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Renting_Car_Project.Forms
 {
@@ -17,7 +18,6 @@ namespace Renting_Car_Project.Forms
         private Control currentHoverControl;
         private int colorStep = 5;
         private int currentColorValue = 40;
-
         public LoginForm()
         {
             InitializeComponent();
@@ -107,26 +107,26 @@ namespace Renting_Car_Project.Forms
         {
             if (guna2CheckBox1.Checked == true)
             {
-                guna2TextBox2.PasswordChar = '\0';
-                guna2TextBox3.PasswordChar = '\0';
+                txtPassSignUp.PasswordChar = '\0';
+                txtRPTpass.PasswordChar = '\0';
             }
             else
             {
-                guna2TextBox2.PasswordChar = '*';
-                guna2TextBox3.PasswordChar = '*';
+                txtPassSignUp.PasswordChar = '*';
+                txtRPTpass.PasswordChar = '*';
             }
            
         }
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
-            guna2TextBox2.PasswordChar = '*';
+            txtPassSignUp.PasswordChar = '*';
         
         }
 
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
         {
             
-            guna2TextBox3.PasswordChar = '*';
+            txtRPTpass.PasswordChar = '*';
         }
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
@@ -160,11 +160,25 @@ namespace Renting_Car_Project.Forms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            if (IsNullOrWhiteSpace(txtRPTpass.Text) ||
+                IsNullOrWhiteSpace(txtPassSignUp.Text) ||
+                IsNullOrWhiteSpace(txtUserSignUp.Text))
+            {
+                MessageBox.Show("لطفا فیلد های خالی را پر کنید");
+            }
+            else
+            {
             string userName = txtUserSignUp.Text;
             string password = txtPassSignUp.Text;
             UserRepository userRepository = new UserRepository();
             userRepository.RegisterUser(userName, password);
+            }
 
 
+        }
+    private bool IsNullOrWhiteSpace(string input)
+    {
+        return string.IsNullOrWhiteSpace(input);
+    }
     }
 }

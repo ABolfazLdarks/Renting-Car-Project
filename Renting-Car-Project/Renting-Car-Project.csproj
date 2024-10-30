@@ -88,7 +88,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\DatabaseConfig.cs" />
     <Compile Include="Classes\FontManager.cs" />
+    <Compile Include="Classes\SignUp.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
