@@ -449,7 +449,7 @@
             this.guna2CheckBox2.Location = new System.Drawing.Point(103, 95);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
             this.guna2CheckBox2.Size = new System.Drawing.Size(182, 24);
-            this.guna2CheckBox2.TabIndex = 4;
+            this.guna2CheckBox2.TabIndex = 3;
             this.guna2CheckBox2.Text = "نمایش گذرواژه";
             this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2CheckBox2.UncheckedState.BorderRadius = 0;
@@ -491,7 +491,7 @@
             this.guna2Button4.Location = new System.Drawing.Point(301, 127);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(84, 45);
-            this.guna2Button4.TabIndex = 5;
+            this.guna2Button4.TabIndex = 4;
             this.guna2Button4.Text = "ورود";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 

@@ -81,7 +81,7 @@
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(135, 37);
-            this.guna2Button2.TabIndex = 4;
+            this.guna2Button2.TabIndex = 2;
             this.guna2Button2.Text = "خروج";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
