@@ -47,6 +47,9 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AnimatedGIF = true;
+            this.guna2Button1.BorderRadius = 10;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -59,11 +62,14 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(135, 37);
             this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "ورود";
+            this.guna2Button1.Text = "ورود/ثبت نام";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button2
             // 
+            this.guna2Button2.Animated = true;
+            this.guna2Button2.AnimatedGIF = true;
+            this.guna2Button2.BorderRadius = 10;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

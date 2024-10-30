@@ -266,6 +266,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel5.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel5.BorderRadius = 15;
             this.guna2Panel5.BorderThickness = 1;
             this.guna2Panel5.Controls.Add(this.guna2CheckBox1);
             this.guna2Panel5.Controls.Add(this.label6);
@@ -285,6 +286,7 @@
             // 
             // guna2CheckBox1
             // 
+            this.guna2CheckBox1.Animated = true;
             this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.CheckedState.BorderRadius = 0;
             this.guna2CheckBox1.CheckedState.BorderThickness = 0;
@@ -331,7 +333,10 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.Animated = true;
+            this.guna2Button1.AnimatedGIF = true;
             this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button1.BorderRadius = 10;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -347,6 +352,8 @@
             // 
             // guna2TextBox3
             // 
+            this.guna2TextBox3.Animated = true;
+            this.guna2TextBox3.BorderRadius = 10;
             this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox3.DefaultText = "";
             this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -367,6 +374,8 @@
             // 
             // guna2TextBox1
             // 
+            this.guna2TextBox1.Animated = true;
+            this.guna2TextBox1.BorderRadius = 10;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -387,6 +396,8 @@
             // 
             // guna2TextBox2
             // 
+            this.guna2TextBox2.Animated = true;
+            this.guna2TextBox2.BorderRadius = 10;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -411,6 +422,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel7.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel7.BorderRadius = 15;
             this.guna2Panel7.BorderThickness = 1;
             this.guna2Panel7.Controls.Add(this.guna2CheckBox2);
             this.guna2Panel7.Controls.Add(this.label8);
@@ -428,6 +440,7 @@
             // 
             // guna2CheckBox2
             // 
+            this.guna2CheckBox2.Animated = true;
             this.guna2CheckBox2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox2.CheckedState.BorderRadius = 0;
             this.guna2CheckBox2.CheckedState.BorderThickness = 0;
@@ -464,7 +477,10 @@
             // 
             // guna2Button4
             // 
+            this.guna2Button4.Animated = true;
+            this.guna2Button4.AnimatedGIF = true;
             this.guna2Button4.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Button4.BorderRadius = 10;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -481,6 +497,8 @@
             // 
             // guna2TextBox4
             // 
+            this.guna2TextBox4.Animated = true;
+            this.guna2TextBox4.BorderRadius = 10;
             this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox4.DefaultText = "";
             this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -501,6 +519,8 @@
             // 
             // guna2TextBox5
             // 
+            this.guna2TextBox5.Animated = true;
+            this.guna2TextBox5.BorderRadius = 10;
             this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2TextBox5.DefaultText = "";
             this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
