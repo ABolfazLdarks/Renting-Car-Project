@@ -30,7 +30,6 @@ namespace Renting_Car_Project
                 }
                 catch (SqlException sqlEx)
                 {
-                    MessageBox.Show($"SQL Error: {sqlEx.Message}");
                 }
             }
         }

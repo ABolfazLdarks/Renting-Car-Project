@@ -117,12 +117,6 @@ namespace Renting_Car_Project.Forms
             }
            
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
             guna2TextBox2.PasswordChar = '*';
@@ -163,6 +157,13 @@ namespace Renting_Car_Project.Forms
             guna2Panel5.Visible = false;
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserSignUp.Text;
+            string password = txtPassSignUp.Text;
+            UserRepository userRepository = new UserRepository();
+            userRepository.RegisterUser(userName, password);
 
 
     }
