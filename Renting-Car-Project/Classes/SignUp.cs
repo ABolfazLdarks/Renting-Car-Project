@@ -26,7 +26,7 @@ public class UserRepository
 
         using (SqlConnection connection = new SqlConnection(DatabaseConfig.ConnectionString))
         {
-            string query = "INSERT INTO Users (UserId,UserName, Password, HasPremission, CreatedTime) VALUES (@UserId,@UserName, @Password, @HasPremission, @CreatedTime)";
+            string query = "INSERT INTO Users (UserId,UserName, Password, HasPremission, CreatedTime) VALUES (@UserId,@UserName, @Password, @HasPremission, @CreatedTime)"; // کامند sql جهت ذخیره اطلاعاتی که دریافت میشود
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@UserId", user.UserId);
@@ -52,7 +52,7 @@ private int GenerateUserId()
 {
     using (SqlConnection connection = new SqlConnection(DatabaseConfig.ConnectionString))
     {
-        string query = "SELECT ISNULL(MAX(UserId), 0) + 1 FROM Users";
+        string query = "SELECT ISNULL(MAX(UserId), 0) + 1 FROM Users"; // دریافت تعداد کاربران و یکی به آن اضافه کردن برای آیدی
         using (SqlCommand command = new SqlCommand(query, connection))
         {
             try
