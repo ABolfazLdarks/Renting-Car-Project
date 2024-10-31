@@ -171,7 +171,7 @@ namespace Renting_Car_Project.Forms
             string userName = txtUserSignUp.Text;
             string password = txtPassSignUp.Text;
             UserRepository userRepository = new UserRepository();
-            userRepository.RegisterUser(userName, password);
+            userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
             }
 
 
