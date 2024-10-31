@@ -57,7 +57,6 @@ C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\User\Desktop\project\Renting-Car-Project\Renting-Car-Project\bin\Debug\System.ValueTuple.xml
-C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\Fonts\IRANSansXBlack.ttf
 C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\Guna.UI2.dll
 C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\System.Buffers.dll
 C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\System.Formats.Asn1.dll
@@ -75,3 +74,4 @@ C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\System.T
 C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\bin\Debug\System.ValueTuple.xml
 C:\Users\User\Desktop\Renting-car-project\Renting-Car-Project\obj\Debug\Renting_Car_Project.Forms.LoginForm.resources
 C:\Users\User\Desktop\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting_Car_Project.MainForm.resources
+C:\Users\User\Desktop\Renting-Car-Project\Renting-Car-Project\bin\Debug\Resources\Fonts\IRANSansXBlack.ttf

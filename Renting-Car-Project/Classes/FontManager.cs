@@ -10,7 +10,7 @@ public static class FontManager
 
     static FontManager()
     {
-        string fontPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Fonts", "IRANSansXBlack.ttf");
+        string fontPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "Resources/Fonts", "IRANSansXBlack.ttf");
 
         privateFonts.AddFontFile(fontPath);
     }
