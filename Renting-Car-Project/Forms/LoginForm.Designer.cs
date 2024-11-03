@@ -36,10 +36,13 @@
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
             this.Menu_Button = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.HoverTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,9 +64,6 @@
             this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
             this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.SideBar.SuspendLayout();
             this.Menu_Button.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -145,6 +145,20 @@
             this.label3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
+            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel6.Location = new System.Drawing.Point(9, 57);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(49, 44);
+            this.guna2Panel6.TabIndex = 1;
+            this.guna2Panel6.Tag = "";
+            this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
+            this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
+            this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Controls.Add(this.label2);
@@ -173,6 +187,19 @@
             this.label2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.label2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
+            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel4.Location = new System.Drawing.Point(5, 55);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(55, 53);
+            this.guna2Panel4.TabIndex = 1;
+            this.guna2Panel4.Tag = "RPText";
+            this.guna2Panel4.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
+            this.guna2Panel4.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.label1);
@@ -199,6 +226,19 @@
             this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackgroundImage = global::Renting_Car_Project.Properties.Resources.login;
+            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel3.Location = new System.Drawing.Point(3, 50);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(52, 53);
+            this.guna2Panel3.TabIndex = 1;
+            this.guna2Panel3.Tag = "";
+            this.guna2Panel3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
+            this.guna2Panel3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // HoverTimer
             // 
@@ -298,7 +338,7 @@
             this.guna2Button1.AnimatedGIF = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BackColor = System.Drawing.SystemColors.Control;
-            this.guna2Button1.BorderRadius = 45;
+            this.guna2Button1.BorderRadius = 37;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -306,10 +346,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(178, 466);
+            this.guna2Button1.Location = new System.Drawing.Point(197, 466);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(220, 93);
+            this.guna2Button1.Size = new System.Drawing.Size(201, 77);
             this.guna2Button1.TabIndex = 5;
             this.guna2Button1.Text = "ثبت نام";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -544,46 +584,6 @@
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
-            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(9, 57);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(49, 44);
-            this.guna2Panel6.TabIndex = 1;
-            this.guna2Panel6.Tag = "";
-            this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
-            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel4.Location = new System.Drawing.Point(5, 55);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(55, 53);
-            this.guna2Panel4.TabIndex = 1;
-            this.guna2Panel4.Tag = "RPText";
-            this.guna2Panel4.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel4.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
-            // 
-            // guna2Panel3
-            // 
-            this.guna2Panel3.BackgroundImage = global::Renting_Car_Project.Properties.Resources.login;
-            this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.Location = new System.Drawing.Point(3, 50);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(52, 53);
-            this.guna2Panel3.TabIndex = 1;
-            this.guna2Panel3.Tag = "";
-            this.guna2Panel3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // LoginForm
             // 
