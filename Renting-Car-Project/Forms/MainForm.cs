@@ -27,6 +27,11 @@ namespace Renting_Car_Project
             form2.Show();
             this.Hide();
         }
+
+        private void TpMain_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
     

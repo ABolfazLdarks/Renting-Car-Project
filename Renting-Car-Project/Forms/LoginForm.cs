@@ -18,6 +18,7 @@ namespace Renting_Car_Project.Forms
         private Control currentHoverControl;
         private int colorStep = 5;
         private int currentColorValue = 40;
+        private LoginRepository loginRepository;
         public LoginForm()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace Renting_Car_Project.Forms
             hoverTimer = new Timer();
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
+            loginRepository = new LoginRepository();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -76,19 +78,19 @@ namespace Renting_Car_Project.Forms
             Control control = sender as Control;
             if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
             {
-                control.ForeColor = SystemColors.ButtonFace;    
+                control.ForeColor = SystemColors.ButtonFace;
                 control.BackColor = Color.FromArgb(35, 40, 45);
-                    }
+            }
         }
 
         private void HoverTimer_Tick(object sender, EventArgs e)
         {
             if (currentHoverControl != null)
             {
-                currentColorValue += colorStep; 
-                if (currentColorValue > 255) currentColorValue = 255; 
+                currentColorValue += colorStep;
+                if (currentColorValue > 255) currentColorValue = 255;
 
-                currentHoverControl.ForeColor = Color.FromArgb(currentColorValue, currentColorValue, currentColorValue); 
+                currentHoverControl.ForeColor = Color.FromArgb(currentColorValue, currentColorValue, currentColorValue);
             }
         }
 
@@ -114,40 +116,40 @@ namespace Renting_Car_Project.Forms
                 txtPassSignUp.PasswordChar = '*';
                 txtRPTpass.PasswordChar = '*';
             }
-           
+
         }
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
             txtPassSignUp.PasswordChar = '*';
-        
+
         }
 
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
         {
-            
+
             txtRPTpass.PasswordChar = '*';
         }
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
-            guna2TextBox5.PasswordChar = '*';
+            txtPassLog.PasswordChar = '*';
         }
 
         private void guna2CheckBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (guna2CheckBox2.Checked == true)
             {
-                guna2TextBox5.PasswordChar = '\0';
-               
+                txtPassLog.PasswordChar = '\0';
+
             }
             else
             {
-                guna2TextBox5.PasswordChar = '*';
-          
+                txtPassLog.PasswordChar = '*';
+
             }
         }
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -163,21 +165,42 @@ namespace Renting_Car_Project.Forms
                 IsNullOrWhiteSpace(txtPassSignUp.Text) ||
                 IsNullOrWhiteSpace(txtUserSignUp.Text))
             {
-                MessageBox.Show("لطفا فیلد های خالی را پر کنید");
+                lblFillField.Visible = true;
+                txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
+
             }
             else
             {
-            string userName = txtUserSignUp.Text;
-            string password = txtPassSignUp.Text;
-            UserRepository userRepository = new UserRepository();
-            userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
+                lblFillField.Visible = false;
+                txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.FromArgb(213, 218, 223);
+                txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
+                string userName = txtUserSignUp.Text;
+                string password = txtPassSignUp.Text;
+                UserRepository userRepository = new UserRepository();
+                userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
             }
 
 
         }
-    private bool IsNullOrWhiteSpace(string input)
-    {
-        return string.IsNullOrWhiteSpace(input);
-    }
+        private bool IsNullOrWhiteSpace(string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string userName = txtUserLog.Text; string password = txtPassLog.Text; if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password)) { lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red; }
+            else
+            {
+                lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223); 
+                bool loginSuccess = loginRepository.LoginUser(userName, password);
+                if (loginSuccess)
+                {
+                    MainForm form = new MainForm();
+                    form.Show();
+                    this.Hide();
+                } 
+            }
+        }
     }
 }
