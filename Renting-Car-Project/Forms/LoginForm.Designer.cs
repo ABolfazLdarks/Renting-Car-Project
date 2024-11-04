@@ -276,7 +276,7 @@
             // 
             this.lblFillField.AutoSize = true;
             this.lblFillField.ForeColor = System.Drawing.Color.Red;
-            this.lblFillField.Location = new System.Drawing.Point(277, 124);
+            this.lblFillField.Location = new System.Drawing.Point(244, 124);
             this.lblFillField.Name = "lblFillField";
             this.lblFillField.Size = new System.Drawing.Size(152, 16);
             this.lblFillField.TabIndex = 10;
@@ -288,7 +288,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            this.label11.Location = new System.Drawing.Point(194, 38);
+            this.label11.Location = new System.Drawing.Point(177, 38);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(328, 62);
@@ -464,7 +464,7 @@
             // 
             this.lblFillFields.AutoSize = true;
             this.lblFillFields.ForeColor = System.Drawing.Color.Red;
-            this.lblFillFields.Location = new System.Drawing.Point(266, 154);
+            this.lblFillFields.Location = new System.Drawing.Point(242, 155);
             this.lblFillFields.Name = "lblFillFields";
             this.lblFillFields.Size = new System.Drawing.Size(152, 16);
             this.lblFillFields.TabIndex = 11;

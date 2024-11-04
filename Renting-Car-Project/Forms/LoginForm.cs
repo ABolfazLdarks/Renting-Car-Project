@@ -189,7 +189,11 @@ namespace Renting_Car_Project.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = txtUserLog.Text; string password = txtPassLog.Text; if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password)) { lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red; }
+            string userName = txtUserLog.Text; string password = txtPassLog.Text;
+            if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password))
+            {
+                lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red; 
+            }
             else
             {
                 lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223); 
