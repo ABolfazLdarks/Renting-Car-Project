@@ -25,7 +25,6 @@ namespace Renting_Car_Project.Forms
             hoverTimer = new Timer();
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
-
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
