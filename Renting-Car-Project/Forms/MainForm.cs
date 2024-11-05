@@ -16,16 +16,16 @@ namespace Renting_Car_Project
             InitializeComponent();
             FontManager.ApplyCustomFont(this.Controls);
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            LoginForm form2 = new LoginForm();
-            form2.Show();
-            this.Hide();
+         
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

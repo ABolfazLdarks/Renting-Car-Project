@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginBorderless = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Elipse_Form = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DragControl_Form = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -67,9 +66,6 @@
             this.txtUserLog = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassLog = new Guna.UI2.WinForms.Guna2TextBox();
             this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
-            this.guna2ImageCheckBox1 = new Guna.UI2.WinForms.Guna2ImageCheckBox();
-            this.guna2CheckBox3 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SideBar.SuspendLayout();
             this.Menu_Button.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -115,7 +111,7 @@
             this.SideBar.Controls.Add(this.guna2Panel2);
             this.SideBar.Controls.Add(this.guna2Panel1);
             this.SideBar.Location = new System.Drawing.Point(-2, 0);
-            this.SideBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SideBar.Margin = new System.Windows.Forms.Padding(2);
             this.SideBar.MaximumSize = new System.Drawing.Size(124, 494);
             this.SideBar.MinimumSize = new System.Drawing.Size(55, 585);
             this.SideBar.Name = "SideBar";
@@ -128,7 +124,7 @@
             this.Menu_Button.Controls.Add(this.label3);
             this.Menu_Button.Controls.Add(this.guna2Panel6);
             this.Menu_Button.Location = new System.Drawing.Point(2, 33);
-            this.Menu_Button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_Button.Name = "Menu_Button";
             this.Menu_Button.Size = new System.Drawing.Size(122, 114);
             this.Menu_Button.TabIndex = 3;
@@ -157,7 +153,7 @@
             this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel6.Location = new System.Drawing.Point(7, 46);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel6.TabIndex = 1;
@@ -171,7 +167,7 @@
             this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.Location = new System.Drawing.Point(0, 352);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(124, 139);
             this.guna2Panel2.TabIndex = 3;
@@ -200,7 +196,7 @@
             this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel4.Location = new System.Drawing.Point(4, 45);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(41, 43);
             this.guna2Panel4.TabIndex = 1;
@@ -213,7 +209,7 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
             this.guna2Panel1.Location = new System.Drawing.Point(2, 190);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(122, 114);
             this.guna2Panel1.TabIndex = 0;
@@ -241,7 +237,7 @@
             this.guna2Panel3.BackgroundImage = global::Renting_Car_Project.Properties.Resources.login;
             this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel3.Location = new System.Drawing.Point(2, 41);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(39, 43);
             this.guna2Panel3.TabIndex = 1;
@@ -261,9 +257,6 @@
             this.guna2Panel5.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel5.BorderRadius = 15;
             this.guna2Panel5.BorderThickness = 1;
-            this.guna2Panel5.Controls.Add(this.guna2CheckBox3);
-            this.guna2Panel5.Controls.Add(this.guna2ImageCheckBox1);
-            this.guna2Panel5.Controls.Add(this.guna2CustomCheckBox1);
             this.guna2Panel5.Controls.Add(this.lblFillField);
             this.guna2Panel5.Controls.Add(this.label11);
             this.guna2Panel5.Controls.Add(this.guna2CheckBox1);
@@ -276,9 +269,9 @@
             this.guna2Panel5.Controls.Add(this.txtPassSignUp);
             this.guna2Panel5.CustomBorderThickness = new System.Windows.Forms.Padding(10);
             this.guna2Panel5.Location = new System.Drawing.Point(155, 33);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(530, 479);
+            this.guna2Panel5.Size = new System.Drawing.Size(530, 374);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
             // 
@@ -286,7 +279,7 @@
             // 
             this.lblFillField.AutoSize = true;
             this.lblFillField.ForeColor = System.Drawing.Color.Red;
-            this.lblFillField.Location = new System.Drawing.Point(183, 101);
+            this.lblFillField.Location = new System.Drawing.Point(133, 101);
             this.lblFillField.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFillField.Name = "lblFillField";
             this.lblFillField.Size = new System.Drawing.Size(144, 13);
@@ -314,7 +307,7 @@
             this.guna2CheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.guna2CheckBox1.Location = new System.Drawing.Point(57, 294);
+            this.guna2CheckBox1.Location = new System.Drawing.Point(57, 245);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
             this.guna2CheckBox1.Size = new System.Drawing.Size(300, 48);
             this.guna2CheckBox1.TabIndex = 4;
@@ -328,7 +321,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(363, 258);
+            this.label6.Location = new System.Drawing.Point(362, 212);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(134, 29);
             this.label6.TabIndex = 6;
@@ -337,7 +330,7 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(388, 194);
+            this.label5.Location = new System.Drawing.Point(388, 172);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 29);
             this.label5.TabIndex = 6;
@@ -366,7 +359,7 @@
             this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(178, 379);
+            this.btnSignUp.Location = new System.Drawing.Point(179, 299);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(151, 63);
             this.btnSignUp.TabIndex = 5;
@@ -386,7 +379,7 @@
             this.txtRPTpass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRPTpass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRPTpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRPTpass.Location = new System.Drawing.Point(57, 258);
+            this.txtRPTpass.Location = new System.Drawing.Point(57, 209);
             this.txtRPTpass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRPTpass.Name = "txtRPTpass";
             this.txtRPTpass.PasswordChar = '\0';
@@ -431,7 +424,7 @@
             this.txtPassSignUp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassSignUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassSignUp.Location = new System.Drawing.Point(57, 194);
+            this.txtPassSignUp.Location = new System.Drawing.Point(57, 172);
             this.txtPassSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassSignUp.Name = "txtPassSignUp";
             this.txtPassSignUp.PasswordChar = '\0';
@@ -460,16 +453,16 @@
             this.guna2Panel7.Controls.Add(this.txtPassLog);
             this.guna2Panel7.CustomBorderThickness = new System.Windows.Forms.Padding(10);
             this.guna2Panel7.Location = new System.Drawing.Point(155, 33);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(530, 479);
+            this.guna2Panel7.Size = new System.Drawing.Size(530, 374);
             this.guna2Panel7.TabIndex = 7;
             // 
             // lblFillFields
             // 
             this.lblFillFields.AutoSize = true;
             this.lblFillFields.ForeColor = System.Drawing.Color.Red;
-            this.lblFillFields.Location = new System.Drawing.Point(182, 126);
+            this.lblFillFields.Location = new System.Drawing.Point(133, 135);
             this.lblFillFields.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFillFields.Name = "lblFillFields";
             this.lblFillFields.Size = new System.Drawing.Size(144, 13);
@@ -504,9 +497,9 @@
             this.guna2CheckBox2.CheckedState.BorderThickness = 0;
             this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CheckBox2.Location = new System.Drawing.Point(19, 318);
+            this.guna2CheckBox2.Location = new System.Drawing.Point(57, 237);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(143, 24);
+            this.guna2CheckBox2.Size = new System.Drawing.Size(317, 24);
             this.guna2CheckBox2.TabIndex = 3;
             this.guna2CheckBox2.Text = "نمایش گذرواژه";
             this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -518,7 +511,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(408, 258);
+            this.label8.Location = new System.Drawing.Point(413, 201);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(83, 29);
             this.label8.TabIndex = 6;
@@ -547,7 +540,7 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(182, 379);
+            this.btnLogin.Location = new System.Drawing.Point(182, 299);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(148, 63);
             this.btnLogin.TabIndex = 4;
@@ -589,7 +582,7 @@
             this.txtPassLog.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassLog.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassLog.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassLog.Location = new System.Drawing.Point(57, 258);
+            this.txtPassLog.Location = new System.Drawing.Point(57, 201);
             this.txtPassLog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassLog.Name = "txtPassLog";
             this.txtPassLog.PasswordChar = '\0';
@@ -605,56 +598,13 @@
             this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Closebtn.Location = new System.Drawing.Point(708, 10);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Closebtn.Name = "Closebtn";
             this.Closebtn.Size = new System.Drawing.Size(37, 36);
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            // 
-            // guna2CustomCheckBox1
-            // 
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(65, 302);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(153, 20);
-            this.guna2CustomCheckBox1.TabIndex = 11;
-            this.guna2CustomCheckBox1.Text = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // guna2ImageCheckBox1
-            // 
-            this.guna2ImageCheckBox1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2ImageCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageCheckBox1.Image")));
-            this.guna2ImageCheckBox1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageCheckBox1.ImageRotate = 0F;
-            this.guna2ImageCheckBox1.Location = new System.Drawing.Point(74, 348);
-            this.guna2ImageCheckBox1.Name = "guna2ImageCheckBox1";
-            this.guna2ImageCheckBox1.Size = new System.Drawing.Size(119, 24);
-            this.guna2ImageCheckBox1.TabIndex = 12;
-            // 
-            // guna2CheckBox3
-            // 
-            this.guna2CheckBox3.AutoSize = true;
-            this.guna2CheckBox3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox3.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox3.Location = new System.Drawing.Point(32, 391);
-            this.guna2CheckBox3.Name = "guna2CheckBox3";
-            this.guna2CheckBox3.Size = new System.Drawing.Size(111, 17);
-            this.guna2CheckBox3.TabIndex = 13;
-            this.guna2CheckBox3.Text = "guna2CheckBox3";
-            this.guna2CheckBox3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox3.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox3.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.Closebtn.Paint += new System.Windows.Forms.PaintEventHandler(this.Closebtn_Paint);
             // 
             // LoginForm
             // 
@@ -666,7 +616,7 @@
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -727,8 +677,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblFillField;
         private System.Windows.Forms.Label lblFillFields;
-        private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox3;
-        private Guna.UI2.WinForms.Guna2ImageCheckBox guna2ImageCheckBox1;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using Renting_Car_Project.Forms;
 
 
 namespace Renting_Car_Project
@@ -19,7 +20,9 @@ namespace Renting_Car_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new StartupForm());
+            
         }
+
     }
 }
