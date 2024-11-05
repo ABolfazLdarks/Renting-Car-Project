@@ -37,9 +37,8 @@ namespace Renting_Car_Project.Forms
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("به خودروچی خوش آمدید", "خودروچی", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoginForm form2 = new LoginForm();
-                form2.Show();
+            form2.Show();
             this.Hide();
 
 
