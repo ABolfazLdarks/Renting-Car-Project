@@ -410,6 +410,7 @@
             this.txtUserSignUp.SelectedText = "";
             this.txtUserSignUp.Size = new System.Drawing.Size(300, 29);
             this.txtUserSignUp.TabIndex = 1;
+            this.txtUserSignUp.TextChanged += new System.EventHandler(this.txtUserSignUp_TextChanged);
             // 
             // txtPassSignUp
             // 
