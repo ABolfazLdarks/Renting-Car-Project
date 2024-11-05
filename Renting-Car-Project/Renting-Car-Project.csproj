@@ -92,6 +92,12 @@
     <Compile Include="Class\ProjectClasses\DatabaseConfig.cs" />
     <Compile Include="Class\ProjectClasses\FontManager.cs" />
     <Compile Include="Class\LoginFormClasses\SignUp.cs" />
+    <Compile Include="Forms\StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <None Include="Resources\img\material-symbols--menu.png" />
     <None Include="Resources\img\signin.png" />
     <None Include="Resources\img\login.png" />
+    <EmbeddedResource Include="Forms\StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

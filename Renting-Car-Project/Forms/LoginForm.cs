@@ -147,10 +147,7 @@ namespace Renting_Car_Project.Forms
 
             }
         }
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -205,6 +202,11 @@ namespace Renting_Car_Project.Forms
                     this.Hide();
                 } 
             }
+        }
+
+        private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
