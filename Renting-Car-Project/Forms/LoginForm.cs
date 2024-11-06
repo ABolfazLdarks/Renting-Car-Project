@@ -170,12 +170,14 @@ namespace Renting_Car_Project.Forms
             {
                 lblFillField.Visible = false;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.FromArgb(213, 218, 223);
+
                 txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
                 string userName = txtUserSignUp.Text;
                 string password = txtPassSignUp.Text;
                 UserRepository userRepository = new UserRepository();
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
             }
+           
 
 
         }
@@ -205,6 +207,11 @@ namespace Renting_Car_Project.Forms
         }
 
         private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUserSignUp_TextChanged(object sender, EventArgs e)
         {
 
         }
