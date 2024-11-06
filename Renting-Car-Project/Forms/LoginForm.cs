@@ -166,6 +166,12 @@ namespace Renting_Car_Project.Forms
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
 
             }
+            else if (txtPassSignUp.Text!=txtRPTpass.Text)
+            {
+                MessageBox.Show("گذرواژه با تکرار آن یکی نیست");
+                txtPassSignUp.Clear();
+                txtRPTpass.Clear();
+            }
             else
             {
                 lblFillField.Visible = false;
