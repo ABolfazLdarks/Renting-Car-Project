@@ -159,6 +159,7 @@
             this.guna2Panel6.TabIndex = 1;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
+            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
             this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -268,12 +269,13 @@
             this.guna2Panel5.Controls.Add(this.txtUserSignUp);
             this.guna2Panel5.Controls.Add(this.txtPassSignUp);
             this.guna2Panel5.CustomBorderThickness = new System.Windows.Forms.Padding(10);
-            this.guna2Panel5.Location = new System.Drawing.Point(169, 33);
+            this.guna2Panel5.Location = new System.Drawing.Point(169, 152);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
+            this.guna2Panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel5_Paint);
             // 
             // lblFillField
             // 
@@ -453,7 +455,7 @@
             this.guna2Panel7.Controls.Add(this.txtUserLog);
             this.guna2Panel7.Controls.Add(this.txtPassLog);
             this.guna2Panel7.CustomBorderThickness = new System.Windows.Forms.Padding(10);
-            this.guna2Panel7.Location = new System.Drawing.Point(169, 33);
+            this.guna2Panel7.Location = new System.Drawing.Point(169, 152);
             this.guna2Panel7.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(530, 319);
