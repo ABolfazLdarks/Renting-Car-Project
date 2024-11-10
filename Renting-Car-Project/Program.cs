@@ -22,11 +22,11 @@ namespace Renting_Car_Project
             Application.SetCompatibleTextRenderingDefault(false);
             string token = TokenManager.LoadToken();
             if (!string.IsNullOrEmpty(token)) {
-                Application.Run(new MainForm()); 
+                Application.Run(new StartupForm()); 
             }
             else
             {
-                Application.Run(new LoginForm()); 
+                Application.Run(new StartupForm()); 
             }
 
         }
