@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.BorderlessFormMain = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnLogOut = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -60,7 +61,8 @@
             this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.btnLogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
