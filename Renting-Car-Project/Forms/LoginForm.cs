@@ -166,16 +166,24 @@ namespace Renting_Car_Project.Forms
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
 
             }
+            else if (txtPassSignUp.Text!=txtRPTpass.Text)
+            {
+                MessageBox.Show("گذرواژه با تکرار آن یکی نیست");
+                txtPassSignUp.Clear();
+                txtRPTpass.Clear();
+            }
             else
             {
                 lblFillField.Visible = false;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.FromArgb(213, 218, 223);
+
                 txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
                 string userName = txtUserSignUp.Text;
                 string password = txtPassSignUp.Text;
                 UserRepository userRepository = new UserRepository();
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
             }
+           
 
 
         }
@@ -205,6 +213,21 @@ namespace Renting_Car_Project.Forms
         }
 
         private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUserSignUp_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }
