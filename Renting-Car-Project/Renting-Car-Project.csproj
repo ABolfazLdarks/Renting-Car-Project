@@ -113,6 +113,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\material-symbols--logout %281%29.png" />
+    <None Include="Resources\material-symbols--logout.png" />
+    <None Include="Resources\logout.png" />
     <None Include="Resources\img\image3.jpg" />
     <None Include="Resources\img\image1.jpg" />
     <None Include="Resources\img\image2.jpg" />

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.BorderlessFormMain = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogOut = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BorderlessFormMain
@@ -43,34 +43,23 @@
             this.BorderlessFormMain.ResizeForm = false;
             this.BorderlessFormMain.TransparentWhileDrag = true;
             // 
-            // guna2Button1
+            // btnLogOut
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AnimatedGIF = true;
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.BorderRadius = 17;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(320, 379);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(135, 37);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogOut.Image = global::Renting_Car_Project.Properties.Resources.material_symbols__logout__1_;
+            this.btnLogOut.Location = new System.Drawing.Point(12, 9);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(74, 80);
+            this.btnLogOut.TabIndex = 0;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 576);
-            this.Controls.Add(this.guna2Button1);
+            this.ClientSize = new System.Drawing.Size(1051, 709);
+            this.Controls.Add(this.btnLogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -81,7 +70,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2BorderlessForm BorderlessFormMain;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Label btnLogOut;
     }
 }
 

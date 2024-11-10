@@ -45,6 +45,11 @@ namespace Renting_Car_Project.Forms
         private void LoginForm_Load(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
+
+        #if DEBUG
+            txtUserLog.Text = "ahmad";
+            txtPassLog.Text = "123";
+        #endif
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
