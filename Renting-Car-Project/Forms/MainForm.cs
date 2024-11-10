@@ -18,14 +18,18 @@ namespace Renting_Car_Project
         }
        
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void MainForm_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            TokenManager.DeleteToken();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            this.Close();
+            loginForm.Show();
         }
     }
 }

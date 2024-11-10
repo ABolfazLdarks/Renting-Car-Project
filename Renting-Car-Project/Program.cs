@@ -20,8 +20,15 @@ namespace Renting_Car_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StartupForm());
-            
+            string token = TokenManager.LoadToken();
+            if (!string.IsNullOrEmpty(token)) {
+                Application.Run(new MainForm()); 
+            }
+            else
+            {
+                Application.Run(new LoginForm()); 
+            }
+
         }
 
     }

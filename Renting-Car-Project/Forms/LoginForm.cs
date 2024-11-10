@@ -27,11 +27,29 @@ namespace Renting_Car_Project.Forms
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
+            CheckSavedToken();
+        }
+
+
+        private void CheckSavedToken()
+        {
+            string token = TokenManager.LoadToken();
+            if (!string.IsNullOrEmpty(token))
+            {
+                MainForm form = new MainForm();
+                form.Show();
+                this.Hide();
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
+
+        #if DEBUG
+            txtUserLog.Text = "ahmad";
+            txtPassLog.Text = "123";
+        #endif
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -147,7 +165,7 @@ namespace Renting_Car_Project.Forms
 
             }
         }
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -166,7 +184,7 @@ namespace Renting_Car_Project.Forms
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
 
             }
-            else if (txtPassSignUp.Text!=txtRPTpass.Text)
+            else if (txtPassSignUp.Text != txtRPTpass.Text)
             {
                 MessageBox.Show("گذرواژه با تکرار آن یکی نیست");
                 txtPassSignUp.Clear();
@@ -183,7 +201,7 @@ namespace Renting_Car_Project.Forms
                 UserRepository userRepository = new UserRepository();
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
             }
-           
+
 
 
         }
@@ -197,39 +215,19 @@ namespace Renting_Car_Project.Forms
             string userName = txtUserLog.Text; string password = txtPassLog.Text;
             if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password))
             {
-                lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red; 
+                lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red;
             }
             else
             {
-                lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223); 
+                lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223);
                 bool loginSuccess = loginRepository.LoginUser(userName, password);
                 if (loginSuccess)
                 {
                     MainForm form = new MainForm();
                     form.Show();
                     this.Hide();
-                } 
+                }
             }
-        }
-
-        private void Closebtn_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtUserSignUp_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
