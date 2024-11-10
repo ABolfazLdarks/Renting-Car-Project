@@ -501,7 +501,7 @@
             this.guna2CheckBox2.CheckedState.BorderRadius = 0;
             this.guna2CheckBox2.CheckedState.BorderThickness = 0;
             this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2CheckBox2.Location = new System.Drawing.Point(80, 203);
             this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
