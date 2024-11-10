@@ -92,6 +92,7 @@
     <Compile Include="Class\ProjectClasses\DatabaseConfig.cs" />
     <Compile Include="Class\ProjectClasses\FontManager.cs" />
     <Compile Include="Class\LoginFormClasses\SignUp.cs" />
+    <Compile Include="Class\ProjectClasses\TokenManager.cs" />
     <Compile Include="Forms\StartupForm.cs">
       <SubType>Form</SubType>
     </Compile>

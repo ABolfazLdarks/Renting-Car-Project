@@ -22,7 +22,9 @@ public class LoginRepository
 
                     if (count == 1)
                     {
-                        return true;
+                         string token = Guid.NewGuid().ToString(); 
+                        TokenManager.SaveToken(token); 
+                        return true; 
                     }
                     else
                     {

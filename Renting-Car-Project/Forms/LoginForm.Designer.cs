@@ -159,7 +159,6 @@
             this.guna2Panel6.TabIndex = 1;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
             this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -275,7 +274,6 @@
             this.guna2Panel5.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
-            this.guna2Panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel5_Paint);
             // 
             // lblFillField
             // 
@@ -412,7 +410,6 @@
             this.txtUserSignUp.SelectedText = "";
             this.txtUserSignUp.Size = new System.Drawing.Size(318, 29);
             this.txtUserSignUp.TabIndex = 1;
-            this.txtUserSignUp.TextChanged += new System.EventHandler(this.txtUserSignUp_TextChanged);
             // 
             // txtPassSignUp
             // 
@@ -609,7 +606,6 @@
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            this.Closebtn.Paint += new System.Windows.Forms.PaintEventHandler(this.Closebtn_Paint);
             // 
             // LoginForm
             // 
