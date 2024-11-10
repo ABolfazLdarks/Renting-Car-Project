@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Startup.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
@@ -113,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Resources\img\Startup.ico" />
+    <Content Include="Startup.ico" />
+    <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />
     <None Include="Resources\material-symbols--logout.png" />
     <None Include="Resources\logout.png" />
