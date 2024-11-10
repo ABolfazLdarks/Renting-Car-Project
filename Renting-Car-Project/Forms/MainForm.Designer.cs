@@ -46,20 +46,21 @@
             // btnLogOut
             // 
             this.btnLogOut.Image = global::Renting_Car_Project.Properties.Resources.material_symbols__logout__1_;
-            this.btnLogOut.Location = new System.Drawing.Point(12, 9);
+            this.btnLogOut.Location = new System.Drawing.Point(9, 7);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(74, 80);
+            this.btnLogOut.Size = new System.Drawing.Size(56, 65);
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 709);
+            this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.btnLogOut);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
