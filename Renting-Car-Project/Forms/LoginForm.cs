@@ -182,7 +182,6 @@ namespace Renting_Car_Project.Forms
             {
                 lblFillField.Visible = true;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
-
             }
              if (txtPassSignUp.Text != txtRPTpass.Text)
             {
