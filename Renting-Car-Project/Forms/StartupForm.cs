@@ -33,6 +33,17 @@ namespace Renting_Car_Project.Forms
             FontManager.ApplyCustomFont(this.Controls);
         }
 
+        private void CheckSavedToken()
+        {
+            string token = TokenManager.LoadToken();
+            if (!string.IsNullOrEmpty(token))
+            {
+                MainForm form = new MainForm();
+                form.Show();
+                this.Hide();
+            }
+        }
+
 
         // وقتی تایمر تمام شود، به فرم بعدی بروید
         private void Timer_Tick(object sender, EventArgs e)
@@ -40,12 +51,22 @@ namespace Renting_Car_Project.Forms
             timer.Stop();  // تایمر را متوقف می‌کنیم
 
             // فرم بعدی را باز می‌کنیم
+            string token = TokenManager.LoadToken();
+            if (!string.IsNullOrEmpty(token))
+            {
+                CheckSavedToken();
+
+            }
+            else
+            {
             LoginForm form2 = new LoginForm();  // فرم بعدی شما
             form2.Show();
 
 
             // فرم فعلی را می‌بندیم
             this.Hide();
+
+            }
 
         }
 

@@ -65,6 +65,7 @@
             this.Closebtn.Size = new System.Drawing.Size(49, 44);
             this.Closebtn.TabIndex = 3;
             this.Closebtn.Tag = "";
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // MainForm
             // 

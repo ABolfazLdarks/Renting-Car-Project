@@ -31,6 +31,11 @@ namespace Renting_Car_Project
             this.Close();
             loginForm.Show();
         }
+
+        private void Closebtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
     
