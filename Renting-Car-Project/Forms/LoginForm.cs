@@ -184,7 +184,7 @@ namespace Renting_Car_Project.Forms
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
 
             }
-            else if (txtPassSignUp.Text != txtRPTpass.Text)
+             if (txtPassSignUp.Text != txtRPTpass.Text)
             {
                 label12.Visible = true;
                 txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
