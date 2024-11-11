@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,11 +46,6 @@ namespace Renting_Car_Project.Forms
         private void LoginForm_Load(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
-
-        #if DEBUG
-            txtUserLog.Text = "ahmad";
-            txtPassLog.Text = "123";
-        #endif
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -201,6 +197,8 @@ namespace Renting_Car_Project.Forms
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
                 txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
 
+                guna2Panel7.Visible = true;
+                guna2Panel5.Visible = false;
 
             }
         }
