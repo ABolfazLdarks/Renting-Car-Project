@@ -447,7 +447,6 @@
             this.lblFillField.TabIndex = 10;
             this.lblFillField.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillField.Visible = false;
-            this.lblFillField.Click += new System.EventHandler(this.lblFillField_Click);
             // 
             // guna2Panel7
             // 

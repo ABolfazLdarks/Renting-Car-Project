@@ -23,12 +23,6 @@ namespace Renting_Car_Project.Forms
         public StartupForm()
         {
             InitializeComponent();
-            // پیکچر باکس را به فرم اضافه می‌کنیم
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Image =Properties.Resources.Startup;//مسیر تصویر
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox.Dock = DockStyle.Fill; // یا هر تنظیم دیگری که می‌خواهید
-            this.Controls.Add(pictureBox);
 
             // تنظیمات تایمر
             timer = new Timer();
@@ -49,34 +43,13 @@ namespace Renting_Car_Project.Forms
             LoginForm form2 = new LoginForm();  // فرم بعدی شما
             form2.Show();
 
+
             // فرم فعلی را می‌بندیم
-           // this.Close();
-        }
+            this.Hide();
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-
-       
-
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-          
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }
