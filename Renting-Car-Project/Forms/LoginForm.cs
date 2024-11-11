@@ -183,7 +183,7 @@ namespace Renting_Car_Project.Forms
                 lblFillField.Visible = true;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
             }
-             if (txtPassSignUp.Text != txtRPTpass.Text)
+            if (txtPassSignUp.Text != txtRPTpass.Text)
             {
                 label12.Visible = true;
                 txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
@@ -195,15 +195,14 @@ namespace Renting_Car_Project.Forms
                 lblFillField.Visible = false;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.FromArgb(213, 218, 223);
 
-                txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
                 string userName = txtUserSignUp.Text;
                 string password = txtPassSignUp.Text;
                 UserRepository userRepository = new UserRepository();
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
+                txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
+
+
             }
-
-
-
         }
         private bool IsNullOrWhiteSpace(string input)
         {
