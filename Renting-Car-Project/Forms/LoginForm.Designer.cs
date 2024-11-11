@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.LoginBorderless = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Elipse_Form = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.DragControl_Form = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -54,8 +55,8 @@
             this.txtRPTpass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserSignUp = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassSignUp = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.lblFillField = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblFillFields = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -296,7 +297,7 @@
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.guna2CheckBox1.Location = new System.Drawing.Point(77, 233);
-            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
             this.guna2CheckBox1.Size = new System.Drawing.Size(412, 59);
             this.guna2CheckBox1.TabIndex = 4;
@@ -352,7 +353,7 @@
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(245, 299);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(201, 78);
             this.btnSignUp.TabIndex = 5;
@@ -427,17 +428,6 @@
             this.txtPassSignUp.TabIndex = 2;
             this.txtPassSignUp.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(177, 76);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 16);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "گذرواژه با تکرار آن یکی نیست";
-            this.label12.Visible = false;
-            // 
             // lblFillField
             // 
             this.lblFillField.AutoSize = true;
@@ -448,6 +438,17 @@
             this.lblFillField.TabIndex = 10;
             this.lblFillField.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillField.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(177, 76);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(158, 16);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "گذرواژه با تکرار آن یکی نیست";
+            this.label12.Visible = false;
             // 
             // guna2Panel7
             // 
@@ -516,7 +517,7 @@
             this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CheckBox2.Location = new System.Drawing.Point(80, 203);
-            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
             this.guna2CheckBox2.Size = new System.Drawing.Size(420, 50);
             this.guna2CheckBox2.TabIndex = 3;
@@ -562,7 +563,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(249, 299);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(197, 78);
             this.btnLogin.TabIndex = 4;
@@ -637,6 +638,7 @@
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
