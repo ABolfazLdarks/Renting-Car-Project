@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,11 +46,6 @@ namespace Renting_Car_Project.Forms
         private void LoginForm_Load(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
-
-        #if DEBUG
-            txtUserLog.Text = "ahmad";
-            txtPassLog.Text = "123";
-        #endif
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -182,9 +178,8 @@ namespace Renting_Car_Project.Forms
             {
                 lblFillField.Visible = true;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
-
             }
-            else if (txtPassSignUp.Text != txtRPTpass.Text)
+            if (txtPassSignUp.Text != txtRPTpass.Text)
             {
                 label12.Visible = true;
                 txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
@@ -196,15 +191,16 @@ namespace Renting_Car_Project.Forms
                 lblFillField.Visible = false;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.FromArgb(213, 218, 223);
 
-                txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
                 string userName = txtUserSignUp.Text;
                 string password = txtPassSignUp.Text;
                 UserRepository userRepository = new UserRepository();
                 userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
+                txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
+
+                guna2Panel7.Visible = true;
+                guna2Panel5.Visible = false;
+
             }
-
-
-
         }
         private bool IsNullOrWhiteSpace(string input)
         {
@@ -231,9 +227,5 @@ namespace Renting_Car_Project.Forms
             }
         }
 
-        private void lblFillField_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
