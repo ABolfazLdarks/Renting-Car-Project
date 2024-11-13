@@ -36,6 +36,11 @@ namespace Renting_Car_Project
         {
             Application.Exit();
         }
+
+        private void Closebtn_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
     
