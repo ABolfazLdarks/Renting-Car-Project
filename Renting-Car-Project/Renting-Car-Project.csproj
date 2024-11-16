@@ -117,7 +117,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\icon.png" />
+    <None Include="Resources\icon.ico" />
+    <None Include="Resources\icon1.ico" />
     <Content Include="Resources\img\Startup.ico" />
+    <None Include="Resources\Loader.png" />
+    <None Include="Resources\temp.png" />
+    <None Include="Resources\plus.png" />
     <Content Include="Startup.ico" />
     <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />

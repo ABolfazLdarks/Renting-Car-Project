@@ -17,7 +17,7 @@ namespace Renting_Car_Project.Forms
 {
     public partial class StartupForm : Form
     {
-        // تایمر برای تأخیر 3 ثانیه
+        // تایمر برای تأخیر 2 ثانیه
         private Timer timer;
 
         public StartupForm()
@@ -26,7 +26,7 @@ namespace Renting_Car_Project.Forms
 
             // تنظیمات تایمر
             timer = new Timer();
-            timer.Interval = 3000; // 3 ثانیه
+            timer.Interval = 2000; // 2 ثانیه
             timer.Tick += Timer_Tick;
             timer.Start();
 

@@ -236,5 +236,10 @@ namespace Renting_Car_Project.Forms
                 txtRPTpass.PasswordChar = '*';
             }
         }
+
+        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
