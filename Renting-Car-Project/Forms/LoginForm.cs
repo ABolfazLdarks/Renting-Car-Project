@@ -45,6 +45,7 @@ namespace Renting_Car_Project.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+       
             guna2Panel7.Visible = true;
         }
 
@@ -118,11 +119,7 @@ namespace Renting_Car_Project.Forms
             guna2Panel7.Visible = false;
 
         }
-        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-
-        }
+       
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
             txtPassSignUp.PasswordChar = '*';
@@ -218,10 +215,7 @@ namespace Renting_Car_Project.Forms
             }
         }
 
-        private void splitter2_SplitterMoved(object sender, SplitterEventArgs e)
-        {
-
-        }
+     
 
         private void guna2CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
@@ -237,9 +231,6 @@ namespace Renting_Car_Project.Forms
             }
         }
 
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+     
     }
 }

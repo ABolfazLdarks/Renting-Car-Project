@@ -39,8 +39,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -108,16 +108,17 @@
             this.SideBar.AutoRoundedCorners = true;
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.SideBar.BorderColor = System.Drawing.Color.White;
-            this.SideBar.BorderRadius = 61;
+            this.SideBar.BorderRadius = 74;
             this.SideBar.Controls.Add(this.Menu_Button);
             this.SideBar.Controls.Add(this.guna2Panel2);
             this.SideBar.Controls.Add(this.guna2Panel1);
-            this.SideBar.Location = new System.Drawing.Point(-2, 0);
+            this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideBar.Location = new System.Drawing.Point(0, 0);
             this.SideBar.Margin = new System.Windows.Forms.Padding(2);
-            this.SideBar.MaximumSize = new System.Drawing.Size(124, 494);
+            this.SideBar.MaximumSize = new System.Drawing.Size(150, 598);
             this.SideBar.MinimumSize = new System.Drawing.Size(55, 585);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(124, 585);
+            this.SideBar.Size = new System.Drawing.Size(150, 585);
             this.SideBar.TabIndex = 0;
             // 
             // Menu_Button
@@ -125,10 +126,10 @@
             this.Menu_Button.BorderColor = System.Drawing.Color.White;
             this.Menu_Button.Controls.Add(this.label3);
             this.Menu_Button.Controls.Add(this.guna2Panel6);
-            this.Menu_Button.Location = new System.Drawing.Point(2, 33);
+            this.Menu_Button.Location = new System.Drawing.Point(5, 36);
             this.Menu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_Button.Name = "Menu_Button";
-            this.Menu_Button.Size = new System.Drawing.Size(122, 114);
+            this.Menu_Button.Size = new System.Drawing.Size(140, 114);
             this.Menu_Button.TabIndex = 3;
             this.Menu_Button.Click += new System.EventHandler(this.Menu_Button_Click);
             this.Menu_Button.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
@@ -137,12 +138,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(67, 46);
+            this.label3.Location = new System.Drawing.Point(102, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 24);
+            this.label3.Size = new System.Drawing.Size(23, 16);
             this.label3.TabIndex = 2;
             this.label3.Tag = "RPText";
             this.label3.Text = "منو";
@@ -154,7 +155,7 @@
             // 
             this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(7, 46);
+            this.guna2Panel6.Location = new System.Drawing.Point(4, 43);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(37, 36);
@@ -166,54 +167,53 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.label2);
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 352);
+            this.guna2Panel2.Controls.Add(this.label2);
+            this.guna2Panel2.Location = new System.Drawing.Point(5, 353);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(124, 139);
+            this.guna2Panel2.Size = new System.Drawing.Size(141, 139);
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(50, 41);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 48);
-            this.label2.TabIndex = 2;
-            this.label2.Tag = "RPText";
-            this.label2.Text = "ساخت\r\n حساب";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            this.label2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel4.Location = new System.Drawing.Point(4, 45);
+            this.guna2Panel4.Location = new System.Drawing.Point(3, 43);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(41, 43);
+            this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel4.TabIndex = 1;
             this.guna2Panel4.Tag = "RPText";
             this.guna2Panel4.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel4.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(44, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 48);
+            this.label2.TabIndex = 2;
+            this.label2.Tag = "RPText";
+            this.label2.Text = "ساخت حساب  ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
+            this.label2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
+            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
-            this.guna2Panel1.Location = new System.Drawing.Point(2, 190);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 194);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(122, 114);
+            this.guna2Panel1.Size = new System.Drawing.Size(140, 114);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel1.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
@@ -221,12 +221,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(56, 49);
+            this.label1.Location = new System.Drawing.Point(95, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 24);
+            this.label1.Size = new System.Drawing.Size(30, 16);
             this.label1.TabIndex = 2;
             this.label1.Tag = "RPText";
             this.label1.Text = "ورود";
@@ -238,13 +238,12 @@
             // 
             this.guna2Panel3.BackgroundImage = global::Renting_Car_Project.Properties.Resources.login;
             this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.Location = new System.Drawing.Point(2, 41);
+            this.guna2Panel3.Location = new System.Drawing.Point(11, 37);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(39, 43);
+            this.guna2Panel3.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel3.TabIndex = 1;
             this.guna2Panel3.Tag = "";
-            this.guna2Panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             this.guna2Panel3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -492,7 +491,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 29);
             this.label10.TabIndex = 8;
-            this.label10.Text = "خوش برگشتی";
+            this.label10.Text = "خوش اومدی";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -644,7 +643,6 @@
             this.Menu_Button.ResumeLayout(false);
             this.Menu_Button.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
