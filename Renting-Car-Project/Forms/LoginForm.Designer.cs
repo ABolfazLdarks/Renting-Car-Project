@@ -46,6 +46,7 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.HoverTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@
             this.txtUserLog = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassLog = new Guna.UI2.WinForms.Guna2TextBox();
             this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SideBar.SuspendLayout();
             this.Menu_Button.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -277,6 +277,25 @@
             this.guna2Panel5.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
+            // 
+            // guna2CheckBox1
+            // 
+            this.guna2CheckBox1.Animated = true;
+            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2CheckBox1.Location = new System.Drawing.Point(52, 189);
+            this.guna2CheckBox1.Name = "guna2CheckBox1";
+            this.guna2CheckBox1.Size = new System.Drawing.Size(315, 41);
+            this.guna2CheckBox1.TabIndex = 13;
+            this.guna2CheckBox1.Text = "نمایش گذرواژه";
+            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
+            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
+            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
             // label11
             // 
@@ -602,25 +621,6 @@
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            // 
-            // guna2CheckBox1
-            // 
-            this.guna2CheckBox1.Animated = true;
-            this.guna2CheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.CheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CheckBox1.Location = new System.Drawing.Point(52, 189);
-            this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(315, 41);
-            this.guna2CheckBox1.TabIndex = 13;
-            this.guna2CheckBox1.Text = "نمایش گذرواژه";
-            this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
-            this.guna2CheckBox1.UncheckedState.BorderThickness = 0;
-            this.guna2CheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2CheckBox1.CheckedChanged += new System.EventHandler(this.guna2CheckBox1_CheckedChanged);
             // 
             // LoginForm
             // 

@@ -90,8 +90,9 @@ namespace Renting_Car_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
-            //AddUserControl1(@"/Resources/img/image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
+           
+           // AddUserControl1(@"Resources\img\image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
+
         }
 
         private void guna2Panel3_Paint(object sender, PaintEventArgs e)
