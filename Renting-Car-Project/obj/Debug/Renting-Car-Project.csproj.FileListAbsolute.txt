@@ -148,3 +148,4 @@ C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Re
 C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.csproj.CopyComplete
 C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.exe
 C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting-Car-Project.pdb
+C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting_Car_Project.UserControl1.resources
