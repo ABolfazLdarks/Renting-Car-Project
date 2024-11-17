@@ -219,7 +219,12 @@ namespace Renting_Car_Project.Forms
 
         private void guna2CheckBox3_CheckedChanged(object sender, EventArgs e)
         {
-            if (guna2CheckBox3.Checked == true)
+            
+        }
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2CheckBox1.Checked == true)
             {
                 txtPassSignUp.PasswordChar = '\0';
                 txtRPTpass.PasswordChar = '\0';
@@ -230,7 +235,5 @@ namespace Renting_Car_Project.Forms
                 txtRPTpass.PasswordChar = '*';
             }
         }
-
-     
     }
 }
