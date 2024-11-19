@@ -24,10 +24,11 @@ namespace Renting_Car_Project
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
+            
         }
        
 
-       
+
 
         private void Closebtn_Click(object sender, EventArgs e)
         {
@@ -43,14 +44,7 @@ namespace Renting_Car_Project
                 currentHoverControl.ForeColor = Color.FromArgb(currentColorValue, currentColorValue, currentColorValue);
             }
         }
-      
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-      
-        }
-
-      
+                         
         private void Menu_But_MouseEnter(object sender, EventArgs e)
         {
             Control control = sender as Control;
@@ -91,31 +85,28 @@ namespace Renting_Car_Project
         private void MainForm_Load(object sender, EventArgs e)
         {
            
-           // AddUserControl1(@"Resources\img\image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
+           //AddUserControl1(@"C: \Users\ABOLFAZL\Documents\Renting - Car - Project\Renting - Car - Project\Resources\img\image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
 
         }
 
-        private void guna2Panel3_Paint(object sender, PaintEventArgs e)
+        //private void AddUserControl1(string imagePath, string title, string details, string price, string status)
+        //{
+        //    //// ایجاد یک نمونه جدید از UserControl1
+        //    //var adControl = new UserControl1();
+
+        //    //// تنظیم داده‌ها
+        //    //adControl.SetData(imagePath, title, details, price, status);
+
+        //    //// اضافه کردن کنترل به FlowLayoutPanel
+        //    //flowLayoutPanel1.Controls.Add(adControl);
+        //}
+
+        
+
+        private void label1_Click(object sender, EventArgs e)
         {
-
+            guna2Panel3.Visible = true;
         }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-        private void AddUserControl1(string imagePath, string title, string details, string price, string status)
-        {
-            // ایجاد یک نمونه جدید از UserControl1
-            var adControl = new UserControl1();
-
-            // تنظیم داده‌ها
-            adControl.SetData(imagePath, title, details, price, status);
-
-            // اضافه کردن کنترل به FlowLayoutPanel
-            flowLayoutPanel1.Controls.Add(adControl);
-        }
-
     }
 }
     

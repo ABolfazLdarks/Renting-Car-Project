@@ -43,9 +43,8 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(386, 6);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(94, 40);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "پلاس دنا";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
@@ -55,7 +54,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "در دسترس";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -65,7 +63,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 22);
             this.label2.TabIndex = 3;
-            this.label2.Text = "تومان20/000 ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
@@ -75,7 +72,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 33);
             this.label3.TabIndex = 4;
-            this.label3.Text = "در گوهردشت";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2Panel1
@@ -92,14 +88,12 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(485, 216);
             this.guna2Panel1.TabIndex = 5;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+     
             // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BackgroundImage = global::Renting_Car_Project.Properties.Resources.image2;
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.Image = global::Renting_Car_Project.Properties.Resources.image2;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(16, 6);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -108,7 +102,7 @@
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.UseTransparentBackground = true;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+      
             // 
             // UserControl1
             // 
@@ -117,7 +111,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(504, 237);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
+      
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

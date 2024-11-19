@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Startup.ico</ApplicationIcon>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -128,6 +128,7 @@
     </EmbeddedResource>
     <None Include="Resources\icon.png" />
     <None Include="Resources\icon.ico" />
+    <Content Include="icon.ico" />
     <Content Include="Resources\img\Startup.ico" />
     <None Include="Resources\Loader.png" />
     <None Include="Resources\temp.png" />

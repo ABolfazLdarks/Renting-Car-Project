@@ -40,6 +40,7 @@ public class UserRepository
                     connection.Open();
                     command.ExecuteNonQuery();
                     MessageBox.Show("ثبت نام با موفقیت انجام شد !","عملیات موفق");
+                    
                 }
                 catch (SqlException ex)
                 {
