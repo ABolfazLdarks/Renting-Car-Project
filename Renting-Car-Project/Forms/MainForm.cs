@@ -7,6 +7,7 @@ using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
 
+
 namespace Renting_Car_Project
 {
     public partial class MainForm : Form
@@ -29,6 +30,8 @@ namespace Renting_Car_Project
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
+
+            
 
         }
 
@@ -89,7 +92,8 @@ namespace Renting_Car_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+          
+           
             //AddUserControl1(@"C: \Users\ABOLFAZL\Documents\Renting - Car - Project\Renting - Car - Project\Resources\img\image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
 
         }
@@ -110,6 +114,7 @@ namespace Renting_Car_Project
 
         private void label1_Click(object sender, EventArgs e)
         {
+            flowLayoutPanel1.Visible = false;
             guna2Panel3.Visible = true;
         }
 
@@ -165,6 +170,14 @@ namespace Renting_Car_Project
         private void label3_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = true;
+            guna2Panel3.Visible = false;
+            
+
+            //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
+            //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
+
+
+
             // اتصال به پایگاه داده
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -174,8 +187,8 @@ namespace Renting_Car_Project
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
-                // پاک کردن محتوای قبلی FlowLayoutPanel
-               //flowLayoutPanel1.Controls.Clear();
+                //پاک کردن محتوای قبلی FlowLayoutPanel
+                flowLayoutPanel1.Controls.Clear();
 
                 while (reader.Read())
                 {
@@ -243,6 +256,11 @@ namespace Renting_Car_Project
 
 
             }
+        }
+
+        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+          
         }
     }
 }
