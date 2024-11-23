@@ -21,13 +21,27 @@ namespace Renting_Car_Project
 
 
         // متد برای تنظیم داده‌های خودرو در UserControl
-        public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage)
+        public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage , string Location)
         {
-            lblCarName.Text = carName;
-            lblCarColor.Text = carColor;
-            lblCarModel.Text = carModel;
+            lblCarName.Text = $"خودرو {carName}";
+            lblCarColor.Text = $"رنگ : {carColor}";
+            lblCarModel.Text = $" مدل : { carModel}";
+            
             // نمایش قیمت به صورت int
-            lblCarPrice.Text = $"قیمت روزانه: {carPrice:#,0}"; // نمایش قیمت به صورت فرمت عددی
+           
+           lblCarPrice.Text = $"قیمت روزانه : {carPrice:#,0} تومان"; // نمایش قیمت به صورت فرمت عددی
+            
+            using (MemoryStream ms = new MemoryStream(carImage))
+            {
+                guna2PictureBox1.Image = Image.FromStream(ms);
+           
+            }
+
+
+            lblLocation.Text = $"در  {Location}";
+
+
+
 
             // بررسی اگر تصویر موجود باشد
             //if (carImage != null && carImage.Length > 0)
@@ -52,10 +66,7 @@ namespace Renting_Car_Project
             //    // اگر تصویر موجود نیست، یک تصویر پیش‌فرض نمایش دهید
             //    //guna2PictureBox1.Image = Properties.Resources.image1;
             //}
-            using (MemoryStream ms = new MemoryStream(carImage))
-            {
-                guna2PictureBox1.Image = Image.FromStream(ms);
-            }
+          
 
 
         }
@@ -71,6 +82,23 @@ namespace Renting_Car_Project
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCarColor_Click(object sender, EventArgs e)
+        {
+
+        }
+        //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
+        //{
+        //    lblCarName.Text = carName;  // نام خودرو را در لیبل نمایش می‌دهیم
+        //    lblCarModel.Text = carModel;  // مدل خودرو را در لیبل نمایش می‌دهیم
+        //    lblCarColor.Text = carColor;
+        //    lblCarPrice
+        //}
+
+        private void lblCarName_Click(object sender, EventArgs e)
         {
 
         }

@@ -228,5 +228,10 @@ namespace Renting_Car_Project.Forms
                 txtRPTpass.PasswordChar = '*';
             }
         }
+
+        private void lblFillField_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

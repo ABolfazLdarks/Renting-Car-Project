@@ -12,7 +12,7 @@ namespace Renting_Car_Project
 {
     public partial class MainForm : Form
     {
-
+       
         // متغیر برای ذخیره مسیر کامل فایل تصویر
         private string imageFilePath = "";
 
@@ -22,6 +22,9 @@ namespace Renting_Car_Project
         private int colorStep = 5;
         private int currentColorValue = 40;
         private LoginRepository loginRepository;
+
+
+      
         public MainForm()
         {
             InitializeComponent();
@@ -30,8 +33,8 @@ namespace Renting_Car_Project
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
+          
 
-            
 
         }
 
@@ -92,23 +95,10 @@ namespace Renting_Car_Project
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-          
-           
-            //AddUserControl1(@"C: \Users\ABOLFAZL\Documents\Renting - Car - Project\Renting - Car - Project\Resources\img\image2.jpg", "پلاس دنا", "در دسترس", "تومان20/000 ", "در گوهردشت");
-
+      
         }
 
-        //private void AddUserControl1(string imagePath, string title, string details, string price, string status)
-        //{
-        //    //// ایجاد یک نمونه جدید از UserControl1
-        //    //var adControl = new UserControl1();
-
-        //    //// تنظیم داده‌ها
-        //    //adControl.SetData(imagePath, title, details, price, status);
-
-        //    //// اضافه کردن کنترل به FlowLayoutPanel
-        //    //flowLayoutPanel1.Controls.Add(adControl);
-        //}
+       
 
 
 
@@ -142,7 +132,7 @@ namespace Renting_Car_Project
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         // اضافه کردن پارامترها به دستور SQL
-                        
+
                         command.Parameters.AddWithValue("@Cars_Name", txtCarName.Text);
                         command.Parameters.AddWithValue("@brand", txtBrand.Text);
                         command.Parameters.AddWithValue("@YearOfProduction", int.Parse(txtModelYear.Text));
@@ -152,8 +142,8 @@ namespace Renting_Car_Project
                         command.Parameters.AddWithValue("@Image", imageBytes);
                         command.Parameters.AddWithValue("@Location", txtLocation.Text);
                         command.Parameters.AddWithValue("@CarOperation", int.Parse(txtMileage.Text));
-                        command.Parameters.AddWithValue("@PriceDay", int.Parse(txtPrice.Text));                     
-                             
+                        command.Parameters.AddWithValue("@PriceDay", int.Parse(txtPrice.Text));
+
                         command.ExecuteNonQuery(); // اجرا کردن دستور
                         MessageBox.Show("آگهی با موفقیت ذخیره شد", "عملیات موفق");
                         txtCarName.Clear(); txtBrand.Clear(); txtModelYear.Clear(); txtColor.Clear(); txtStateofCar.Clear(); txtDescription.Clear(); txtImage.Clear(); txtLocation.Clear(); txtMileage.Clear(); txtPrice.Clear();
@@ -171,18 +161,17 @@ namespace Renting_Car_Project
         {
             flowLayoutPanel1.Visible = true;
             guna2Panel3.Visible = false;
-            
+
 
             //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
             //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
-
-
 
             // اتصال به پایگاه داده
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+
                 string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
@@ -200,34 +189,19 @@ namespace Renting_Car_Project
                     int carPrice = Convert.ToInt32(reader["PriceDay"]);
                     byte[] carImage = reader["Image"] as byte[];
 
+                    string Location = reader["Location"].ToString();
+                 
+                  
+
                     // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
                     UserControl1 carControl = new UserControl1();
-                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage);
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
 
                     // افزودن UserControl به FlowLayoutPanel
                     flowLayoutPanel1.Controls.Add(carControl); // افزودن UserControl جدید به FlowLayoutPanel
                 }
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -260,11 +234,121 @@ namespace Renting_Car_Project
 
         private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
+
+        }
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
           
+                // ابتدا مطمئن میشویم که ورودی خالی نیست
+                if (!string.IsNullOrWhiteSpace(guna2TextBox1.Text))
+                {
+                    // رشته جستجو شده از TextBox
+                    string searchTerm = guna2TextBox1.Text.Trim();
+
+                    // انجام عملیات جستجو در پایگاه داده
+                    string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";  // اتصال به پایگاه داده
+                    string query = "SELECT * FROM Cars WHERE Cars_Name LIKE @Cars_Name";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        SqlCommand command = new SqlCommand(query, connection);
+                        command.Parameters.AddWithValue("@Cars_Name", "%" + searchTerm + "%");
+
+                    try
+                    {
+                        connection.Open();
+                        SqlDataReader reader = command.ExecuteReader();
+
+                        // ابتدا فلوی لیوت پانل را پاک می‌کنیم تا نتایج جدید نمایش داده شود
+                        flowLayoutPanel1.Controls.Clear();
+
+                        while (reader.Read())
+                        {
+                                                     
+                                // خواندن داده‌ها از پایگاه داده
+                                string carName = reader["Cars_Name"].ToString();
+                                string carColor = reader["Color"].ToString();
+                                string carModel = reader["YearOfProduction"].ToString();
+                                // تبدیل قیمت به نوع int
+                                int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                                byte[] carImage = reader["Image"] as byte[];
+
+                                string Location = reader["Location"].ToString();
+
+
+
+                                // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
+                                UserControl1 carControl1 = new UserControl1();
+                                carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+
+                                // افزودن UserControl به FlowLayoutPanel
+                                flowLayoutPanel1.Controls.Add(carControl1); // افزودن UserControl جدید به FlowLayoutPanel
+                            
+                          
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex.Message);
+                    }
+                    }
+                }
+                else
+                {
+                // اگر ورودی خالی باشد، فلوی لیوت پانل را پاک می‌کنیم
+                flowLayoutPanel1.Controls.Clear();
+                }
+            
+
+
+
+
+
+
+        }
+
+        private void guna2TextBox1_MouseEnter(object sender, EventArgs e)
+        {
+           
+
+        }
+
+        private void guna2TextBox1_Leave(object sender, EventArgs e)
+        {
+
+
+
+            guna2TextBox1.Text = "جستجو در همه آگهی ها";
+            guna2TextBox1.ForeColor = Color.Gray;
+            guna2TextBox1.ReadOnly = true;
+
+        }
+
+        private void guna2TextBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+           
+                guna2TextBox1.Text = "";
+                guna2TextBox1.ForeColor = Color.Gray;
+                guna2TextBox1.ReadOnly = false;
+            
+        }
+
+        private void guna2TextBox1_MouseLeave(object sender, EventArgs e)
+        {
+
+            
+          
+        }
+
+        private void guna2TextBox1_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
-           
-   
 
-    
+
+
+

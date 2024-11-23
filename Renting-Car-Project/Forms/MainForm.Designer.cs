@@ -277,7 +277,7 @@
             this.SideBar2.MinimumSize = new System.Drawing.Size(55, 585);
             this.SideBar2.Name = "SideBar2";
             this.SideBar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.SideBar2.Size = new System.Drawing.Size(150, 598);
+            this.SideBar2.Size = new System.Drawing.Size(150, 585);
             this.SideBar2.TabIndex = 4;
             // 
             // guna2Separator4
@@ -370,16 +370,24 @@
             this.guna2TextBox1.FillColor = System.Drawing.Color.LightGray;
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Gray;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(315, 11);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
+            this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.Size = new System.Drawing.Size(284, 36);
             this.guna2TextBox1.TabIndex = 1;
+            this.guna2TextBox1.TabStop = false;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2TextBox1.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            this.guna2TextBox1.Load += new System.EventHandler(this.guna2TextBox1_Load);
+            this.guna2TextBox1.Leave += new System.EventHandler(this.guna2TextBox1_Leave);
+            this.guna2TextBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.guna2TextBox1_MouseClick);
+            this.guna2TextBox1.MouseEnter += new System.EventHandler(this.guna2TextBox1_MouseEnter);
+            this.guna2TextBox1.MouseLeave += new System.EventHandler(this.guna2TextBox1_MouseLeave);
             // 
             // guna2Panel3
             // 
@@ -459,6 +467,7 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "";
+            this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(286, 36);
             this.txtPrice.TabIndex = 19;
@@ -519,6 +528,7 @@
             this.txtMileage.Name = "txtMileage";
             this.txtMileage.PasswordChar = '\0';
             this.txtMileage.PlaceholderText = "";
+            this.txtMileage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMileage.SelectedText = "";
             this.txtMileage.Size = new System.Drawing.Size(286, 36);
             this.txtMileage.TabIndex = 14;
@@ -539,6 +549,7 @@
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
             this.txtLocation.PlaceholderText = "";
+            this.txtLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtLocation.SelectedText = "";
             this.txtLocation.Size = new System.Drawing.Size(286, 36);
             this.txtLocation.TabIndex = 13;
@@ -579,6 +590,7 @@
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.PlaceholderText = "";
+            this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDescription.SelectedText = "";
             this.txtDescription.Size = new System.Drawing.Size(286, 36);
             this.txtDescription.TabIndex = 11;
@@ -618,6 +630,7 @@
             this.txtStateofCar.Name = "txtStateofCar";
             this.txtStateofCar.PasswordChar = '\0';
             this.txtStateofCar.PlaceholderText = "";
+            this.txtStateofCar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtStateofCar.SelectedText = "";
             this.txtStateofCar.Size = new System.Drawing.Size(286, 36);
             this.txtStateofCar.TabIndex = 9;
@@ -638,6 +651,7 @@
             this.txtColor.Name = "txtColor";
             this.txtColor.PasswordChar = '\0';
             this.txtColor.PlaceholderText = "";
+            this.txtColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtColor.SelectedText = "";
             this.txtColor.Size = new System.Drawing.Size(286, 36);
             this.txtColor.TabIndex = 8;
@@ -658,6 +672,7 @@
             this.txtModelYear.Name = "txtModelYear";
             this.txtModelYear.PasswordChar = '\0';
             this.txtModelYear.PlaceholderText = "";
+            this.txtModelYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtModelYear.SelectedText = "";
             this.txtModelYear.Size = new System.Drawing.Size(286, 36);
             this.txtModelYear.TabIndex = 7;
@@ -678,6 +693,7 @@
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.PasswordChar = '\0';
             this.txtBrand.PlaceholderText = "";
+            this.txtBrand.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBrand.SelectedText = "";
             this.txtBrand.Size = new System.Drawing.Size(286, 36);
             this.txtBrand.TabIndex = 6;
@@ -698,6 +714,7 @@
             this.txtCarName.Name = "txtCarName";
             this.txtCarName.PasswordChar = '\0';
             this.txtCarName.PlaceholderText = "";
+            this.txtCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCarName.SelectedText = "";
             this.txtCarName.Size = new System.Drawing.Size(286, 36);
             this.txtCarName.TabIndex = 5;
@@ -764,7 +781,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(604, 551);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(754, 551);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
             // 
@@ -773,11 +790,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 603);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar2);
             this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
