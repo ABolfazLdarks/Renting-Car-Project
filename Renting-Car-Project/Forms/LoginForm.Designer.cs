@@ -35,6 +35,8 @@
             this.DragControl_Form = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
             this.SideBar = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.Menu_Button = new Guna.UI2.WinForms.Guna2Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
@@ -109,6 +111,8 @@
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.SideBar.BorderColor = System.Drawing.Color.White;
             this.SideBar.BorderRadius = 74;
+            this.SideBar.Controls.Add(this.guna2Separator2);
+            this.SideBar.Controls.Add(this.guna2Separator1);
             this.SideBar.Controls.Add(this.Menu_Button);
             this.SideBar.Controls.Add(this.guna2Panel2);
             this.SideBar.Controls.Add(this.guna2Panel1);
@@ -120,6 +124,20 @@
             this.SideBar.Name = "SideBar";
             this.SideBar.Size = new System.Drawing.Size(150, 585);
             this.SideBar.TabIndex = 0;
+            // 
+            // guna2Separator2
+            // 
+            this.guna2Separator2.Location = new System.Drawing.Point(-50, 324);
+            this.guna2Separator2.Name = "guna2Separator2";
+            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator2.TabIndex = 13;
+            // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.Location = new System.Drawing.Point(-50, 158);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator1.TabIndex = 12;
             // 
             // Menu_Button
             // 
@@ -694,5 +712,7 @@
         private System.Windows.Forms.Label lblFillFields;
         private System.Windows.Forms.Label label12;
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }

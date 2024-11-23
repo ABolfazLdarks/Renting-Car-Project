@@ -201,7 +201,7 @@ namespace Renting_Car_Project.Forms
             if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password))
             {
                 lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red;
-            }
+             }
             else
             {
                 lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223);
@@ -215,14 +215,7 @@ namespace Renting_Car_Project.Forms
             }
         }
 
-     
-
-        private void guna2CheckBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+       private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (guna2CheckBox1.Checked == true)
             {
