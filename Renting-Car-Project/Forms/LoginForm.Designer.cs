@@ -393,6 +393,7 @@
             this.txtRPTpass.Name = "txtRPTpass";
             this.txtRPTpass.PasswordChar = '\0';
             this.txtRPTpass.PlaceholderText = "";
+            this.txtRPTpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRPTpass.SelectedText = "";
             this.txtRPTpass.Size = new System.Drawing.Size(318, 29);
             this.txtRPTpass.TabIndex = 3;
@@ -416,6 +417,7 @@
             this.txtUserSignUp.Name = "txtUserSignUp";
             this.txtUserSignUp.PasswordChar = '\0';
             this.txtUserSignUp.PlaceholderText = "";
+            this.txtUserSignUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUserSignUp.SelectedText = "";
             this.txtUserSignUp.Size = new System.Drawing.Size(318, 29);
             this.txtUserSignUp.TabIndex = 1;
@@ -438,6 +440,7 @@
             this.txtPassSignUp.Name = "txtPassSignUp";
             this.txtPassSignUp.PasswordChar = '\0';
             this.txtPassSignUp.PlaceholderText = "";
+            this.txtPassSignUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassSignUp.SelectedText = "";
             this.txtPassSignUp.Size = new System.Drawing.Size(318, 29);
             this.txtPassSignUp.TabIndex = 2;
@@ -454,6 +457,7 @@
             this.lblFillField.TabIndex = 10;
             this.lblFillField.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillField.Visible = false;
+            this.lblFillField.Click += new System.EventHandler(this.lblFillField_Click);
             // 
             // label12
             // 
@@ -600,6 +604,7 @@
             this.txtUserLog.Name = "txtUserLog";
             this.txtUserLog.PasswordChar = '\0';
             this.txtUserLog.PlaceholderText = "";
+            this.txtUserLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUserLog.SelectedText = "";
             this.txtUserLog.Size = new System.Drawing.Size(317, 29);
             this.txtUserLog.TabIndex = 1;
@@ -622,6 +627,7 @@
             this.txtPassLog.Name = "txtPassLog";
             this.txtPassLog.PasswordChar = '\0';
             this.txtPassLog.PlaceholderText = "";
+            this.txtPassLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassLog.SelectedText = "";
             this.txtPassLog.Size = new System.Drawing.Size(317, 29);
             this.txtPassLog.TabIndex = 2;
