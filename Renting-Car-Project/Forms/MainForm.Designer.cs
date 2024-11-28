@@ -29,6 +29,58 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.BorderlessFormMain = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
@@ -101,11 +153,14 @@
             // 
             this.guna2Panel9.Controls.Add(this.guna2Panel2);
             this.guna2Panel9.Controls.Add(this.label1);
+            this.guna2Panel9.CustomizableEdges = customizableEdges23;
             this.guna2Panel9.Location = new System.Drawing.Point(0, 226);
             this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel9.Name = "guna2Panel9";
+            this.guna2Panel9.ShadowDecoration.CustomizableEdges = customizableEdges24;
             this.guna2Panel9.Size = new System.Drawing.Size(148, 81);
             this.guna2Panel9.TabIndex = 0;
+            this.guna2Panel9.Click += new System.EventHandler(this.guna2Panel9_Click);
             this.guna2Panel9.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel9.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -113,8 +168,10 @@
             // 
             this.guna2Panel2.BackgroundImage = global::Renting_Car_Project.Properties.Resources.white_plus;
             this.guna2Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel2.CustomizableEdges = customizableEdges21;
             this.guna2Panel2.Location = new System.Drawing.Point(6, 29);
             this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges22;
             this.guna2Panel2.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
@@ -128,11 +185,10 @@
             this.label1.Location = new System.Drawing.Point(80, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 2;
             this.label1.Tag = "RPText";
             this.label1.Text = "ثبت آگهی";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label1.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -140,9 +196,11 @@
             // 
             this.guna2Panel10.Controls.Add(this.guna2Panel4);
             this.guna2Panel10.Controls.Add(this.label2);
+            this.guna2Panel10.CustomizableEdges = customizableEdges19;
             this.guna2Panel10.Location = new System.Drawing.Point(0, 340);
             this.guna2Panel10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel10.Name = "guna2Panel10";
+            this.guna2Panel10.ShadowDecoration.CustomizableEdges = customizableEdges20;
             this.guna2Panel10.Size = new System.Drawing.Size(148, 81);
             this.guna2Panel10.TabIndex = 3;
             this.guna2Panel10.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
@@ -152,8 +210,10 @@
             // 
             this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.white_user_profile;
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel4.CustomizableEdges = customizableEdges17;
             this.guna2Panel4.Location = new System.Drawing.Point(6, 26);
             this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges18;
             this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel4.TabIndex = 4;
             this.guna2Panel4.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
@@ -167,7 +227,7 @@
             this.label2.Location = new System.Drawing.Point(64, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 2;
             this.label2.Tag = "RPText";
             this.label2.Text = "خودروچی من";
@@ -180,11 +240,14 @@
             this.Menu_But.BorderColor = System.Drawing.Color.White;
             this.Menu_But.Controls.Add(this.guna2Panel1);
             this.Menu_But.Controls.Add(this.label3);
+            this.Menu_But.CustomizableEdges = customizableEdges15;
             this.Menu_But.Location = new System.Drawing.Point(0, 115);
             this.Menu_But.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_But.Name = "Menu_But";
+            this.Menu_But.ShadowDecoration.CustomizableEdges = customizableEdges16;
             this.Menu_But.Size = new System.Drawing.Size(150, 81);
             this.Menu_But.TabIndex = 3;
+            this.Menu_But.Click += new System.EventHandler(this.Menu_But_Click);
             this.Menu_But.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.Menu_But.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -192,8 +255,10 @@
             // 
             this.guna2Panel1.BackgroundImage = global::Renting_Car_Project.Properties.Resources.icon;
             this.guna2Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel1.CustomizableEdges = customizableEdges13;
             this.guna2Panel1.Location = new System.Drawing.Point(6, 24);
             this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges14;
             this.guna2Panel1.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel1.TabIndex = 0;
             // 
@@ -205,11 +270,10 @@
             this.label3.Location = new System.Drawing.Point(84, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(53, 16);
             this.label3.TabIndex = 2;
             this.label3.Tag = "RPText";
             this.label3.Text = "آگهی ها";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -218,10 +282,12 @@
             this.guna2Panel8.BorderColor = System.Drawing.Color.White;
             this.guna2Panel8.Controls.Add(this.guna2Panel6);
             this.guna2Panel8.Controls.Add(this.label4);
+            this.guna2Panel8.CustomizableEdges = customizableEdges11;
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel8.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.ShadowDecoration.CustomizableEdges = customizableEdges12;
             this.guna2Panel8.Size = new System.Drawing.Size(150, 88);
             this.guna2Panel8.TabIndex = 5;
             this.guna2Panel8.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
@@ -229,11 +295,12 @@
             // 
             // guna2Panel6
             // 
-            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel6.CustomizableEdges = customizableEdges9;
             this.guna2Panel6.Location = new System.Drawing.Point(6, 29);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.ShadowDecoration.CustomizableEdges = customizableEdges10;
             this.guna2Panel6.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel6.TabIndex = 3;
             this.guna2Panel6.Tag = "";
@@ -248,7 +315,7 @@
             this.label4.Location = new System.Drawing.Point(113, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 16);
+            this.label4.Size = new System.Drawing.Size(24, 16);
             this.label4.TabIndex = 2;
             this.label4.Tag = "RPText";
             this.label4.Text = "منو";
@@ -270,6 +337,7 @@
             this.SideBar2.Controls.Add(this.Menu_But);
             this.SideBar2.Controls.Add(this.guna2Panel10);
             this.SideBar2.Controls.Add(this.guna2Panel9);
+            this.SideBar2.CustomizableEdges = customizableEdges25;
             this.SideBar2.Dock = System.Windows.Forms.DockStyle.Right;
             this.SideBar2.Location = new System.Drawing.Point(604, 0);
             this.SideBar2.Margin = new System.Windows.Forms.Padding(2);
@@ -277,6 +345,7 @@
             this.SideBar2.MinimumSize = new System.Drawing.Size(55, 585);
             this.SideBar2.Name = "SideBar2";
             this.SideBar2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SideBar2.ShadowDecoration.CustomizableEdges = customizableEdges26;
             this.SideBar2.Size = new System.Drawing.Size(150, 585);
             this.SideBar2.TabIndex = 4;
             // 
@@ -312,18 +381,23 @@
             // 
             this.guna2Panel5.Controls.Add(this.guna2Panel7);
             this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.CustomizableEdges = customizableEdges7;
             this.guna2Panel5.Location = new System.Drawing.Point(1, 453);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges8;
             this.guna2Panel5.Size = new System.Drawing.Size(147, 132);
             this.guna2Panel5.TabIndex = 5;
+            this.guna2Panel5.Click += new System.EventHandler(this.guna2Panel5_Click);
             // 
             // guna2Panel7
             // 
             this.guna2Panel7.BackgroundImage = global::Renting_Car_Project.Properties.Resources.logout;
             this.guna2Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel7.CustomizableEdges = customizableEdges5;
             this.guna2Panel7.Location = new System.Drawing.Point(5, 35);
             this.guna2Panel7.Name = "guna2Panel7";
+            this.guna2Panel7.ShadowDecoration.CustomizableEdges = customizableEdges6;
             this.guna2Panel7.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel7.TabIndex = 4;
             // 
@@ -335,12 +409,11 @@
             this.label5.Location = new System.Drawing.Point(99, 45);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 16);
+            this.label5.Size = new System.Drawing.Size(37, 16);
             this.label5.TabIndex = 2;
             this.label5.Tag = "RPText";
             this.label5.Text = "خروج";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             this.label5.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label5.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -350,9 +423,11 @@
             this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Closebtn.CustomizableEdges = customizableEdges3;
             this.Closebtn.Location = new System.Drawing.Point(11, 11);
             this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Closebtn.Name = "Closebtn";
+            this.Closebtn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             this.Closebtn.Size = new System.Drawing.Size(37, 36);
             this.Closebtn.TabIndex = 3;
             this.Closebtn.Tag = "";
@@ -362,6 +437,7 @@
             // 
             this.guna2TextBox1.BorderRadius = 15;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.CustomizableEdges = customizableEdges1;
             this.guna2TextBox1.DefaultText = "جستجو در همه آگهی ها";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -378,6 +454,7 @@
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             this.guna2TextBox1.Size = new System.Drawing.Size(284, 36);
             this.guna2TextBox1.TabIndex = 1;
             this.guna2TextBox1.TabStop = false;
@@ -416,8 +493,10 @@
             this.guna2Panel3.Controls.Add(this.label8);
             this.guna2Panel3.Controls.Add(this.label7);
             this.guna2Panel3.Controls.Add(this.label6);
+            this.guna2Panel3.CustomizableEdges = customizableEdges51;
             this.guna2Panel3.Location = new System.Drawing.Point(47, 53);
             this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.CustomizableEdges = customizableEdges52;
             this.guna2Panel3.Size = new System.Drawing.Size(501, 545);
             this.guna2Panel3.TabIndex = 5;
             this.guna2Panel3.Visible = false;
@@ -427,6 +506,7 @@
             this.btnImage.Animated = true;
             this.btnImage.AnimatedGIF = true;
             this.btnImage.BorderRadius = 10;
+            this.btnImage.CustomizableEdges = customizableEdges27;
             this.btnImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -436,6 +516,7 @@
             this.btnImage.ForeColor = System.Drawing.Color.White;
             this.btnImage.Location = new System.Drawing.Point(266, 309);
             this.btnImage.Name = "btnImage";
+            this.btnImage.ShadowDecoration.CustomizableEdges = customizableEdges28;
             this.btnImage.Size = new System.Drawing.Size(116, 36);
             this.btnImage.TabIndex = 21;
             this.btnImage.Text = "انتخاب تصویر";
@@ -455,6 +536,7 @@
             // 
             this.txtPrice.BorderRadius = 10;
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrice.CustomizableEdges = customizableEdges29;
             this.txtPrice.DefaultText = "";
             this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -469,6 +551,7 @@
             this.txtPrice.PlaceholderText = "";
             this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPrice.SelectedText = "";
+            this.txtPrice.ShadowDecoration.CustomizableEdges = customizableEdges30;
             this.txtPrice.Size = new System.Drawing.Size(286, 36);
             this.txtPrice.TabIndex = 19;
             // 
@@ -516,6 +599,7 @@
             // 
             this.txtMileage.BorderRadius = 10;
             this.txtMileage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMileage.CustomizableEdges = customizableEdges31;
             this.txtMileage.DefaultText = "";
             this.txtMileage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMileage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -530,6 +614,7 @@
             this.txtMileage.PlaceholderText = "";
             this.txtMileage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMileage.SelectedText = "";
+            this.txtMileage.ShadowDecoration.CustomizableEdges = customizableEdges32;
             this.txtMileage.Size = new System.Drawing.Size(286, 36);
             this.txtMileage.TabIndex = 14;
             // 
@@ -537,6 +622,7 @@
             // 
             this.txtLocation.BorderRadius = 10;
             this.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLocation.CustomizableEdges = customizableEdges33;
             this.txtLocation.DefaultText = "";
             this.txtLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtLocation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -551,6 +637,7 @@
             this.txtLocation.PlaceholderText = "";
             this.txtLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtLocation.SelectedText = "";
+            this.txtLocation.ShadowDecoration.CustomizableEdges = customizableEdges34;
             this.txtLocation.Size = new System.Drawing.Size(286, 36);
             this.txtLocation.TabIndex = 13;
             // 
@@ -558,6 +645,7 @@
             // 
             this.txtImage.BorderRadius = 10;
             this.txtImage.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtImage.CustomizableEdges = customizableEdges35;
             this.txtImage.DefaultText = "";
             this.txtImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -571,6 +659,7 @@
             this.txtImage.PasswordChar = '\0';
             this.txtImage.PlaceholderText = "";
             this.txtImage.SelectedText = "";
+            this.txtImage.ShadowDecoration.CustomizableEdges = customizableEdges36;
             this.txtImage.Size = new System.Drawing.Size(164, 36);
             this.txtImage.TabIndex = 12;
             // 
@@ -578,6 +667,7 @@
             // 
             this.txtDescription.BorderRadius = 10;
             this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.CustomizableEdges = customizableEdges37;
             this.txtDescription.DefaultText = "";
             this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -592,6 +682,7 @@
             this.txtDescription.PlaceholderText = "";
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDescription.SelectedText = "";
+            this.txtDescription.ShadowDecoration.CustomizableEdges = customizableEdges38;
             this.txtDescription.Size = new System.Drawing.Size(286, 36);
             this.txtDescription.TabIndex = 11;
             // 
@@ -600,6 +691,7 @@
             this.btnRegistration.Animated = true;
             this.btnRegistration.AnimatedGIF = true;
             this.btnRegistration.BorderRadius = 20;
+            this.btnRegistration.CustomizableEdges = customizableEdges39;
             this.btnRegistration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -609,6 +701,7 @@
             this.btnRegistration.ForeColor = System.Drawing.Color.White;
             this.btnRegistration.Location = new System.Drawing.Point(158, 487);
             this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.ShadowDecoration.CustomizableEdges = customizableEdges40;
             this.btnRegistration.Size = new System.Drawing.Size(180, 45);
             this.btnRegistration.TabIndex = 10;
             this.btnRegistration.Text = "ثبت آگهی";
@@ -618,6 +711,7 @@
             // 
             this.txtStateofCar.BorderRadius = 10;
             this.txtStateofCar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtStateofCar.CustomizableEdges = customizableEdges41;
             this.txtStateofCar.DefaultText = "";
             this.txtStateofCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtStateofCar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -632,6 +726,7 @@
             this.txtStateofCar.PlaceholderText = "";
             this.txtStateofCar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtStateofCar.SelectedText = "";
+            this.txtStateofCar.ShadowDecoration.CustomizableEdges = customizableEdges42;
             this.txtStateofCar.Size = new System.Drawing.Size(286, 36);
             this.txtStateofCar.TabIndex = 9;
             // 
@@ -639,6 +734,7 @@
             // 
             this.txtColor.BorderRadius = 10;
             this.txtColor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtColor.CustomizableEdges = customizableEdges43;
             this.txtColor.DefaultText = "";
             this.txtColor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtColor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -653,6 +749,7 @@
             this.txtColor.PlaceholderText = "";
             this.txtColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtColor.SelectedText = "";
+            this.txtColor.ShadowDecoration.CustomizableEdges = customizableEdges44;
             this.txtColor.Size = new System.Drawing.Size(286, 36);
             this.txtColor.TabIndex = 8;
             // 
@@ -660,6 +757,7 @@
             // 
             this.txtModelYear.BorderRadius = 10;
             this.txtModelYear.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtModelYear.CustomizableEdges = customizableEdges45;
             this.txtModelYear.DefaultText = "";
             this.txtModelYear.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtModelYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -674,6 +772,7 @@
             this.txtModelYear.PlaceholderText = "";
             this.txtModelYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtModelYear.SelectedText = "";
+            this.txtModelYear.ShadowDecoration.CustomizableEdges = customizableEdges46;
             this.txtModelYear.Size = new System.Drawing.Size(286, 36);
             this.txtModelYear.TabIndex = 7;
             // 
@@ -681,6 +780,7 @@
             // 
             this.txtBrand.BorderRadius = 10;
             this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBrand.CustomizableEdges = customizableEdges47;
             this.txtBrand.DefaultText = "";
             this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtBrand.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -695,6 +795,7 @@
             this.txtBrand.PlaceholderText = "";
             this.txtBrand.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBrand.SelectedText = "";
+            this.txtBrand.ShadowDecoration.CustomizableEdges = customizableEdges48;
             this.txtBrand.Size = new System.Drawing.Size(286, 36);
             this.txtBrand.TabIndex = 6;
             // 
@@ -702,6 +803,7 @@
             // 
             this.txtCarName.BorderRadius = 10;
             this.txtCarName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCarName.CustomizableEdges = customizableEdges49;
             this.txtCarName.DefaultText = "";
             this.txtCarName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtCarName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
@@ -716,6 +818,7 @@
             this.txtCarName.PlaceholderText = "";
             this.txtCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCarName.SelectedText = "";
+            this.txtCarName.ShadowDecoration.CustomizableEdges = customizableEdges50;
             this.txtCarName.Size = new System.Drawing.Size(286, 36);
             this.txtCarName.TabIndex = 5;
             // 
@@ -815,7 +918,6 @@
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

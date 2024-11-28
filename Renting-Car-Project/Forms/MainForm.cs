@@ -77,16 +77,7 @@ namespace Renting_Car_Project
                 control.BackColor = Color.FromArgb(35, 40, 45);
             }
         }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            TokenManager.DeleteToken();
-            this.Hide();
-            LoginForm loginForm = new LoginForm();
-            this.Close();
-            loginForm.Show();
-        }
-
+        
 
         private void Closebtn_Click_1(object sender, EventArgs e)
         {
@@ -97,16 +88,7 @@ namespace Renting_Car_Project
         {
       
         }
-
-       
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Visible = false;
-            guna2Panel3.Visible = true;
-        }
+        
 
         private void btnRegistration_Click(object sender, EventArgs e)
         {
@@ -153,52 +135,6 @@ namespace Renting_Car_Project
                 catch (Exception ex)
                 {
                     MessageBox.Show("خطا: " + ex.Message);
-                }
-            }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Visible = true;
-            guna2Panel3.Visible = false;
-
-
-            //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
-            //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
-
-            // اتصال به پایگاه داده
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
-                SqlCommand command = new SqlCommand(query, connection);
-                SqlDataReader reader = command.ExecuteReader();
-
-                //پاک کردن محتوای قبلی FlowLayoutPanel
-                flowLayoutPanel1.Controls.Clear();
-
-                while (reader.Read())
-                {
-                    // خواندن داده‌ها از پایگاه داده
-                    string carName = reader["Cars_Name"].ToString();
-                    string carColor = reader["Color"].ToString();
-                    string carModel = reader["YearOfProduction"].ToString();
-                    // تبدیل قیمت به نوع int
-                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
-                    byte[] carImage = reader["Image"] as byte[];
-
-                    string Location = reader["Location"].ToString();
-                 
-                  
-
-                    // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
-                    UserControl1 carControl = new UserControl1();
-                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
-
-                    // افزودن UserControl به FlowLayoutPanel
-                    flowLayoutPanel1.Controls.Add(carControl); // افزودن UserControl جدید به FlowLayoutPanel
                 }
             }
         }
@@ -345,6 +281,67 @@ namespace Renting_Car_Project
         private void guna2TextBox1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void Menu_But_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+            guna2Panel3.Visible = false;
+
+
+            //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
+            //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
+
+            // اتصال به پایگاه داده
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                //پاک کردن محتوای قبلی FlowLayoutPanel
+                flowLayoutPanel1.Controls.Clear();
+
+                while (reader.Read())
+                {
+                    // خواندن داده‌ها از پایگاه داده
+                    string carName = reader["Cars_Name"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    // تبدیل قیمت به نوع int
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+
+                    string Location = reader["Location"].ToString();
+                 
+                  
+
+                    // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+
+                    // افزودن UserControl به FlowLayoutPanel
+                    flowLayoutPanel1.Controls.Add(carControl); // افزودن UserControl جدید به FlowLayoutPanel
+                }
+            }
+        }
+
+        private void guna2Panel9_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            guna2Panel3.Visible = true;
+        }
+
+        private void guna2Panel5_Click(object sender, EventArgs e)
+        {
+            TokenManager.DeleteToken();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            this.Close();
+            loginForm.Show();
         }
     }
 }
