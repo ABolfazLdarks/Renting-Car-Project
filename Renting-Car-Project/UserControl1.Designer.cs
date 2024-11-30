@@ -66,7 +66,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(485, 216);
             this.guna2Panel1.TabIndex = 5;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // lblLocation
             // 
@@ -115,7 +114,6 @@
             this.lblCarColor.TabIndex = 8;
             this.lblCarColor.Text = "label2";
             this.lblCarColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCarColor.Click += new System.EventHandler(this.lblCarColor_Click);
             // 
             // lblCarName
             // 
@@ -128,7 +126,6 @@
             this.lblCarName.TabIndex = 7;
             this.lblCarName.Text = "label1";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCarName.Click += new System.EventHandler(this.lblCarName_Click);
             // 
             // guna2PictureBox1
             // 
@@ -142,7 +139,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
             // UserControl1
             // 

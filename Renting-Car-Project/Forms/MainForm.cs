@@ -93,13 +93,6 @@ namespace Renting_Car_Project
             Application.Exit();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-      
-        }
-
-       
-
 
 
         private void label1_Click(object sender, EventArgs e)
@@ -231,11 +224,6 @@ namespace Renting_Car_Project
 
             }
         }
-
-        private void guna2VScrollBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -309,12 +297,6 @@ namespace Renting_Car_Project
 
         }
 
-        private void guna2TextBox1_MouseEnter(object sender, EventArgs e)
-        {
-           
-
-        }
-
         private void guna2TextBox1_Leave(object sender, EventArgs e)
         {
 
@@ -335,17 +317,6 @@ namespace Renting_Car_Project
             
         }
 
-        private void guna2TextBox1_MouseLeave(object sender, EventArgs e)
-        {
-
-            
-          
-        }
-
-        private void guna2TextBox1_Load(object sender, EventArgs e)
-        {
-            
-        }
     }
 }
 

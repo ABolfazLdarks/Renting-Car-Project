@@ -16,7 +16,7 @@ namespace Renting_Car_Project
         public UserControl1()
         {
             InitializeComponent();
-          
+            FontManager.ApplyCustomFont(this.Controls);
         }
 
 
@@ -70,26 +70,6 @@ namespace Renting_Car_Project
 
 
         }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCarColor_Click(object sender, EventArgs e)
-        {
-
-        }
         //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
         //{
         //    lblCarName.Text = carName;  // نام خودرو را در لیبل نمایش می‌دهیم
@@ -98,9 +78,5 @@ namespace Renting_Car_Project
         //    lblCarPrice
         //}
 
-        private void lblCarName_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
