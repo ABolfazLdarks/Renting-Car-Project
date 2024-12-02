@@ -349,6 +349,10 @@ namespace Renting_Car_Project
             guna2Panel3.Visible = true;
         }
 
+        private void guna2Panel3_SizeChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

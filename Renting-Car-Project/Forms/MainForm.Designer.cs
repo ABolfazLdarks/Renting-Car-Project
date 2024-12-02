@@ -428,9 +428,10 @@
             this.guna2Panel3.Location = new System.Drawing.Point(63, 65);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(668, 671);
+            this.guna2Panel3.Size = new System.Drawing.Size(637, 645);
             this.guna2Panel3.TabIndex = 5;
             this.guna2Panel3.Visible = false;
+            this.guna2Panel3.SizeChanged += new System.EventHandler(this.guna2Panel3_SizeChanged);
             // 
             // btnImage
             // 
@@ -444,7 +445,7 @@
             this.btnImage.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnImage.ForeColor = System.Drawing.Color.White;
-            this.btnImage.Location = new System.Drawing.Point(355, 380);
+            this.btnImage.Location = new System.Drawing.Point(303, 348);
             this.btnImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(155, 44);
@@ -455,7 +456,7 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(568, 484);
+            this.label15.Location = new System.Drawing.Point(516, 452);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 28);
@@ -475,7 +476,7 @@
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(131, 535);
+            this.txtPrice.Location = new System.Drawing.Point(79, 503);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -488,7 +489,7 @@
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(568, 432);
+            this.label14.Location = new System.Drawing.Point(516, 400);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 28);
@@ -499,7 +500,7 @@
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(568, 380);
+            this.label13.Location = new System.Drawing.Point(516, 348);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 28);
@@ -510,7 +511,7 @@
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(517, 329);
+            this.label12.Location = new System.Drawing.Point(465, 297);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(141, 28);
@@ -521,7 +522,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(519, 277);
+            this.label11.Location = new System.Drawing.Point(467, 245);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(140, 28);
@@ -541,7 +542,7 @@
             this.txtMileage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMileage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMileage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMileage.Location = new System.Drawing.Point(131, 484);
+            this.txtMileage.Location = new System.Drawing.Point(79, 452);
             this.txtMileage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMileage.Name = "txtMileage";
             this.txtMileage.PasswordChar = '\0';
@@ -563,7 +564,7 @@
             this.txtLocation.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtLocation.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtLocation.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLocation.Location = new System.Drawing.Point(131, 432);
+            this.txtLocation.Location = new System.Drawing.Point(79, 400);
             this.txtLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
@@ -585,7 +586,7 @@
             this.txtImage.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtImage.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtImage.Location = new System.Drawing.Point(131, 380);
+            this.txtImage.Location = new System.Drawing.Point(79, 348);
             this.txtImage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtImage.Name = "txtImage";
             this.txtImage.PasswordChar = '\0';
@@ -606,7 +607,7 @@
             this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescription.Location = new System.Drawing.Point(128, 329);
+            this.txtDescription.Location = new System.Drawing.Point(76, 297);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
@@ -620,6 +621,7 @@
             // 
             this.btnRegistration.Animated = true;
             this.btnRegistration.AnimatedGIF = true;
+            this.btnRegistration.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistration.BorderRadius = 20;
             this.btnRegistration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -628,7 +630,7 @@
             this.btnRegistration.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRegistration.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnRegistration.Location = new System.Drawing.Point(211, 599);
+            this.btnRegistration.Location = new System.Drawing.Point(159, 567);
             this.btnRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(240, 55);
@@ -648,7 +650,7 @@
             this.txtStateofCar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtStateofCar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtStateofCar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtStateofCar.Location = new System.Drawing.Point(128, 277);
+            this.txtStateofCar.Location = new System.Drawing.Point(76, 245);
             this.txtStateofCar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStateofCar.Name = "txtStateofCar";
             this.txtStateofCar.PasswordChar = '\0';
@@ -670,7 +672,7 @@
             this.txtColor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtColor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtColor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtColor.Location = new System.Drawing.Point(128, 225);
+            this.txtColor.Location = new System.Drawing.Point(76, 193);
             this.txtColor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtColor.Name = "txtColor";
             this.txtColor.PasswordChar = '\0';
@@ -692,7 +694,7 @@
             this.txtModelYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtModelYear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtModelYear.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtModelYear.Location = new System.Drawing.Point(128, 174);
+            this.txtModelYear.Location = new System.Drawing.Point(76, 142);
             this.txtModelYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtModelYear.Name = "txtModelYear";
             this.txtModelYear.PasswordChar = '\0';
@@ -714,7 +716,7 @@
             this.txtBrand.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBrand.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBrand.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBrand.Location = new System.Drawing.Point(128, 122);
+            this.txtBrand.Location = new System.Drawing.Point(76, 90);
             this.txtBrand.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBrand.Name = "txtBrand";
             this.txtBrand.PasswordChar = '\0';
@@ -736,7 +738,7 @@
             this.txtCarName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCarName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCarName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCarName.Location = new System.Drawing.Point(128, 70);
+            this.txtCarName.Location = new System.Drawing.Point(76, 38);
             this.txtCarName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtCarName.Name = "txtCarName";
             this.txtCarName.PasswordChar = '\0';
@@ -749,7 +751,7 @@
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(568, 535);
+            this.label10.Location = new System.Drawing.Point(516, 503);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(91, 28);
@@ -760,7 +762,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(573, 225);
+            this.label9.Location = new System.Drawing.Point(521, 193);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 28);
@@ -771,7 +773,7 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(568, 174);
+            this.label8.Location = new System.Drawing.Point(516, 142);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 28);
@@ -782,7 +784,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(568, 122);
+            this.label7.Location = new System.Drawing.Point(516, 90);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 28);
@@ -793,7 +795,7 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(568, 70);
+            this.label6.Location = new System.Drawing.Point(516, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 28);
@@ -808,6 +810,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
@@ -827,6 +830,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1005, 742);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
