@@ -621,7 +621,6 @@
             // 
             this.btnRegistration.Animated = true;
             this.btnRegistration.AnimatedGIF = true;
-            this.btnRegistration.BackColor = System.Drawing.Color.Transparent;
             this.btnRegistration.BorderRadius = 20;
             this.btnRegistration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -630,7 +629,7 @@
             this.btnRegistration.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnRegistration.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnRegistration.Location = new System.Drawing.Point(159, 567);
+            this.btnRegistration.Location = new System.Drawing.Point(218, 576);
             this.btnRegistration.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(240, 55);
@@ -810,7 +809,6 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
@@ -830,7 +828,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1005, 742);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
