@@ -18,6 +18,7 @@ namespace Renting_Car_Project
 
 
         private Timer hoverTimer;
+        bool sideBar_Expand = true;
         private Control currentHoverControl;
         private int colorStep = 5;
         private int currentColorValue = 40;
@@ -94,13 +95,6 @@ namespace Renting_Car_Project
         }
 
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Visible = false;
-            guna2Panel3.Visible = true;
-        }
-
         private void btnRegistration_Click(object sender, EventArgs e)
         {
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
@@ -150,51 +144,7 @@ namespace Renting_Car_Project
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            flowLayoutPanel1.Visible = true;
-            guna2Panel3.Visible = false;
 
-
-            //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
-            //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
-
-            // اتصال به پایگاه داده
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
-                SqlCommand command = new SqlCommand(query, connection);
-                SqlDataReader reader = command.ExecuteReader();
-
-                //پاک کردن محتوای قبلی FlowLayoutPanel
-                flowLayoutPanel1.Controls.Clear();
-
-                while (reader.Read())
-                {
-                    // خواندن داده‌ها از پایگاه داده
-                    string carName = reader["Cars_Name"].ToString();
-                    string carColor = reader["Color"].ToString();
-                    string carModel = reader["YearOfProduction"].ToString();
-                    // تبدیل قیمت به نوع int
-                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
-                    byte[] carImage = reader["Image"] as byte[];
-
-                    string Location = reader["Location"].ToString();
-                 
-                  
-
-                    // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
-                    UserControl1 carControl = new UserControl1();
-                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
-
-                    // افزودن UserControl به FlowLayoutPanel
-                    flowLayoutPanel1.Controls.Add(carControl); // افزودن UserControl جدید به FlowLayoutPanel
-                }
-            }
-        }
 
         private void btnImage_Click(object sender, EventArgs e)
         {
@@ -315,6 +265,88 @@ namespace Renting_Car_Project
                 guna2TextBox1.ForeColor = Color.Gray;
                 guna2TextBox1.ReadOnly = false;
             
+        }
+
+
+
+        private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
+        {
+            if (sideBar_Expand)
+            {
+                SideBar2.Width -= 10;
+                if (SideBar2.Width == SideBar2.MinimumSize.Width)
+                {
+                    sideBar_Expand = false;
+                    Timer_Sidebar_Menu.Stop();
+                }
+            }
+            else
+            {
+                SideBar2.Width += 10;
+                if (SideBar2.Width == SideBar2.MaximumSize.Width)
+                {
+                    sideBar_Expand = true;
+                    Timer_Sidebar_Menu.Stop();
+                }
+            }
+        }
+
+        private void guna2Panel8_Click(object sender, EventArgs e)
+        {
+            Timer_Sidebar_Menu.Start();
+
+        }
+
+        private void Menu_But_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = true;
+            guna2Panel3.Visible = false;
+
+
+            //تنظیم مقدار Maximum براساس محتوای FlowLayoutPanel
+            //guna2VScrollBar1.Maximum = Math.Max(0, flowLayoutPanel1.DisplayRectangle.Height - flowLayoutPanel1.ClientSize.Height);
+
+            // اتصال به پایگاه داده
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataReader reader = command.ExecuteReader();
+
+                //پاک کردن محتوای قبلی FlowLayoutPanel
+                flowLayoutPanel1.Controls.Clear();
+
+                while (reader.Read())
+                {
+                    // خواندن داده‌ها از پایگاه داده
+                    string carName = reader["Cars_Name"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    // تبدیل قیمت به نوع int
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+
+                    string Location = reader["Location"].ToString();
+
+
+
+                    // ایجاد یک نمونه از UserControl و تنظیم داده‌ها
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+
+                    // افزودن UserControl به FlowLayoutPanel
+                    flowLayoutPanel1.Controls.Add(carControl); // افزودن UserControl جدید به FlowLayoutPanel
+                }
+            }
+        }
+
+        private void guna2Panel2_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            guna2Panel3.Visible = true;
         }
 
     }

@@ -70,6 +70,8 @@ namespace Renting_Car_Project
 
 
         }
+
+
         //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
         //{
         //    lblCarName.Text = carName;  // نام خودرو را در لیبل نمایش می‌دهیم

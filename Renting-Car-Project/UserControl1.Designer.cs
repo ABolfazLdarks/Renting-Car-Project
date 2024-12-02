@@ -43,7 +43,8 @@
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(399, 1);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(532, 1);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(3, 2);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -62,19 +63,21 @@
             this.guna2Panel1.Controls.Add(this.lblCarName);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Location = new System.Drawing.Point(16, 18);
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 22);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(485, 216);
+            this.guna2Panel1.Size = new System.Drawing.Size(647, 266);
             this.guna2Panel1.TabIndex = 5;
             // 
             // lblLocation
             // 
             this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.Color.Gray;
-            this.lblLocation.Location = new System.Drawing.Point(263, 163);
+            this.lblLocation.Location = new System.Drawing.Point(351, 201);
+            this.lblLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblLocation.Size = new System.Drawing.Size(217, 35);
+            this.lblLocation.Size = new System.Drawing.Size(289, 43);
             this.lblLocation.TabIndex = 11;
             this.lblLocation.Text = "label3";
             this.lblLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,10 +86,11 @@
             // 
             this.lblCarPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarPrice.Location = new System.Drawing.Point(265, 128);
+            this.lblCarPrice.Location = new System.Drawing.Point(353, 158);
+            this.lblCarPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCarPrice.Name = "lblCarPrice";
             this.lblCarPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarPrice.Size = new System.Drawing.Size(217, 35);
+            this.lblCarPrice.Size = new System.Drawing.Size(289, 43);
             this.lblCarPrice.TabIndex = 10;
             this.lblCarPrice.Text = "label3";
             this.lblCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,10 +99,11 @@
             // 
             this.lblCarModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarModel.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarModel.Location = new System.Drawing.Point(265, 58);
+            this.lblCarModel.Location = new System.Drawing.Point(353, 71);
+            this.lblCarModel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCarModel.Name = "lblCarModel";
             this.lblCarModel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarModel.Size = new System.Drawing.Size(217, 35);
+            this.lblCarModel.Size = new System.Drawing.Size(289, 43);
             this.lblCarModel.TabIndex = 9;
             this.lblCarModel.Text = "label3";
             this.lblCarModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,10 +112,11 @@
             // 
             this.lblCarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarColor.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarColor.Location = new System.Drawing.Point(265, 93);
+            this.lblCarColor.Location = new System.Drawing.Point(353, 114);
+            this.lblCarColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCarColor.Name = "lblCarColor";
             this.lblCarColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarColor.Size = new System.Drawing.Size(217, 35);
+            this.lblCarColor.Size = new System.Drawing.Size(289, 43);
             this.lblCarColor.TabIndex = 8;
             this.lblCarColor.Text = "label2";
             this.lblCarColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -119,10 +125,11 @@
             // 
             this.lblCarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarName.ForeColor = System.Drawing.Color.Black;
-            this.lblCarName.Location = new System.Drawing.Point(265, 23);
+            this.lblCarName.Location = new System.Drawing.Point(353, 28);
+            this.lblCarName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCarName.Name = "lblCarName";
             this.lblCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarName.Size = new System.Drawing.Size(217, 35);
+            this.lblCarName.Size = new System.Drawing.Size(289, 43);
             this.lblCarName.TabIndex = 7;
             this.lblCarName.Text = "label1";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,20 +140,22 @@
             this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2PictureBox1.BorderRadius = 10;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 6);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(21, 7);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(243, 200);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(324, 246);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
             // 
             // UserControl1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(504, 237);
+            this.Size = new System.Drawing.Size(672, 292);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
