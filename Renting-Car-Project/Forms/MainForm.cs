@@ -243,7 +243,7 @@ namespace Renting_Car_Project
             {
                 connection.Open();
 
-                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars";
+                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars WHERE ViewState = 1";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
