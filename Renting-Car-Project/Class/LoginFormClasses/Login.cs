@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 public class LoginRepository
 {
-    public bool LoginUser(string userName, string password)
+    public int LoginUser(string userName, string password)
     {
         using (SqlConnection connection = new SqlConnection(DatabaseConfig.ConnectionString))
         {
-            string query = "SELECT COUNT(1) FROM Users WHERE UserName = @UserName AND Password = @Password"; // کامند sql جهت بررسی ورود کاربر
+            string query = "SELECT UserId FROM Users WHERE UserName = @UserName AND Password = @Password"; // بازگشت UserId
             using (SqlCommand command = new SqlCommand(query, connection))
             {
                 command.Parameters.AddWithValue("@UserName", userName);
@@ -18,29 +18,26 @@ public class LoginRepository
                 try
                 {
                     connection.Open();
-                    int count = (int)command.ExecuteScalar();
+                    object result = command.ExecuteScalar();
 
-                    if (count == 1)
+                    if (result != null && int.TryParse(result.ToString(), out int userId))
                     {
-                         string token = Guid.NewGuid().ToString(); 
-                        TokenManager.SaveToken(token); 
-                        return true; 
+                        return userId;
                     }
+
                     else
                     {
-                        MessageBox.Show(" !نام کاربری یا رمز عبور اشتباه است", "خطا در ورود");
-                        
-                        return false;
-                        
+                        MessageBox.Show("نام کاربری یا رمز عبور اشتباه است!", "خطا در ورود");
+                        return -1;
                     }
-        
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show($"خطا در ورود: {ex.Message}", "مشکلی رخ داد");
-                    return false;
+                    return -1; 
                 }
             }
         }
     }
+
 }

@@ -128,7 +128,7 @@
             // guna2Separator2
             // 
             this.guna2Separator2.Location = new System.Drawing.Point(-67, 399);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator2.Name = "guna2Separator2";
             this.guna2Separator2.Size = new System.Drawing.Size(267, 12);
             this.guna2Separator2.TabIndex = 13;
@@ -136,7 +136,7 @@
             // guna2Separator1
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(-67, 194);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(267, 12);
             this.guna2Separator1.TabIndex = 12;
@@ -304,7 +304,7 @@
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CheckBox1.Location = new System.Drawing.Point(69, 233);
-            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
             this.guna2CheckBox1.Size = new System.Drawing.Size(420, 50);
             this.guna2CheckBox1.TabIndex = 13;
@@ -373,7 +373,7 @@
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(245, 299);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(201, 78);
             this.btnSignUp.TabIndex = 5;
@@ -541,7 +541,7 @@
             this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CheckBox2.Location = new System.Drawing.Point(69, 203);
-            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
             this.guna2CheckBox2.Size = new System.Drawing.Size(420, 50);
             this.guna2CheckBox2.TabIndex = 3;
@@ -587,7 +587,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(249, 299);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(197, 78);
             this.btnLogin.TabIndex = 4;
