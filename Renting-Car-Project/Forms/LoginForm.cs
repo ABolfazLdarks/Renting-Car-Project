@@ -1,14 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Renting_Car_Project.Forms
 {
@@ -20,6 +13,7 @@ namespace Renting_Car_Project.Forms
         private int colorStep = 5;
         private int currentColorValue = 40;
         private LoginRepository loginRepository;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -28,24 +22,24 @@ namespace Renting_Car_Project.Forms
             hoverTimer.Interval = 30;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
-            CheckSavedToken();
+            CheckSavedUserId();  
         }
 
-
-        private void CheckSavedToken()
+        private void CheckSavedUserId()
         {
-            string token = TokenManager.LoadToken();
-            if (!string.IsNullOrEmpty(token))
+            var userSession = UserSession.LoadUserSession(); 
+
+            if (userSession != null && userSession.IsLoggedIn) 
             {
-                MainForm form = new MainForm();
+                MainForm form = new MainForm(userSession.UserId); 
                 form.Show();
                 this.Hide();
             }
         }
 
+
         private void LoginForm_Load(object sender, EventArgs e)
         {
-       
             guna2Panel7.Visible = true;
         }
 
@@ -70,10 +64,10 @@ namespace Renting_Car_Project.Forms
                 }
             }
         }
+
         private void Menu_Button_Click(object sender, EventArgs e)
         {
             Timer_Sidebar_Menu.Start();
-
         }
 
         private void guna2Panel4_MouseEnter(object sender, EventArgs e)
@@ -113,24 +107,23 @@ namespace Renting_Car_Project.Forms
         {
             Application.Exit();
         }
+
         private void label2_Click(object sender, EventArgs e)
         {
             guna2Panel5.Visible = true;
             guna2Panel7.Visible = false;
-
         }
-       
+
         private void guna2TextBox2_TextChanged(object sender, EventArgs e)
         {
             txtPassSignUp.PasswordChar = '*';
-
         }
 
         private void guna2TextBox3_TextChanged(object sender, EventArgs e)
         {
-
             txtRPTpass.PasswordChar = '*';
         }
+
         private void guna2TextBox5_TextChanged(object sender, EventArgs e)
         {
             txtPassLog.PasswordChar = '*';
@@ -141,21 +134,17 @@ namespace Renting_Car_Project.Forms
             if (guna2CheckBox2.Checked == true)
             {
                 txtPassLog.PasswordChar = '\0';
-
             }
             else
             {
                 txtPassLog.PasswordChar = '*';
-
             }
         }
-
 
         private void label1_Click(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
             guna2Panel5.Visible = false;
-
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -182,14 +171,14 @@ namespace Renting_Car_Project.Forms
                 string userName = txtUserSignUp.Text;
                 string password = txtPassSignUp.Text;
                 UserRepository userRepository = new UserRepository();
-                userRepository.RegisterUser(userName, password); // ارسال نام کاربری و رمز عبور به RegisterUser برای ثبت اطلاعات
+                userRepository.RegisterUser(userName, password); 
                 txtUserSignUp.Text = txtPassSignUp.Text = txtRPTpass.Text = string.Empty;
 
                 guna2Panel7.Visible = true;
                 guna2Panel5.Visible = false;
-
             }
         }
+
         private bool IsNullOrWhiteSpace(string input)
         {
             return string.IsNullOrWhiteSpace(input);
@@ -197,25 +186,38 @@ namespace Renting_Car_Project.Forms
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string userName = txtUserLog.Text; string password = txtPassLog.Text;
-            if (IsNullOrWhiteSpace(userName) || IsNullOrWhiteSpace(password))
+            string userName = txtUserLog.Text;
+            string password = txtPassLog.Text;
+            int userId = loginRepository.LoginUser(userName, password); 
+
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
             {
-                lblFillFields.Visible = true; txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red;
-             }
+                lblFillFields.Visible = true;
+                txtUserLog.BorderColor = txtPassLog.BorderColor = Color.Red;
+            }
             else
             {
-                lblFillFields.Visible = false; txtUserLog.BorderColor = txtPassLog.BorderColor = txtUserLog.BorderColor = Color.FromArgb(213, 218, 223);
-                bool loginSuccess = loginRepository.LoginUser(userName, password);
-                if (loginSuccess)
+                lblFillFields.Visible = false;
+                txtUserLog.BorderColor = txtPassLog.BorderColor = Color.FromArgb(213, 218, 223);
+
+                if (userId != -1) 
                 {
-                    MainForm form = new MainForm();
+                    bool isLoggedIn = true; 
+                    UserSession.SaveUserSession(userId, isLoggedIn); 
+                    MainForm form = new MainForm(userId);
                     form.Show();
                     this.Hide();
+                }
+                else
+                {
+                    lblFillFields.Visible = true;
+                    lblFillFields.Text = "نام کاربری یا رمز عبور اشتباه است.";
                 }
             }
         }
 
-       private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
+
+        private void guna2CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (guna2CheckBox1.Checked == true)
             {
@@ -231,7 +233,6 @@ namespace Renting_Car_Project.Forms
 
         private void lblFillField_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

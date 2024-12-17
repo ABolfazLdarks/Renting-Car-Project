@@ -1,32 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
-using Renting_Car_Project.Forms;
-using System.Drawing.Text;
-using System.IO;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace Renting_Car_Project.Forms
 {
     public partial class StartupForm : Form
     {
-        // تایمر برای تأخیر 2 ثانیه
         private Timer timer;
 
         public StartupForm()
         {
             InitializeComponent();
 
-            // تنظیمات تایمر
             timer = new Timer();
-            timer.Interval = 2000; // 2 ثانیه
+            timer.Interval = 2000;
             timer.Tick += Timer_Tick;
             timer.Start();
 
@@ -35,39 +21,39 @@ namespace Renting_Car_Project.Forms
 
         private void CheckSavedToken()
         {
-            string token = TokenManager.LoadToken();
-            if (!string.IsNullOrEmpty(token))
+            var userSession = UserSession.LoadUserSession();
+
+            if (userSession != null && userSession.IsLoggedIn)
             {
-                MainForm form = new MainForm();
+                MainForm form = new MainForm(userSession.UserId);
                 form.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("اطلاعات کاربری یافت نشد، لطفاً وارد شوید.", "خطا");
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
                 this.Hide();
             }
         }
 
-
-        // وقتی تایمر تمام شود، به فرم بعدی بروید
         private void Timer_Tick(object sender, EventArgs e)
         {
-            timer.Stop();  // تایمر را متوقف می‌کنیم
+            timer.Stop();
 
-            // فرم بعدی را باز می‌کنیم
-            string token = TokenManager.LoadToken();
-            if (!string.IsNullOrEmpty(token))
+            var userSession = UserSession.LoadUserSession();
+
+            if (userSession != null && userSession.IsLoggedIn)
             {
                 CheckSavedToken();
-
             }
             else
             {
-            LoginForm form2 = new LoginForm();  // فرم بعدی شما
-            form2.Show();
-
-
-            // فرم فعلی را می‌بندیم
-            this.Hide();
-
+                LoginForm form2 = new LoginForm();
+                form2.Show();
+                this.Hide();
             }
-
         }
     }
 }
