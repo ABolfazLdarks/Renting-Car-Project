@@ -49,7 +49,7 @@
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -76,6 +76,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.PanleAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Separator10 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator8 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator9 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator6 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator5 = new Guna.UI2.WinForms.Guna2Separator();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
@@ -86,6 +97,7 @@
             this.SideBar2.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.PanleAccount.SuspendLayout();
             this.SuspendLayout();
             // 
             // BorderlessFormMain
@@ -102,12 +114,13 @@
             // 
             this.guna2Panel9.Controls.Add(this.guna2Panel2);
             this.guna2Panel9.Controls.Add(this.label1);
-            this.guna2Panel9.Location = new System.Drawing.Point(0, 226);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel9.Location = new System.Drawing.Point(0, 228);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(131, 81);
+            this.guna2Panel9.Size = new System.Drawing.Size(131, 79);
             this.guna2Panel9.TabIndex = 0;
             this.guna2Panel9.Click += new System.EventHandler(this.guna2Panel2_Click);
+            this.guna2Panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel9_Paint);
             this.guna2Panel9.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel9.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -120,6 +133,7 @@
             this.guna2Panel2.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.Click += new System.EventHandler(this.guna2Panel2_Click);
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             this.guna2Panel2.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel2.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -144,10 +158,12 @@
             this.guna2Panel10.Controls.Add(this.guna2Panel4);
             this.guna2Panel10.Controls.Add(this.label2);
             this.guna2Panel10.Location = new System.Drawing.Point(0, 340);
-            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(131, 81);
             this.guna2Panel10.TabIndex = 3;
+            this.guna2Panel10.Click += new System.EventHandler(this.guna2Panel10_Click);
+            this.guna2Panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel10_Paint);
             this.guna2Panel10.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel10.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -159,22 +175,25 @@
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel4.TabIndex = 4;
+            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
+            this.guna2Panel4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.guna2Panel4_MouseClick);
+            this.guna2Panel4.MouseCaptureChanged += new System.EventHandler(this.guna2Panel4_MouseCaptureChanged);
             this.guna2Panel4.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel4.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(56, 26);
+            this.label2.Location = new System.Drawing.Point(48, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 32);
+            this.label2.Size = new System.Drawing.Size(74, 50);
             this.label2.TabIndex = 2;
             this.label2.Tag = "RPText";
-            this.label2.Text = "خودروچی\r\n من";
+            this.label2.Text = "خودروچی من";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label2.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -184,7 +203,7 @@
             this.Menu_But.Controls.Add(this.guna2Panel1);
             this.Menu_But.Controls.Add(this.label3);
             this.Menu_But.Location = new System.Drawing.Point(0, 115);
-            this.Menu_But.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Menu_But.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_But.Name = "Menu_But";
             this.Menu_But.Size = new System.Drawing.Size(131, 81);
             this.Menu_But.TabIndex = 3;
@@ -225,7 +244,7 @@
             this.guna2Panel8.Controls.Add(this.label4);
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel8.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(131, 88);
             this.guna2Panel8.TabIndex = 5;
@@ -238,13 +257,12 @@
             this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Panel6.Location = new System.Drawing.Point(6, 29);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel6.TabIndex = 3;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.guna2Panel8_Click);
-            this.guna2Panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel6_Paint);
             this.guna2Panel6.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.guna2Panel6.MouseHover += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
@@ -281,7 +299,7 @@
             this.SideBar2.Controls.Add(this.guna2Panel9);
             this.SideBar2.Dock = System.Windows.Forms.DockStyle.Right;
             this.SideBar2.Location = new System.Drawing.Point(623, 0);
-            this.SideBar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SideBar2.Margin = new System.Windows.Forms.Padding(2);
             this.SideBar2.MaximumSize = new System.Drawing.Size(131, 598);
             this.SideBar2.MinimumSize = new System.Drawing.Size(49, 605);
             this.SideBar2.Name = "SideBar2";
@@ -319,22 +337,25 @@
             // 
             // guna2Panel5
             // 
-            this.guna2Panel5.Controls.Add(this.guna2Panel7);
+            this.guna2Panel5.Controls.Add(this.guna2Panel13);
             this.guna2Panel5.Controls.Add(this.label5);
             this.guna2Panel5.Location = new System.Drawing.Point(1, 453);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(130, 131);
             this.guna2Panel5.TabIndex = 5;
             // 
-            // guna2Panel7
+            // guna2Panel13
             // 
-            this.guna2Panel7.BackgroundImage = global::Renting_Car_Project.Properties.Resources.logout;
-            this.guna2Panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel7.Location = new System.Drawing.Point(5, 35);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel7.TabIndex = 4;
+            this.guna2Panel13.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
+            this.guna2Panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel13.Location = new System.Drawing.Point(5, 31);
+            this.guna2Panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel13.Name = "guna2Panel13";
+            this.guna2Panel13.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel13.TabIndex = 5;
+            this.guna2Panel13.Tag = "RPText";
+            this.guna2Panel13.Click += new System.EventHandler(this.guna2Panel13_Click);
             // 
             // label5
             // 
@@ -360,7 +381,7 @@
             this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Closebtn.Location = new System.Drawing.Point(11, 11);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Closebtn.Name = "Closebtn";
             this.Closebtn.Size = new System.Drawing.Size(37, 36);
             this.Closebtn.TabIndex = 3;
@@ -428,7 +449,6 @@
             this.guna2Panel3.Size = new System.Drawing.Size(478, 524);
             this.guna2Panel3.TabIndex = 5;
             this.guna2Panel3.Visible = false;
-            this.guna2Panel3.SizeChanged += new System.EventHandler(this.guna2Panel3_SizeChanged);
             // 
             // btnImage
             // 
@@ -787,6 +807,110 @@
             this.label6.Text = ":نام خودرو";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // PanleAccount
+            // 
+            this.PanleAccount.BorderColor = System.Drawing.Color.Black;
+            this.PanleAccount.BorderRadius = 20;
+            this.PanleAccount.BorderThickness = 2;
+            this.PanleAccount.Controls.Add(this.guna2Panel12);
+            this.PanleAccount.Controls.Add(this.guna2Panel11);
+            this.PanleAccount.Controls.Add(this.guna2Separator10);
+            this.PanleAccount.Controls.Add(this.guna2Separator8);
+            this.PanleAccount.Controls.Add(this.guna2Separator9);
+            this.PanleAccount.Controls.Add(this.guna2Separator6);
+            this.PanleAccount.Controls.Add(this.guna2Separator5);
+            this.PanleAccount.Controls.Add(this.label18);
+            this.PanleAccount.Controls.Add(this.label17);
+            this.PanleAccount.Controls.Add(this.label16);
+            this.PanleAccount.Location = new System.Drawing.Point(104, 181);
+            this.PanleAccount.Name = "PanleAccount";
+            this.PanleAccount.Size = new System.Drawing.Size(387, 227);
+            this.PanleAccount.TabIndex = 0;
+            this.PanleAccount.Visible = false;
+            // 
+            // guna2Panel12
+            // 
+            this.guna2Panel12.BackgroundImage = global::Renting_Car_Project.Properties.Resources.icon;
+            this.guna2Panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel12.Location = new System.Drawing.Point(344, 148);
+            this.guna2Panel12.Name = "guna2Panel12";
+            this.guna2Panel12.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel12.TabIndex = 15;
+            // 
+            // guna2Panel11
+            // 
+            this.guna2Panel11.BackgroundImage = global::Renting_Car_Project.Properties.Resources.white_user_profile;
+            this.guna2Panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel11.Location = new System.Drawing.Point(344, 19);
+            this.guna2Panel11.Name = "guna2Panel11";
+            this.guna2Panel11.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel11.TabIndex = 14;
+            // 
+            // guna2Separator10
+            // 
+            this.guna2Separator10.Location = new System.Drawing.Point(4, 187);
+            this.guna2Separator10.Name = "guna2Separator10";
+            this.guna2Separator10.Size = new System.Drawing.Size(381, 10);
+            this.guna2Separator10.TabIndex = 13;
+            // 
+            // guna2Separator8
+            // 
+            this.guna2Separator8.Location = new System.Drawing.Point(2, 139);
+            this.guna2Separator8.Name = "guna2Separator8";
+            this.guna2Separator8.Size = new System.Drawing.Size(381, 10);
+            this.guna2Separator8.TabIndex = 12;
+            // 
+            // guna2Separator9
+            // 
+            this.guna2Separator9.Location = new System.Drawing.Point(3, 127);
+            this.guna2Separator9.Name = "guna2Separator9";
+            this.guna2Separator9.Size = new System.Drawing.Size(381, 10);
+            this.guna2Separator9.TabIndex = 11;
+            // 
+            // guna2Separator6
+            // 
+            this.guna2Separator6.Location = new System.Drawing.Point(2, 71);
+            this.guna2Separator6.Name = "guna2Separator6";
+            this.guna2Separator6.Size = new System.Drawing.Size(381, 10);
+            this.guna2Separator6.TabIndex = 9;
+            // 
+            // guna2Separator5
+            // 
+            this.guna2Separator5.Location = new System.Drawing.Point(3, 59);
+            this.guna2Separator5.Name = "guna2Separator5";
+            this.guna2Separator5.Size = new System.Drawing.Size(381, 10);
+            this.guna2Separator5.TabIndex = 8;
+            // 
+            // label18
+            // 
+            this.label18.Location = new System.Drawing.Point(106, 148);
+            this.label18.Name = "label18";
+            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label18.Size = new System.Drawing.Size(232, 36);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "درباره خودروچی";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.Location = new System.Drawing.Point(106, 82);
+            this.label17.Name = "label17";
+            this.label17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label17.Size = new System.Drawing.Size(232, 42);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "حساب کاربری";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(103, 19);
+            this.label16.Name = "label16";
+            this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label16.Size = new System.Drawing.Size(235, 37);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "آگهی های من";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -802,6 +926,8 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(754, 551);
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
+            this.flowLayoutPanel1.Click += new System.EventHandler(this.flowLayoutPanel1_Click);
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // Timer_Sidebar_Menu
             // 
@@ -813,6 +939,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 603);
+            this.Controls.Add(this.PanleAccount);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar2);
@@ -820,14 +947,14 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
             this.guna2Panel10.ResumeLayout(false);
-            this.guna2Panel10.PerformLayout();
             this.Menu_But.ResumeLayout(false);
             this.Menu_But.PerformLayout();
             this.guna2Panel8.ResumeLayout(false);
@@ -836,6 +963,7 @@
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
+            this.PanleAccount.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -856,7 +984,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
@@ -890,6 +1017,18 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer Timer_Sidebar_Menu;
+        private Guna.UI2.WinForms.Guna2Panel PanleAccount;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator6;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator10;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator8;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator9;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
     }
 }
 

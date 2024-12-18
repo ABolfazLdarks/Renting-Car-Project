@@ -72,24 +72,12 @@ namespace Renting_Car_Project.Forms
 
         private void guna2Panel4_MouseEnter(object sender, EventArgs e)
         {
-            Control control = sender as Control;
-            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
-            {
-                currentHoverControl = control;
-                currentColorValue = 40;
-                hoverTimer.Start();
-            }
+            
         }
 
         private void guna2Panel4_MouseLeave(object sender, EventArgs e)
         {
-            hoverTimer.Stop();
-            Control control = sender as Control;
-            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
-            {
-                control.ForeColor = SystemColors.ButtonFace;
-                control.BackColor = Color.FromArgb(35, 40, 45);
-            }
+           
         }
 
         private void HoverTimer_Tick(object sender, EventArgs e)
@@ -233,6 +221,50 @@ namespace Renting_Car_Project.Forms
 
         private void lblFillField_Click(object sender, EventArgs e)
         {
+        }
+
+        private void guna2Panel3_Click(object sender, EventArgs e)
+        {
+            guna2Panel7.Visible = true;
+            guna2Panel5.Visible = false;
+        }
+
+        private void guna2Panel4_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel8_MouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                currentHoverControl = control;
+                currentColorValue = 40;
+                hoverTimer.Start();
+            }
+        }
+
+        private void guna2Panel8_MouseLeave(object sender, EventArgs e)
+        {
+            hoverTimer.Stop();
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                control.ForeColor = SystemColors.ButtonFace;
+                control.BackColor = Color.FromArgb(35, 40, 45);
+            }
+        }
+
+        private void guna2Panel8_Click(object sender, EventArgs e)
+        {
+            guna2Panel5.Visible = true;
+            guna2Panel7.Visible = false;
         }
     }
 }

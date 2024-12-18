@@ -71,6 +71,26 @@ namespace Renting_Car_Project
 
         }
 
+        private void guna2Panel1_Click(object sender, EventArgs e)
+        {
+
+         
+           
+                       
+                          
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UserControl1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
 
         //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
         //{

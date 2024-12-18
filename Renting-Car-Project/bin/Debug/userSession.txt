@@ -1,2 +1,0 @@
-UserId=4
-IsLoggedIn=True

@@ -235,8 +235,10 @@ namespace Renting_Car_Project
 
         private void Menu_But_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel1.Visible = true;
             guna2Panel3.Visible = false;
+            PanleAccount.Visible = false;
+            flowLayoutPanel1.Visible = true;
+         
 
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -259,27 +261,103 @@ namespace Renting_Car_Project
                     string Location = reader["Location"].ToString();
 
                     UserControl1 carControl = new UserControl1();
+                   
                     carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
 
                     flowLayoutPanel1.Controls.Add(carControl);
+
+                                  
+                  
                 }
+             
             }
         }
 
         private void guna2Panel2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
+            PanleAccount.Visible = false;
             guna2Panel3.Visible = true;
         }
+         private void label2_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            guna2Panel3.Visible = false;
+            PanleAccount.Visible = true;
+        }
 
-        private void guna2Panel3_SizeChanged(object sender, EventArgs e)
+        private void guna2Panel9_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void guna2Panel6_Paint(object sender, PaintEventArgs e)
+       
+
+
+        private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void guna2Panel10_Click(object sender, EventArgs e)
+        {
+     
+        }
+
+        private void guna2Panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_MouseCaptureChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            flowLayoutPanel1.Visible = false;
+            guna2Panel3.Visible = false;
+            PanleAccount.Visible = true;
+        }
+
+        private void guna2Panel7_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel13_Click(object sender, EventArgs e)
+        {
+            UserSession.Logout();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            this.Close();
+            loginForm.Show();
         }
     }
 }
