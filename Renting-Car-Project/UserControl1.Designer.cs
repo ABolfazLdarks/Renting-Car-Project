@@ -122,7 +122,7 @@
             // 
             this.lblCarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarName.ForeColor = System.Drawing.Color.Black;
-            this.lblCarName.Location = new System.Drawing.Point(306, 23);
+            this.lblCarName.Location = new System.Drawing.Point(308, 23);
             this.lblCarName.Name = "lblCarName";
             this.lblCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblCarName.Size = new System.Drawing.Size(176, 35);

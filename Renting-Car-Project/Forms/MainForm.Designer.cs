@@ -92,13 +92,15 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblCarPrice = new System.Windows.Forms.Label();
             this.lblCarModel = new System.Windows.Forms.Label();
             this.lblCarColor = new System.Windows.Forms.Label();
             this.lblCarName = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.Menu_But.SuspendLayout();
@@ -960,6 +962,8 @@
             this.guna2Panel14.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel14.BorderRadius = 12;
             this.guna2Panel14.BorderThickness = 3;
+            this.guna2Panel14.Controls.Add(this.label20);
+            this.guna2Panel14.Controls.Add(this.label19);
             this.guna2Panel14.Controls.Add(this.lblLocation);
             this.guna2Panel14.Controls.Add(this.lblCarPrice);
             this.guna2Panel14.Controls.Add(this.lblCarModel);
@@ -972,30 +976,40 @@
             this.guna2Panel14.Size = new System.Drawing.Size(605, 526);
             this.guna2Panel14.TabIndex = 0;
             this.guna2Panel14.Visible = false;
+            this.guna2Panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel14_Load);
             // 
-            // guna2Panel15
+            // label20
             // 
-            this.guna2Panel15.AutoScroll = true;
-            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(13, 15);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel15.TabIndex = 4;
-            this.guna2Panel15.Tag = "";
-            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
-            this.guna2Panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel15_Paint);
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Gray;
+            this.label20.Location = new System.Drawing.Point(302, 350);
+            this.label20.Name = "label20";
+            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label20.Size = new System.Drawing.Size(287, 35);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "label2";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Gray;
+            this.label19.Location = new System.Drawing.Point(302, 308);
+            this.label19.Name = "label19";
+            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label19.Size = new System.Drawing.Size(287, 35);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "label2";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblLocation
             // 
             this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.Color.Gray;
-            this.lblLocation.Location = new System.Drawing.Point(306, 224);
+            this.lblLocation.Location = new System.Drawing.Point(302, 264);
             this.lblLocation.Name = "lblLocation";
             this.lblLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblLocation.Size = new System.Drawing.Size(174, 35);
+            this.lblLocation.Size = new System.Drawing.Size(287, 35);
             this.lblLocation.TabIndex = 17;
             this.lblLocation.Text = "label3";
             this.lblLocation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1004,10 +1018,10 @@
             // 
             this.lblCarPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarPrice.Location = new System.Drawing.Point(306, 189);
+            this.lblCarPrice.Location = new System.Drawing.Point(302, 217);
             this.lblCarPrice.Name = "lblCarPrice";
             this.lblCarPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarPrice.Size = new System.Drawing.Size(176, 35);
+            this.lblCarPrice.Size = new System.Drawing.Size(287, 35);
             this.lblCarPrice.TabIndex = 16;
             this.lblCarPrice.Text = "label3";
             this.lblCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1016,10 +1030,10 @@
             // 
             this.lblCarModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarModel.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarModel.Location = new System.Drawing.Point(306, 119);
+            this.lblCarModel.Location = new System.Drawing.Point(302, 116);
             this.lblCarModel.Name = "lblCarModel";
             this.lblCarModel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarModel.Size = new System.Drawing.Size(176, 35);
+            this.lblCarModel.Size = new System.Drawing.Size(287, 35);
             this.lblCarModel.TabIndex = 15;
             this.lblCarModel.Text = "label3";
             this.lblCarModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1028,10 +1042,10 @@
             // 
             this.lblCarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarColor.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarColor.Location = new System.Drawing.Point(306, 154);
+            this.lblCarColor.Location = new System.Drawing.Point(302, 168);
             this.lblCarColor.Name = "lblCarColor";
             this.lblCarColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarColor.Size = new System.Drawing.Size(176, 35);
+            this.lblCarColor.Size = new System.Drawing.Size(287, 35);
             this.lblCarColor.TabIndex = 14;
             this.lblCarColor.Text = "label2";
             this.lblCarColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1040,10 +1054,10 @@
             // 
             this.lblCarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarName.ForeColor = System.Drawing.Color.Black;
-            this.lblCarName.Location = new System.Drawing.Point(306, 84);
+            this.lblCarName.Location = new System.Drawing.Point(302, 68);
             this.lblCarName.Name = "lblCarName";
             this.lblCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarName.Size = new System.Drawing.Size(176, 35);
+            this.lblCarName.Size = new System.Drawing.Size(289, 35);
             this.lblCarName.TabIndex = 13;
             this.lblCarName.Text = "label1";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1060,6 +1074,21 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 12;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.AutoScroll = true;
+            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel15.Location = new System.Drawing.Point(13, 15);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel15.TabIndex = 4;
+            this.guna2Panel15.Tag = "";
+            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
+            this.guna2Panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel15_Paint);
             // 
             // MainForm
             // 
@@ -1168,6 +1197,8 @@
         private System.Windows.Forms.Label lblCarColor;
         private System.Windows.Forms.Label lblCarName;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
     }
 }
 
