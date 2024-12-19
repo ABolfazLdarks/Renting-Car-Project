@@ -226,4 +226,3 @@ C:\Users\User\Desktop\New folder (2)\Renting-Car-Project\Renting-Car-Project\bin
 C:\Users\User\Desktop\New folder (2)\Renting-Car-Project\Renting-Car-Project\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\bin\Debug\Newtonsoft.Json.xml
-C:\Users\ABOLFAZL\Documents\Renting-Car-Project\Renting-Car-Project\obj\Debug\Renting_Car_Project.UserControl2.resources

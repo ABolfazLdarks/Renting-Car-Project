@@ -12,6 +12,7 @@ namespace Renting_Car_Project
 {
     public partial class MainForm : Form
     {
+        
         // متغیر برای ذخیره مسیر کامل فایل تصویر
         private string imageFilePath = "";
 
@@ -33,6 +34,7 @@ namespace Renting_Car_Project
             _userId = userId;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
+            addusercontrol();
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -232,15 +234,24 @@ namespace Renting_Car_Project
         {
             Timer_Sidebar_Menu.Start();
         }
+       
 
         private void Menu_But_Click(object sender, EventArgs e)
         {
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
-         
 
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            loaddata();
+          
+             
+            
+        }
+
+        private void loaddata()
+        {
+          
+             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -261,18 +272,48 @@ namespace Renting_Car_Project
                     string Location = reader["Location"].ToString();
 
                     UserControl1 carControl = new UserControl1();
-                   
+
                     carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
 
                     flowLayoutPanel1.Controls.Add(carControl);
 
-                                  
-                  
+
                 }
-             
+
             }
         }
+        private void UserControl1_Click(object sender, EventArgs e)
+        {
+           // UserControl1 currentUsercontrol = (UserControl1)sender;
+           // currentUsercontrol.Visible = false;
 
+
+           // UserControl2 userControl2 = new UserControl2();
+            //guna2Panel4.Controls.Add(userControl2);
+           // guna2Panel4.Visible = true;
+            //userControl2.BringToFront();
+            
+           
+
+        }
+         public void ShowUserControl2()
+        {
+            flowLayoutPanel1.Visible = false;
+            guna2Panel14.Visible = true;
+
+
+
+        }
+        private void addusercontrol()
+        {
+            //UserControl2 = new UserControl2();
+          //  {
+           //     Visible = false;
+           // }
+          //  guna2Panel14.Controls.Add(UserControl2);
+
+
+        }
         private void guna2Panel2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
@@ -358,6 +399,22 @@ namespace Renting_Car_Project
             LoginForm loginForm = new LoginForm();
             this.Close();
             loginForm.Show();
+        }
+
+        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2Panel15_Click(object sender, EventArgs e)
+        {
+            guna2Panel14.Visible = false;
+            guna2Panel3.Visible = false;
+            PanleAccount.Visible = false;
+            flowLayoutPanel1.Visible = true;
+            loaddata();
+          
+           
         }
     }
 }

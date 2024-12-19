@@ -16,6 +16,7 @@ namespace Renting_Car_Project
         public UserControl1()
         {
             InitializeComponent();
+            this.Click += new EventHandler(UserControl1_Click);
             FontManager.ApplyCustomFont(this.Controls);
         }
 
@@ -74,12 +75,18 @@ namespace Renting_Car_Project
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
 
-         
-           
-                       
-                          
+            Form paraenForm = this.FindForm();
+            if (paraenForm is MainForm mainForm)
+            {
+                mainForm.ShowUserControl2();
+                this.Visible = false;
+            }
+
+
+
 
         }
+      
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -88,7 +95,17 @@ namespace Renting_Car_Project
 
         private void UserControl1_Click(object sender, EventArgs e)
         {
-          
+            Form paraenForm = this.FindForm();
+            if(paraenForm is MainForm mainForm)
+            {
+                mainForm.ShowUserControl2();
+                this.Visible = false;
+            }
+        }
+
+        private void UserControl1_Load(object sender, EventArgs e)
+        {
+
         }
 
 

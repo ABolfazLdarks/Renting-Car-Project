@@ -127,17 +127,8 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\icon.png" />
     <None Include="Resources\icon.ico" />
@@ -148,6 +139,7 @@
     <None Include="Resources\plus.png" />
     <None Include="Resources\white_plus.png" />
     <None Include="Resources\white_user_profile.png" />
+    <None Include="Resources\setting.png" />
     <Content Include="Startup.ico" />
     <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />
