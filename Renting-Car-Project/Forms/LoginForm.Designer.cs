@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblFillFields = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -110,7 +109,7 @@
             this.SideBar.AutoRoundedCorners = true;
             this.SideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.SideBar.BorderColor = System.Drawing.Color.White;
-            this.SideBar.BorderRadius = 99;
+            this.SideBar.BorderRadius = 74;
             this.SideBar.Controls.Add(this.guna2Separator2);
             this.SideBar.Controls.Add(this.guna2Separator1);
             this.SideBar.Controls.Add(this.Menu_Button);
@@ -118,27 +117,25 @@
             this.SideBar.Controls.Add(this.guna2Panel1);
             this.SideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.SideBar.Location = new System.Drawing.Point(0, 0);
-            this.SideBar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SideBar.MaximumSize = new System.Drawing.Size(200, 736);
-            this.SideBar.MinimumSize = new System.Drawing.Size(73, 720);
+            this.SideBar.Margin = new System.Windows.Forms.Padding(2);
+            this.SideBar.MaximumSize = new System.Drawing.Size(150, 598);
+            this.SideBar.MinimumSize = new System.Drawing.Size(55, 585);
             this.SideBar.Name = "SideBar";
-            this.SideBar.Size = new System.Drawing.Size(200, 720);
+            this.SideBar.Size = new System.Drawing.Size(150, 585);
             this.SideBar.TabIndex = 0;
             // 
             // guna2Separator2
             // 
-            this.guna2Separator2.Location = new System.Drawing.Point(-67, 399);
-            this.guna2Separator2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator2.Location = new System.Drawing.Point(-50, 324);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(267, 12);
+            this.guna2Separator2.Size = new System.Drawing.Size(200, 10);
             this.guna2Separator2.TabIndex = 13;
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(-67, 194);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Location = new System.Drawing.Point(-50, 158);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(267, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
             this.guna2Separator1.TabIndex = 12;
             // 
             // Menu_Button
@@ -146,10 +143,10 @@
             this.Menu_Button.BorderColor = System.Drawing.Color.White;
             this.Menu_Button.Controls.Add(this.label3);
             this.Menu_Button.Controls.Add(this.guna2Panel6);
-            this.Menu_Button.Location = new System.Drawing.Point(7, 44);
-            this.Menu_Button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Menu_Button.Location = new System.Drawing.Point(5, 36);
+            this.Menu_Button.Margin = new System.Windows.Forms.Padding(2);
             this.Menu_Button.Name = "Menu_Button";
-            this.Menu_Button.Size = new System.Drawing.Size(187, 140);
+            this.Menu_Button.Size = new System.Drawing.Size(140, 114);
             this.Menu_Button.TabIndex = 3;
             this.Menu_Button.Click += new System.EventHandler(this.Menu_Button_Click);
             this.Menu_Button.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
@@ -160,9 +157,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(136, 64);
+            this.label3.Location = new System.Drawing.Point(102, 52);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 20);
+            this.label3.Size = new System.Drawing.Size(23, 16);
             this.label3.TabIndex = 2;
             this.label3.Tag = "RPText";
             this.label3.Text = "منو";
@@ -174,10 +172,10 @@
             // 
             this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.material_symbols__menu;
             this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(5, 53);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel6.Location = new System.Drawing.Point(11, 41);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(49, 44);
+            this.guna2Panel6.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel6.TabIndex = 1;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
@@ -186,36 +184,36 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.guna2Panel4);
+            this.guna2Panel2.Controls.Add(this.guna2Panel8);
             this.guna2Panel2.Controls.Add(this.label2);
-            this.guna2Panel2.Location = new System.Drawing.Point(7, 434);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(5, 353);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(188, 171);
+            this.guna2Panel2.Size = new System.Drawing.Size(141, 139);
             this.guna2Panel2.TabIndex = 3;
             this.guna2Panel2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
-            // guna2Panel4
+            // guna2Panel8
             // 
-            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.signin;
-            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel4.Location = new System.Drawing.Point(4, 53);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(49, 44);
-            this.guna2Panel4.TabIndex = 1;
-            this.guna2Panel4.Tag = "RPText";
-            this.guna2Panel4.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel4.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
+            this.guna2Panel8.BackgroundImage = global::Renting_Car_Project.Properties.Resources.white_plus;
+            this.guna2Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel8.Location = new System.Drawing.Point(11, 42);
+            this.guna2Panel8.Name = "guna2Panel8";
+            this.guna2Panel8.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel8.TabIndex = 4;
+            this.guna2Panel8.Click += new System.EventHandler(this.guna2Panel8_Click);
+            this.guna2Panel8.MouseEnter += new System.EventHandler(this.guna2Panel8_MouseEnter);
+            this.guna2Panel8.MouseLeave += new System.EventHandler(this.guna2Panel8_MouseLeave);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(59, 49);
+            this.label2.Location = new System.Drawing.Point(53, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 59);
+            this.label2.Size = new System.Drawing.Size(86, 48);
             this.label2.TabIndex = 2;
             this.label2.Tag = "RPText";
             this.label2.Text = "ساخت حساب  ";
@@ -228,10 +226,10 @@
             // 
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.guna2Panel3);
-            this.guna2Panel1.Location = new System.Drawing.Point(7, 239);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(5, 194);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(187, 140);
+            this.guna2Panel1.Size = new System.Drawing.Size(140, 114);
             this.guna2Panel1.TabIndex = 0;
             this.guna2Panel1.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel1.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
@@ -241,9 +239,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(127, 62);
+            this.label1.Location = new System.Drawing.Point(95, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 20);
+            this.label1.Size = new System.Drawing.Size(30, 16);
             this.label1.TabIndex = 2;
             this.label1.Tag = "RPText";
             this.label1.Text = "ورود";
@@ -255,12 +254,13 @@
             // 
             this.guna2Panel3.BackgroundImage = global::Renting_Car_Project.Properties.Resources.login;
             this.guna2Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel3.Location = new System.Drawing.Point(15, 46);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel3.Location = new System.Drawing.Point(11, 37);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(49, 44);
+            this.guna2Panel3.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel3.TabIndex = 1;
             this.guna2Panel3.Tag = "";
+            this.guna2Panel3.Click += new System.EventHandler(this.guna2Panel3_Click);
             this.guna2Panel3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
             this.guna2Panel3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
@@ -288,10 +288,10 @@
             this.guna2Panel5.Controls.Add(this.lblFillField);
             this.guna2Panel5.Controls.Add(this.label12);
             this.guna2Panel5.CustomBorderThickness = new System.Windows.Forms.Padding(10);
-            this.guna2Panel5.Location = new System.Drawing.Point(225, 187);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.guna2Panel5.Location = new System.Drawing.Point(169, 152);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(707, 393);
+            this.guna2Panel5.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
             // 
@@ -303,10 +303,9 @@
             this.guna2CheckBox1.CheckedState.BorderThickness = 0;
             this.guna2CheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CheckBox1.Location = new System.Drawing.Point(69, 233);
-            this.guna2CheckBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CheckBox1.Location = new System.Drawing.Point(52, 189);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
-            this.guna2CheckBox1.Size = new System.Drawing.Size(420, 50);
+            this.guna2CheckBox1.Size = new System.Drawing.Size(315, 48);
             this.guna2CheckBox1.TabIndex = 13;
             this.guna2CheckBox1.Text = "نمایش گذرواژه";
             this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -320,10 +319,9 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            this.label11.Location = new System.Drawing.Point(191, 7);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(143, 6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(328, 62);
+            this.label11.Size = new System.Drawing.Size(246, 50);
             this.label11.TabIndex = 9;
             this.label11.Text = "برای شروع ثبت نام کنید";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,30 +329,27 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(497, 188);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(373, 153);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(179, 36);
+            this.label6.Size = new System.Drawing.Size(134, 29);
             this.label6.TabIndex = 6;
             this.label6.Text = " تکرار کلمه عبور: ";
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(497, 143);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(373, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 36);
+            this.label5.Size = new System.Drawing.Size(134, 29);
             this.label5.TabIndex = 6;
             this.label5.Text = "کلمه عبور: ";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(497, 97);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(373, 79);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 36);
+            this.label4.Size = new System.Drawing.Size(134, 29);
             this.label4.TabIndex = 5;
             this.label4.Text = "نام کاربری:";
             // 
@@ -364,7 +359,7 @@
             this.btnSignUp.AnimatedGIF = true;
             this.btnSignUp.AutoRoundedCorners = true;
             this.btnSignUp.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSignUp.BorderRadius = 38;
+            this.btnSignUp.BorderRadius = 30;
             this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -372,10 +367,9 @@
             this.btnSignUp.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSignUp.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(245, 299);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSignUp.Location = new System.Drawing.Point(184, 243);
             this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(201, 78);
+            this.btnSignUp.Size = new System.Drawing.Size(151, 63);
             this.btnSignUp.TabIndex = 5;
             this.btnSignUp.Text = "ثبت نام";
             this.btnSignUp.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -393,14 +387,14 @@
             this.txtRPTpass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRPTpass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRPTpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRPTpass.Location = new System.Drawing.Point(65, 188);
-            this.txtRPTpass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRPTpass.Location = new System.Drawing.Point(49, 153);
+            this.txtRPTpass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRPTpass.Name = "txtRPTpass";
             this.txtRPTpass.PasswordChar = '\0';
             this.txtRPTpass.PlaceholderText = "";
             this.txtRPTpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtRPTpass.SelectedText = "";
-            this.txtRPTpass.Size = new System.Drawing.Size(424, 36);
+            this.txtRPTpass.Size = new System.Drawing.Size(318, 29);
             this.txtRPTpass.TabIndex = 3;
             this.txtRPTpass.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
@@ -417,14 +411,14 @@
             this.txtUserSignUp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserSignUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserSignUp.Location = new System.Drawing.Point(65, 97);
-            this.txtUserSignUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUserSignUp.Location = new System.Drawing.Point(49, 79);
+            this.txtUserSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserSignUp.Name = "txtUserSignUp";
             this.txtUserSignUp.PasswordChar = '\0';
             this.txtUserSignUp.PlaceholderText = "";
             this.txtUserSignUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUserSignUp.SelectedText = "";
-            this.txtUserSignUp.Size = new System.Drawing.Size(424, 36);
+            this.txtUserSignUp.Size = new System.Drawing.Size(318, 29);
             this.txtUserSignUp.TabIndex = 1;
             // 
             // txtPassSignUp
@@ -440,14 +434,14 @@
             this.txtPassSignUp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassSignUp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassSignUp.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassSignUp.Location = new System.Drawing.Point(65, 143);
-            this.txtPassSignUp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassSignUp.Location = new System.Drawing.Point(49, 116);
+            this.txtPassSignUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassSignUp.Name = "txtPassSignUp";
             this.txtPassSignUp.PasswordChar = '\0';
             this.txtPassSignUp.PlaceholderText = "";
             this.txtPassSignUp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassSignUp.SelectedText = "";
-            this.txtPassSignUp.Size = new System.Drawing.Size(424, 36);
+            this.txtPassSignUp.Size = new System.Drawing.Size(318, 29);
             this.txtPassSignUp.TabIndex = 2;
             this.txtPassSignUp.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
@@ -455,9 +449,10 @@
             // 
             this.lblFillField.AutoSize = true;
             this.lblFillField.ForeColor = System.Drawing.Color.Red;
-            this.lblFillField.Location = new System.Drawing.Point(177, 76);
+            this.lblFillField.Location = new System.Drawing.Point(133, 62);
+            this.lblFillField.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFillField.Name = "lblFillField";
-            this.lblFillField.Size = new System.Drawing.Size(152, 16);
+            this.lblFillField.Size = new System.Drawing.Size(144, 13);
             this.lblFillField.TabIndex = 10;
             this.lblFillField.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillField.Visible = false;
@@ -467,9 +462,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(177, 76);
+            this.label12.Location = new System.Drawing.Point(133, 62);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 16);
+            this.label12.Size = new System.Drawing.Size(148, 13);
             this.label12.TabIndex = 11;
             this.label12.Text = "گذرواژه با تکرار آن یکی نیست";
             this.label12.Visible = false;
@@ -483,7 +479,6 @@
             this.guna2Panel7.BorderRadius = 15;
             this.guna2Panel7.BorderThickness = 2;
             this.guna2Panel7.Controls.Add(this.lblFillFields);
-            this.guna2Panel7.Controls.Add(this.label10);
             this.guna2Panel7.Controls.Add(this.label7);
             this.guna2Panel7.Controls.Add(this.guna2CheckBox2);
             this.guna2Panel7.Controls.Add(this.label8);
@@ -492,44 +487,33 @@
             this.guna2Panel7.Controls.Add(this.txtUserLog);
             this.guna2Panel7.Controls.Add(this.txtPassLog);
             this.guna2Panel7.CustomBorderThickness = new System.Windows.Forms.Padding(10);
-            this.guna2Panel7.Location = new System.Drawing.Point(225, 187);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.guna2Panel7.Location = new System.Drawing.Point(169, 152);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(20);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(707, 393);
+            this.guna2Panel7.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel7.TabIndex = 7;
             // 
             // lblFillFields
             // 
             this.lblFillFields.AutoSize = true;
             this.lblFillFields.ForeColor = System.Drawing.Color.Red;
-            this.lblFillFields.Location = new System.Drawing.Point(191, 92);
+            this.lblFillFields.Location = new System.Drawing.Point(143, 75);
+            this.lblFillFields.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFillFields.Name = "lblFillFields";
-            this.lblFillFields.Size = new System.Drawing.Size(152, 16);
+            this.lblFillFields.Size = new System.Drawing.Size(144, 13);
             this.lblFillFields.TabIndex = 11;
             this.lblFillFields.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillFields.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(277, 50);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(175, 36);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "خوش اومدی";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            this.label7.Location = new System.Drawing.Point(277, 7);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(208, 6);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 39);
+            this.label7.Size = new System.Drawing.Size(132, 32);
             this.label7.TabIndex = 7;
-            this.label7.Text = "سلام !";
+            this.label7.Text = "ورود";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2CheckBox2
@@ -540,10 +524,9 @@
             this.guna2CheckBox2.CheckedState.BorderThickness = 0;
             this.guna2CheckBox2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2CheckBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2CheckBox2.Location = new System.Drawing.Point(69, 203);
-            this.guna2CheckBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2CheckBox2.Location = new System.Drawing.Point(52, 165);
             this.guna2CheckBox2.Name = "guna2CheckBox2";
-            this.guna2CheckBox2.Size = new System.Drawing.Size(420, 50);
+            this.guna2CheckBox2.Size = new System.Drawing.Size(315, 65);
             this.guna2CheckBox2.TabIndex = 3;
             this.guna2CheckBox2.Text = "نمایش گذرواژه";
             this.guna2CheckBox2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -555,20 +538,18 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(508, 159);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(381, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 36);
+            this.label8.Size = new System.Drawing.Size(126, 29);
             this.label8.TabIndex = 6;
             this.label8.Text = "کلمه عبور: ";
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(508, 113);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(381, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(168, 36);
+            this.label9.Size = new System.Drawing.Size(126, 29);
             this.label9.TabIndex = 5;
             this.label9.Text = "نام کاربری:";
             // 
@@ -578,7 +559,7 @@
             this.btnLogin.AnimatedGIF = true;
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BorderRadius = 38;
+            this.btnLogin.BorderRadius = 30;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -586,10 +567,9 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(249, 299);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(187, 243);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(197, 78);
+            this.btnLogin.Size = new System.Drawing.Size(148, 63);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "ورود";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -607,14 +587,14 @@
             this.txtUserLog.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserLog.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserLog.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserLog.Location = new System.Drawing.Point(77, 113);
-            this.txtUserLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUserLog.Location = new System.Drawing.Point(58, 92);
+            this.txtUserLog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserLog.Name = "txtUserLog";
             this.txtUserLog.PasswordChar = '\0';
             this.txtUserLog.PlaceholderText = "";
             this.txtUserLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUserLog.SelectedText = "";
-            this.txtUserLog.Size = new System.Drawing.Size(423, 36);
+            this.txtUserLog.Size = new System.Drawing.Size(317, 29);
             this.txtUserLog.TabIndex = 1;
             // 
             // txtPassLog
@@ -630,14 +610,14 @@
             this.txtPassLog.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassLog.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassLog.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassLog.Location = new System.Drawing.Point(77, 159);
-            this.txtPassLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPassLog.Location = new System.Drawing.Point(58, 129);
+            this.txtPassLog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassLog.Name = "txtPassLog";
             this.txtPassLog.PasswordChar = '\0';
             this.txtPassLog.PlaceholderText = "";
             this.txtPassLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassLog.SelectedText = "";
-            this.txtPassLog.Size = new System.Drawing.Size(423, 36);
+            this.txtPassLog.Size = new System.Drawing.Size(317, 29);
             this.txtPassLog.TabIndex = 2;
             this.txtPassLog.TextChanged += new System.EventHandler(this.guna2TextBox5_TextChanged);
             // 
@@ -646,26 +626,26 @@
             this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Closebtn.Location = new System.Drawing.Point(944, 12);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Closebtn.Location = new System.Drawing.Point(708, 10);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
             this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(49, 44);
+            this.Closebtn.Size = new System.Drawing.Size(37, 36);
             this.Closebtn.TabIndex = 2;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 709);
+            this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.guna2Panel7);
             this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
@@ -698,7 +678,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel Menu_Button;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
@@ -720,7 +699,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtUserLog;
         private Guna.UI2.WinForms.Guna2TextBox txtPassLog;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblFillField;
         private System.Windows.Forms.Label lblFillFields;
@@ -728,5 +706,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox guna2CheckBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
     }
 }
