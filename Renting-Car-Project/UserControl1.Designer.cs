@@ -62,9 +62,10 @@
             this.guna2Panel1.Controls.Add(this.lblCarName);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 22);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(504, 215);
+            this.guna2Panel1.Size = new System.Drawing.Size(505, 239);
             this.guna2Panel1.TabIndex = 5;
             this.guna2Panel1.Click += new System.EventHandler(this.guna2Panel1_Click);
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
@@ -148,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(588, 303);
+            this.Size = new System.Drawing.Size(505, 239);
             this.Click += new System.EventHandler(this.UserControl1_Click);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

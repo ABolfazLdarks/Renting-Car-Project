@@ -1009,6 +1009,7 @@
             this.guna2Panel15.TabIndex = 4;
             this.guna2Panel15.Tag = "";
             this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
+            this.guna2Panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel15_Paint);
             // 
             // MainForm
             // 

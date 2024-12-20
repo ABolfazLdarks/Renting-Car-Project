@@ -128,6 +128,7 @@ namespace Renting_Car_Project
                         MessageBox.Show("آگهی با موفقیت ذخیره شد", "عملیات موفق");
                         txtCarName.Clear(); txtBrand.Clear(); txtModelYear.Clear(); txtColor.Clear(); txtStateofCar.Clear(); txtDescription.Clear(); txtImage.Clear(); txtLocation.Clear(); txtMileage.Clear(); txtPrice.Clear();
                     }
+                    connection.Close();
                 }
                 catch (Exception ex)
                 {
@@ -180,6 +181,7 @@ namespace Renting_Car_Project
                             carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
                             flowLayoutPanel1.Controls.Add(carControl1);
                         }
+                        connection.Close();
 
                     }
                     catch (Exception ex)
@@ -279,6 +281,7 @@ namespace Renting_Car_Project
 
 
                 }
+                connection.Close();
 
             }
         }
@@ -287,6 +290,7 @@ namespace Renting_Car_Project
         {
             ClearDetaillable();
             LoadDataFromDatabase(Data);
+            loaddata();
             flowLayoutPanel1.Visible = false;
             
             
@@ -301,8 +305,8 @@ namespace Renting_Car_Project
         private void ClearDetaillable()
         {
 
-            lblCarColor.Text = "";
-            lblCarColor.Text = "";
+            lblCarName.Text = "";
+            
         }
       
         private void LoadDataFromDatabase(string Data)
@@ -310,14 +314,14 @@ namespace Renting_Car_Project
             
             
                 string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-                string query = "SELECT * FROM Cars WHERE Cars_Name LIKE @Cars_Name ";
+                string query = "SELECT Cars_Name FROM Cars WHERE Cars_Name LIKE @Cars_Name ";
 
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                    SqlCommand command = new SqlCommand(query, connection);
-                   command.Parameters.AddWithValue("@Cars_Name","%"+ Data +"%");
-
+                   command.Parameters.AddWithValue("@Cars_Name","%"+Data+"%");
+                
 
 
                 try
@@ -325,24 +329,25 @@ namespace Renting_Car_Project
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
+                        
+                            if (reader.Read())
                             {
+                               
                                 lblCarName.Text = reader["Cars_Name"].ToString();
-                                lblCarColor.Text = reader["Color"].ToString();
-
+                                guna2Panel14.Controls.Add(lblCarName);
+                               
                             }
+                           // reader.Close();
 
-                            reader.Close();
+                            connection.Close();
 
 
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("asas");
-                        }
+                       
+                        //else
+                        //{
+                        //    MessageBox.Show("asas");
+                        //}
                         
 
                     }
@@ -358,7 +363,7 @@ namespace Renting_Car_Project
                 {
                     MessageBox.Show("" + ex.Message);
                 }
-                finally { connection.Close(); }
+                
 
                 }
             
@@ -404,13 +409,15 @@ namespace Renting_Car_Project
 
         private void guna2Panel15_Click(object sender, EventArgs e )
         {
-            guna2Panel14.Visible = false;
             ClearDetaillable();
-            
+            guna2Panel14.Visible = false;
+           
+
+
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
-            loaddata();
+            /// loaddata();
             if (previousUserControl != null)
             {
                 previousUserControl.Visible = true;
@@ -421,11 +428,16 @@ namespace Renting_Car_Project
 
 
 
-       
+
 
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
         {
 
         }
