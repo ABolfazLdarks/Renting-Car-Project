@@ -12,12 +12,12 @@ namespace Renting_Car_Project
 {
     public partial class MainForm : Form
     {
-        
+
         // متغیر برای ذخیره مسیر کامل فایل تصویر
         private string imageFilePath = "";
 
         private int _userId;
-
+        private UserControl1 previousUserControl;
         private Timer hoverTimer;
         bool sideBar_Expand = true;
         private Control currentHoverControl;
@@ -34,7 +34,7 @@ namespace Renting_Car_Project
             _userId = userId;
             hoverTimer.Tick += HoverTimer_Tick;
             loginRepository = new LoginRepository();
-            addusercontrol();
+
         }
 
         private void Closebtn_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace Renting_Car_Project
 
         private void label5_Click(object sender, EventArgs e)
         {
-            UserSession.Logout(); 
+            UserSession.Logout();
             this.Hide();
             LoginForm loginForm = new LoginForm();
             this.Close();
@@ -234,7 +234,7 @@ namespace Renting_Car_Project
         {
             Timer_Sidebar_Menu.Start();
         }
-       
+
 
         private void Menu_But_Click(object sender, EventArgs e)
         {
@@ -243,15 +243,15 @@ namespace Renting_Car_Project
             flowLayoutPanel1.Visible = true;
 
             loaddata();
-          
-             
-            
+
+
+
         }
 
         private void loaddata()
         {
-          
-             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
@@ -282,146 +282,105 @@ namespace Renting_Car_Project
 
             }
         }
-        private void UserControl1_Click(object sender, EventArgs e)
+
+        public void ShowDetailPanel(string Data , UserControl1 currentControl)
         {
-           // UserControl1 currentUsercontrol = (UserControl1)sender;
-           // currentUsercontrol.Visible = false;
-
-
-           // UserControl2 userControl2 = new UserControl2();
-            //guna2Panel4.Controls.Add(userControl2);
-           // guna2Panel4.Visible = true;
-            //userControl2.BringToFront();
-            
-           
-
-        }
-         public void ShowUserControl2()
-        {
+            ClearDetaillable();
+            LoadDataFromDatabase(Data);
             flowLayoutPanel1.Visible = false;
+            
+            
             guna2Panel14.Visible = true;
 
-
+            previousUserControl = currentControl;
+            previousUserControl.Visible = false;
+            
+      
 
         }
-        private void addusercontrol()
+        private void ClearDetaillable()
         {
-            //UserControl2 = new UserControl2();
-          //  {
-           //     Visible = false;
-           // }
-          //  guna2Panel14.Controls.Add(UserControl2);
+
+            lblCarColor.Text = "";
+            lblCarColor.Text = "";
+        }
+      
+        private void LoadDataFromDatabase(string Data)
+        {
+            
+            
+                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+                string query = "SELECT * FROM Cars WHERE Cars_Name LIKE @Cars_Name ";
+
+
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                   SqlCommand command = new SqlCommand(query, connection);
+                   command.Parameters.AddWithValue("@Cars_Name","%"+ Data +"%");
+
+
+
+                try
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                lblCarName.Text = reader["Cars_Name"].ToString();
+                                lblCarColor.Text = reader["Color"].ToString();
+
+                            }
+
+                            reader.Close();
+
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("asas");
+                        }
+                        
+
+                    }
+
+
+
+
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex.Message);
+                }
+                finally { connection.Close(); }
+
+                }
+            
+            
+
 
 
         }
-        private void guna2Panel2_Click(object sender, EventArgs e)
+
+                private void guna2Panel2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
             PanleAccount.Visible = false;
             guna2Panel3.Visible = true;
         }
-         private void label2_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
             guna2Panel3.Visible = false;
             PanleAccount.Visible = true;
         }
 
-        private void guna2Panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-        private void SetCarData1(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
-        {
-            lblCarName.Text = $"خودرو {carName}";
-            lblCarColor.Text = $"رنگ : {carColor}";
-            lblCarModel.Text = $" مدل : { carModel}";
-
-            // نمایش قیمت به صورت int
-
-            lblCarPrice.Text = $"قیمت روزانه : {carPrice:#,0} تومان"; // نمایش قیمت به صورت فرمت عددی
-
-            using (MemoryStream ms = new MemoryStream(carImage))
-            {
-                guna2PictureBox1.Image = Image.FromStream(ms);
-
-            }
-
-
-            lblLocation.Text = $"در  {Location}";
-
-
-
-
-            // بررسی اگر تصویر موجود باشد
-            //if (carImage != null && carImage.Length > 0)
-            //{
-            //    try
-            //    {
-            //        // ذخیره تصویر موقت برای بررسی
-            //        //string tempFilePath = Path.Combine(Path.GetTempPath(), "tempCarImage.jpg");
-            //       // File.WriteAllBytes(tempFilePath, carImage);
-
-            //        // بارگذاری تصویر از فایل موقت
-            //        guna2PictureBox1.Image = Image.FromFile(tempFilePath);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        // نمایش پیغام خطا در صورت بروز مشکل در بارگذاری تصویر
-            //        MessageBox.Show("خطا در بارگذاری تصویر: " + ex.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    // اگر تصویر موجود نیست، یک تصویر پیش‌فرض نمایش دهید
-            //    //guna2PictureBox1.Image = Properties.Resources.image1;
-            //}
-
-
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void guna2Panel10_Click(object sender, EventArgs e)
-        {
-     
-        }
-
-        private void guna2Panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel4_MouseCaptureChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2Panel4_MouseClick(object sender, MouseEventArgs e)
         {
@@ -430,15 +389,7 @@ namespace Renting_Car_Project
             PanleAccount.Visible = true;
         }
 
-        private void guna2Panel7_Click(object sender, EventArgs e)
-        {
-         
-        }
 
-        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2Panel13_Click(object sender, EventArgs e)
         {
@@ -449,67 +400,34 @@ namespace Renting_Car_Project
             loginForm.Show();
         }
 
-        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void guna2Panel15_Click(object sender, EventArgs e)
+        private void guna2Panel15_Click(object sender, EventArgs e )
         {
             guna2Panel14.Visible = false;
+            ClearDetaillable();
+            
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
             loaddata();
-          
-           
+            if (previousUserControl != null)
+            {
+                previousUserControl.Visible = true;
+                previousUserControl = null;
+            }
+
+
+
+
+
+       
+
         }
 
-        private void guna2Panel14_Load(object sender, PaintEventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-           // loaddata();
-           
-           
-                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-               
 
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    SqlCommand command = new SqlCommand( connection);
-                 
-
-                    try
-                    {
-                        connection.Open();
-                        SqlDataReader reader = command.ExecuteReader();
-
-                      
-
-                        while (reader.Read())
-                        {
-                            string carName = reader["Cars_Name"].ToString();
-                            string carColor = reader["Color"].ToString();
-                            string carModel = reader["YearOfProduction"].ToString();
-                            int carPrice = Convert.ToInt32(reader["PriceDay"]);
-                            byte[] carImage = reader["Image"] as byte[];
-                            string Location = reader["Location"].ToString();
-
-
-                       
-                        
-                            UserControl1 carControl1 = new UserControl1();
-                            carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
-                        guna2Panel14.Controls.Add(carControl1);
-
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message);
-                    }
-                }
-                      
         }
     }
 }

@@ -13,10 +13,12 @@ namespace Renting_Car_Project
 {
     public partial class UserControl1 : UserControl
     {
+        public string Data { get; set; }
         public UserControl1()
         {
             InitializeComponent();
             this.Click += new EventHandler(UserControl1_Click);
+            this.Click += new EventHandler(guna2Panel1_Click);
             FontManager.ApplyCustomFont(this.Controls);
         }
 
@@ -40,82 +42,45 @@ namespace Renting_Car_Project
 
 
             lblLocation.Text = $"در  {Location}";
-
-
-
-
-            // بررسی اگر تصویر موجود باشد
-            //if (carImage != null && carImage.Length > 0)
-            //{
-            //    try
-            //    {
-            //        // ذخیره تصویر موقت برای بررسی
-            //        //string tempFilePath = Path.Combine(Path.GetTempPath(), "tempCarImage.jpg");
-            //       // File.WriteAllBytes(tempFilePath, carImage);
-
-            //        // بارگذاری تصویر از فایل موقت
-            //        guna2PictureBox1.Image = Image.FromFile(tempFilePath);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        // نمایش پیغام خطا در صورت بروز مشکل در بارگذاری تصویر
-            //        MessageBox.Show("خطا در بارگذاری تصویر: " + ex.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    // اگر تصویر موجود نیست، یک تصویر پیش‌فرض نمایش دهید
-            //    //guna2PictureBox1.Image = Properties.Resources.image1;
-            //}
-          
-
+                                
 
         }
 
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
 
+           
+            // فراخوانی متدی در فرم اصلی برای نمایش پنل جزئیات
             Form paraenForm = this.FindForm();
             if (paraenForm is MainForm mainForm)
             {
-                mainForm.ShowUserControl2();
-                this.Visible = false;
+                mainForm.ShowDetailPanel(this.Data,this); // ارسال داده ها به mainform
+                this.Visible = false; //مخفی کردن یوزرکنترل
             }
-
+           
+           
 
 
 
         }
       
+               
+        //رویداد کلیک برای نشان دادن پنل جزئیات
+        private void UserControl1_Click(object sender, EventArgs e)
+        {
+            // فراخوانی متدی در فرم اصلی برای نمایش پنل جزئیات
+            Form paraenForm = this.FindForm();
+            if (paraenForm is MainForm mainForm)
+            {
+                mainForm.ShowDetailPanel(this.Data,this); // ارسال داده ها به mainform
+                this.Visible = false; //مخفی کردن یوزرکنترل
+            }
+        }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void UserControl1_Click(object sender, EventArgs e)
-        {
-            Form paraenForm = this.FindForm();
-            if(paraenForm is MainForm mainForm)
-            {
-                mainForm.ShowUserControl2();
-                this.Visible = false;
-            }
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
-        //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
-        //{
-        //    lblCarName.Text = carName;  // نام خودرو را در لیبل نمایش می‌دهیم
-        //    lblCarModel.Text = carModel;  // مدل خودرو را در لیبل نمایش می‌دهیم
-        //    lblCarColor.Text = carColor;
-        //    lblCarPrice
-        //}
 
     }
 }
