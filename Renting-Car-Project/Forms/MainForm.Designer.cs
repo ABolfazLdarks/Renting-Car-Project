@@ -795,9 +795,9 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(387, 31);
+            this.label6.Location = new System.Drawing.Point(353, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 23);
+            this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = ":نام خودرو";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
