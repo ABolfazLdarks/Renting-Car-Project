@@ -91,11 +91,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
-            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblCarColor = new System.Windows.Forms.Label();
-            this.lblCarName = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.Menu_But.SuspendLayout();
@@ -104,8 +99,6 @@
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.PanleAccount.SuspendLayout();
-            this.guna2Panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessFormMain
@@ -944,79 +937,11 @@
             this.Timer_Sidebar_Menu.Interval = 10;
             this.Timer_Sidebar_Menu.Tick += new System.EventHandler(this.Timer_Sidebar_Menu_Tick);
             // 
-            // guna2Panel14
-            // 
-            this.guna2Panel14.BorderColor = System.Drawing.Color.Black;
-            this.guna2Panel14.BorderRadius = 12;
-            this.guna2Panel14.BorderThickness = 3;
-            this.guna2Panel14.Controls.Add(this.lblCarColor);
-            this.guna2Panel14.Controls.Add(this.lblCarName);
-            this.guna2Panel14.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel14.Controls.Add(this.guna2Panel15);
-            this.guna2Panel14.Location = new System.Drawing.Point(12, 65);
-            this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(605, 526);
-            this.guna2Panel14.TabIndex = 0;
-            this.guna2Panel14.Visible = false;
-            // 
-            // lblCarColor
-            // 
-            this.lblCarColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarColor.ForeColor = System.Drawing.Color.Gray;
-            this.lblCarColor.Location = new System.Drawing.Point(302, 116);
-            this.lblCarColor.Name = "lblCarColor";
-            this.lblCarColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarColor.Size = new System.Drawing.Size(287, 35);
-            this.lblCarColor.TabIndex = 14;
-            this.lblCarColor.Text = "label2";
-            this.lblCarColor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCarName
-            // 
-            this.lblCarName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarName.ForeColor = System.Drawing.Color.Black;
-            this.lblCarName.Location = new System.Drawing.Point(302, 68);
-            this.lblCarName.Name = "lblCarName";
-            this.lblCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCarName.Size = new System.Drawing.Size(289, 35);
-            this.lblCarName.TabIndex = 13;
-            this.lblCarName.Text = "label1";
-            this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(16, 67);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(243, 200);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 12;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // guna2Panel15
-            // 
-            this.guna2Panel15.AutoScroll = true;
-            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(13, 15);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel15.TabIndex = 4;
-            this.guna2Panel15.Tag = "";
-            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
-            this.guna2Panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel15_Paint);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 603);
-            this.Controls.Add(this.guna2Panel14);
             this.Controls.Add(this.PanleAccount);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
@@ -1042,8 +967,6 @@
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.PanleAccount.ResumeLayout(false);
-            this.guna2Panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1110,11 +1033,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel12;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
-        private System.Windows.Forms.Label lblCarColor;
-        private System.Windows.Forms.Label lblCarName;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

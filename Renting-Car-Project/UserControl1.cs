@@ -13,16 +13,25 @@ namespace Renting_Car_Project
 {
     public partial class UserControl1 : UserControl
     {
-        public string Data { get; set; }
+        public string CarsName { get; set; }
         public UserControl1()
         {
             InitializeComponent();
+            //AddClickEvent(this);
             this.Click += new EventHandler(UserControl1_Click);
-            this.Click += new EventHandler(guna2Panel1_Click);
+             this.Click += new EventHandler(guna2Panel1_Click);
             FontManager.ApplyCustomFont(this.Controls);
         }
 
-
+        private void AddClickEvent(Control control)
+        {
+            control.Click += UserControl1_Click;
+            control.Click += guna2Panel1_Click;
+            foreach (Control child in control.Controls)
+            {
+                AddClickEvent(child);
+            }
+        }
         // متد برای تنظیم داده‌های خودرو در UserControl
         public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage , string Location)
         {
@@ -48,32 +57,59 @@ namespace Renting_Car_Project
 
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
-
-           
-            // فراخوانی متدی در فرم اصلی برای نمایش پنل جزئیات
-            Form paraenForm = this.FindForm();
-            if (paraenForm is MainForm mainForm)
+            try
             {
-                mainForm.ShowDetailPanel(this.Data,this); // ارسال داده ها به mainform
-                this.Visible = false; //مخفی کردن یوزرکنترل
+               // if (string.IsNullOrEmpty(CarsName))
+                //{
+                    // باز کردن فرم جدید
+                    LoadCarForm loadCarForm = new LoadCarForm
+                    {
+                        CarsName = this.CarsName // ارسال نام خودرو به فرم
+                    };
+                    loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
+                //}
+                //else
+                //{
+                    // نمایش مقدار فعلی CarsName برای دیباگ
+                   // MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
+                //}
             }
-           
-           
+            catch (Exception ex)
+            {
+                // نمایش شرح خطا
+                MessageBox.Show("خطا هنگام کلیک روی یوزرکنترل: " + ex.Message);
+            }
+
+
+
 
 
 
         }
-      
-               
-        //رویداد کلیک برای نشان دادن پنل جزئیات
+                             //رویداد کلیک برای نشان دادن پنل جزئیات
         private void UserControl1_Click(object sender, EventArgs e)
         {
-            // فراخوانی متدی در فرم اصلی برای نمایش پنل جزئیات
-            Form paraenForm = this.FindForm();
-            if (paraenForm is MainForm mainForm)
+            try
             {
-                mainForm.ShowDetailPanel(this.Data,this); // ارسال داده ها به mainform
-                this.Visible = false; //مخفی کردن یوزرکنترل
+               // if (string.IsNullOrEmpty(CarsName))
+               // {
+                    // باز کردن فرم جدید
+                    LoadCarForm loadCarForm = new LoadCarForm
+                    {
+                        CarsName = this.CarsName // ارسال نام خودرو به فرم
+                    };
+                    loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
+                //}
+               // else
+               // {
+                    // نمایش مقدار فعلی CarsName برای دیباگ
+                    //MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
+                //}
+            }
+            catch (Exception ex)
+            {
+                // نمایش شرح خطا
+                MessageBox.Show("خطا هنگام کلیک روی یوزرکنترل: " + ex.Message);
             }
         }
 
@@ -82,5 +118,9 @@ namespace Renting_Car_Project
 
         }
 
+        private void UserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

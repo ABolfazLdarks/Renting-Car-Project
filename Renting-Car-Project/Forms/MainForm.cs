@@ -17,7 +17,7 @@ namespace Renting_Car_Project
         private string imageFilePath = "";
 
         private int _userId;
-        private UserControl1 previousUserControl;
+        
         private Timer hoverTimer;
         bool sideBar_Expand = true;
         private Control currentHoverControl;
@@ -107,12 +107,12 @@ namespace Renting_Car_Project
                         imageBytes = File.ReadAllBytes(imageFilePath); // تبدیل تصویر به بایت‌ها
                     }
 
-                    string query = "INSERT INTO Cars(Sellers_ID,Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@Sellers_ID,@Cars_Name,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
+                    string query = "INSERT INTO Cars(Sellers_ID,CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@Sellers_ID,@Cars_Name,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Sellers_ID", _userId);
-                        command.Parameters.AddWithValue("@Cars_Name", txtCarName.Text);
+                        command.Parameters.AddWithValue("@CarsName", txtCarName.Text);
                         command.Parameters.AddWithValue("@brand", txtBrand.Text);
                         command.Parameters.AddWithValue("@YearOfProduction", int.Parse(txtModelYear.Text));
                         command.Parameters.AddWithValue("@Color", txtColor.Text);
@@ -154,12 +154,12 @@ namespace Renting_Car_Project
             {
                 string searchTerm = guna2TextBox1.Text.Trim();
                 string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-                string query = "SELECT * FROM Cars WHERE Cars_Name LIKE @Cars_Name";
+                string query = "SELECT * FROM Cars WHERE CarsName LIKE @CarsName";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@Cars_Name", "%" + searchTerm + "%");
+                    command.Parameters.AddWithValue("@CarsName", "%" + searchTerm + "%");
 
                     try
                     {
@@ -170,7 +170,7 @@ namespace Renting_Car_Project
 
                         while (reader.Read())
                         {
-                            string carName = reader["Cars_Name"].ToString();
+                            string carName = reader["CarsName"].ToString();
                             string carColor = reader["Color"].ToString();
                             string carModel = reader["YearOfProduction"].ToString();
                             int carPrice = Convert.ToInt32(reader["PriceDay"]);
@@ -179,6 +179,7 @@ namespace Renting_Car_Project
 
                             UserControl1 carControl1 = new UserControl1();
                             carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+                            carControl1.CarsName=carName;
                             flowLayoutPanel1.Controls.Add(carControl1);
                         }
                         connection.Close();
@@ -258,7 +259,7 @@ namespace Renting_Car_Project
             {
                 connection.Open();
 
-                string query = "SELECT Cars_Name,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars WHERE ViewState = 1";
+                string query = "SELECT CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars WHERE ViewState = 1";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -266,7 +267,7 @@ namespace Renting_Car_Project
 
                 while (reader.Read())
                 {
-                    string carName = reader["Cars_Name"].ToString();
+                    string carName = reader["CarsName"].ToString();
                     string carColor = reader["Color"].ToString();
                     string carModel = reader["YearOfProduction"].ToString();
                     int carPrice = Convert.ToInt32(reader["PriceDay"]);
@@ -276,7 +277,7 @@ namespace Renting_Car_Project
                     UserControl1 carControl = new UserControl1();
 
                     carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
-
+                    carControl.CarsName = carName;
                     flowLayoutPanel1.Controls.Add(carControl);
 
 
@@ -286,92 +287,24 @@ namespace Renting_Car_Project
             }
         }
 
-        public void ShowDetailPanel(string Data , UserControl1 currentControl)
+        public void ShowDetailPanel()
         {
-            ClearDetaillable();
-            LoadDataFromDatabase(Data);
+          
+          
             loaddata();
             flowLayoutPanel1.Visible = false;
             
             
-            guna2Panel14.Visible = true;
+            
 
-            previousUserControl = currentControl;
-            previousUserControl.Visible = false;
+           
             
       
 
         }
-        private void ClearDetaillable()
-        {
-
-            lblCarName.Text = "";
-            
-        }
+        
       
-        private void LoadDataFromDatabase(string Data)
-        {
-            
-            
-                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-                string query = "SELECT Cars_Name FROM Cars WHERE Cars_Name LIKE @Cars_Name ";
-
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                   SqlCommand command = new SqlCommand(query, connection);
-                   command.Parameters.AddWithValue("@Cars_Name","%"+Data+"%");
-                
-
-
-                try
-                {
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        
-                            if (reader.Read())
-                            {
-                               
-                                lblCarName.Text = reader["Cars_Name"].ToString();
-                                guna2Panel14.Controls.Add(lblCarName);
-                               
-                            }
-                           // reader.Close();
-
-                            connection.Close();
-
-
-
-                       
-                        //else
-                        //{
-                        //    MessageBox.Show("asas");
-                        //}
-                        
-
-                    }
-
-
-
-
-
-
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("" + ex.Message);
-                }
-                
-
-                }
-            
-            
-
-
-
-        }
+     
 
                 private void guna2Panel2_Click(object sender, EventArgs e)
         {
@@ -409,20 +342,16 @@ namespace Renting_Car_Project
 
         private void guna2Panel15_Click(object sender, EventArgs e )
         {
-            ClearDetaillable();
-            guna2Panel14.Visible = false;
+           
+          
            
 
 
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
-            /// loaddata();
-            if (previousUserControl != null)
-            {
-                previousUserControl.Visible = true;
-                previousUserControl = null;
-            }
+            loaddata();
+           
 
 
 
@@ -433,11 +362,6 @@ namespace Renting_Car_Project
         }
 
         private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
         {
 
         }
