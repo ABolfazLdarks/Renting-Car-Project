@@ -13,14 +13,25 @@ namespace Renting_Car_Project
 {
     public partial class UserControl1 : UserControl
     {
+        public string CarsName { get; set; }
         public UserControl1()
         {
             InitializeComponent();
+            //AddClickEvent(this);
             this.Click += new EventHandler(UserControl1_Click);
+             this.Click += new EventHandler(guna2Panel1_Click);
             FontManager.ApplyCustomFont(this.Controls);
         }
 
-
+        private void AddClickEvent(Control control)
+        {
+            control.Click += UserControl1_Click;
+            control.Click += guna2Panel1_Click;
+            foreach (Control child in control.Controls)
+            {
+                AddClickEvent(child);
+            }
+        }
         // متد برای تنظیم داده‌های خودرو در UserControl
         public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage , string Location)
         {
@@ -40,82 +51,76 @@ namespace Renting_Car_Project
 
 
             lblLocation.Text = $"در  {Location}";
-
-
-
-
-            // بررسی اگر تصویر موجود باشد
-            //if (carImage != null && carImage.Length > 0)
-            //{
-            //    try
-            //    {
-            //        // ذخیره تصویر موقت برای بررسی
-            //        //string tempFilePath = Path.Combine(Path.GetTempPath(), "tempCarImage.jpg");
-            //       // File.WriteAllBytes(tempFilePath, carImage);
-
-            //        // بارگذاری تصویر از فایل موقت
-            //        guna2PictureBox1.Image = Image.FromFile(tempFilePath);
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        // نمایش پیغام خطا در صورت بروز مشکل در بارگذاری تصویر
-            //        MessageBox.Show("خطا در بارگذاری تصویر: " + ex.Message);
-            //    }
-            //}
-            //else
-            //{
-            //    // اگر تصویر موجود نیست، یک تصویر پیش‌فرض نمایش دهید
-            //    //guna2PictureBox1.Image = Properties.Resources.image1;
-            //}
-          
-
+                                
 
         }
 
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
-
-            Form paraenForm = this.FindForm();
-            if (paraenForm is MainForm mainForm)
+            try
             {
-                mainForm.ShowUserControl2();
-                this.Visible = false;
+               // if (string.IsNullOrEmpty(CarsName))
+                //{
+                    // باز کردن فرم جدید
+                    LoadCarForm loadCarForm = new LoadCarForm
+                    {
+                        CarsName = this.CarsName // ارسال نام خودرو به فرم
+                    };
+                    loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
+                //}
+                //else
+                //{
+                    // نمایش مقدار فعلی CarsName برای دیباگ
+                   // MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
+                //}
+            }
+            catch (Exception ex)
+            {
+                // نمایش شرح خطا
+                MessageBox.Show("خطا هنگام کلیک روی یوزرکنترل: " + ex.Message);
             }
 
 
 
 
+
+
         }
-      
+                             //رویداد کلیک برای نشان دادن پنل جزئیات
+        private void UserControl1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+               // if (string.IsNullOrEmpty(CarsName))
+               // {
+                    // باز کردن فرم جدید
+                    LoadCarForm loadCarForm = new LoadCarForm
+                    {
+                        CarsName = this.CarsName // ارسال نام خودرو به فرم
+                    };
+                    loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
+                //}
+               // else
+               // {
+                    // نمایش مقدار فعلی CarsName برای دیباگ
+                    //MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
+                //}
+            }
+            catch (Exception ex)
+            {
+                // نمایش شرح خطا
+                MessageBox.Show("خطا هنگام کلیک روی یوزرکنترل: " + ex.Message);
+            }
+        }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void UserControl1_Click(object sender, EventArgs e)
-        {
-            Form paraenForm = this.FindForm();
-            if(paraenForm is MainForm mainForm)
-            {
-                mainForm.ShowUserControl2();
-                this.Visible = false;
-            }
-        }
-
         private void UserControl1_Load(object sender, EventArgs e)
         {
 
         }
-
-
-        //public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage, string Location)
-        //{
-        //    lblCarName.Text = carName;  // نام خودرو را در لیبل نمایش می‌دهیم
-        //    lblCarModel.Text = carModel;  // مدل خودرو را در لیبل نمایش می‌دهیم
-        //    lblCarColor.Text = carColor;
-        //    lblCarPrice
-        //}
-
     }
 }
