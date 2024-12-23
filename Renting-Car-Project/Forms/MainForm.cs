@@ -327,69 +327,11 @@ namespace Renting_Car_Project
             PanleAccount.Visible = true;
         }
 
-        private void guna2Panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
-
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void guna2Panel10_Click(object sender, EventArgs e)
-        {
-     
-        }
-
-        private void guna2Panel10_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2Panel4_MouseCaptureChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Panel4_MouseClick(object sender, MouseEventArgs e)
         {
             flowLayoutPanel1.Visible = false;
             guna2Panel3.Visible = false;
             PanleAccount.Visible = true;
-        }
-
-        private void guna2Panel7_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-        private void guna2Panel7_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void guna2Panel13_Click(object sender, EventArgs e)
@@ -399,11 +341,6 @@ namespace Renting_Car_Project
             LoginForm loginForm = new LoginForm();
             this.Close();
             loginForm.Show();
-        }
-
-        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void guna2Panel15_Click(object sender, EventArgs e)
