@@ -107,7 +107,7 @@ namespace Renting_Car_Project
                         imageBytes = File.ReadAllBytes(imageFilePath); // تبدیل تصویر به بایت‌ها
                     }
 
-                    string query = "INSERT INTO Cars(Sellers_ID,CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@Sellers_ID,@Cars_Name,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
+                    string query = "INSERT INTO Cars(Sellers_ID,CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@Sellers_ID,@CarsName,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -339,9 +339,7 @@ namespace Renting_Car_Project
         }
 
 
-        private void guna2Panel15_Click(object sender, EventArgs e)
-
-
+       
         private void guna2Panel15_Click(object sender, EventArgs e )
         {
            
