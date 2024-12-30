@@ -1,0 +1,2 @@
+UserId=2
+IsLoggedIn=True
