@@ -14,6 +14,7 @@ namespace Renting_Car_Project
     public partial class UserControl1 : UserControl
     {
         public string CarsName { get; set; }
+        public int CarID { get; set; }
         public UserControl1()
         {
             InitializeComponent();
@@ -32,8 +33,21 @@ namespace Renting_Car_Project
                 AddClickEvent(child);
             }
         }
-        // متد برای تنظیم داده‌های خودرو در UserControl
-        public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage , string Location)
+        // متد برای نمایش دکمه‌ها
+        public void ShowUpdateAndDeleteButtons()
+        {
+            btnUpdate.Visible = true;
+            btnDelete.Visible = true;
+        }
+
+        // متد برای مخفی کردن دکمه‌ها
+        public void HideUpdateAndDeleteButtons()
+        {
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false;
+        }
+            // متد برای تنظیم داده‌های خودرو در UserControl
+            public void SetCarData(string carName, string carColor, string carModel, int carPrice, byte[] carImage , string Location , int carId)
         {
             lblCarName.Text = $"خودرو {carName}";
             lblCarColor.Text = $"رنگ : {carColor}";
@@ -51,7 +65,7 @@ namespace Renting_Car_Project
 
 
             lblLocation.Text = $"در  {Location}";
-                                
+            this.CarID = carId;
 
         }
 

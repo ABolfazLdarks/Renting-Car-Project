@@ -641,8 +641,8 @@
             this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel7);
+            this.Controls.Add(this.guna2Panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
