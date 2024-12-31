@@ -51,7 +51,7 @@
             this.label1.Location = new System.Drawing.Point(13, 54);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label1.Size = new System.Drawing.Size(221, 37);
+            this.label1.Size = new System.Drawing.Size(330, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -62,7 +62,7 @@
             this.label2.Location = new System.Drawing.Point(13, 91);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(218, 46);
+            this.label2.Size = new System.Drawing.Size(330, 46);
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,7 +74,7 @@
             this.label3.Location = new System.Drawing.Point(13, 137);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(217, 46);
+            this.label3.Size = new System.Drawing.Size(329, 46);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -85,7 +85,7 @@
             this.label4.Location = new System.Drawing.Point(13, 183);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(217, 46);
+            this.label4.Size = new System.Drawing.Size(329, 46);
             this.label4.TabIndex = 4;
             this.label4.Text = "label4";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -96,7 +96,7 @@
             this.label5.Location = new System.Drawing.Point(13, 229);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(217, 46);
+            this.label5.Size = new System.Drawing.Size(329, 46);
             this.label5.TabIndex = 5;
             this.label5.Text = "label5";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@
             this.label6.Location = new System.Drawing.Point(17, 275);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(217, 46);
+            this.label6.Size = new System.Drawing.Size(329, 46);
             this.label6.TabIndex = 6;
             this.label6.Text = "label6";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -118,7 +118,7 @@
             this.label7.Location = new System.Drawing.Point(17, 321);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(217, 46);
+            this.label7.Size = new System.Drawing.Size(329, 46);
             this.label7.TabIndex = 7;
             this.label7.Text = "label7";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,7 +129,7 @@
             this.label8.Location = new System.Drawing.Point(17, 367);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(217, 46);
+            this.label8.Size = new System.Drawing.Size(329, 46);
             this.label8.TabIndex = 8;
             this.label8.Text = "label8";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

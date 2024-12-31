@@ -111,7 +111,7 @@ namespace Renting_Car_Project
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Sellers_ID", _userId);
+                        command.Parameters.AddWithValue("@UserId", _userId);
                         command.Parameters.AddWithValue("@CarsName", txtCarName.Text);
                         command.Parameters.AddWithValue("@brand", txtBrand.Text);
                         command.Parameters.AddWithValue("@YearOfProduction", int.Parse(txtModelYear.Text));
@@ -170,6 +170,7 @@ namespace Renting_Car_Project
 
                         while (reader.Read())
                         {
+                            int carId = Convert.ToInt32(reader["UserId"]);
                             string carName = reader["CarsName"].ToString();
                             string carColor = reader["Color"].ToString();
                             string carModel = reader["YearOfProduction"].ToString();
@@ -178,7 +179,7 @@ namespace Renting_Car_Project
                             string Location = reader["Location"].ToString();
 
                             UserControl1 carControl1 = new UserControl1();
-                            carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+                            carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location , carId);
                             carControl1.CarsName = carName;
                             flowLayoutPanel1.Controls.Add(carControl1);
                         }
@@ -259,7 +260,7 @@ namespace Renting_Car_Project
             {
                 connection.Open();
 
-                string query = "SELECT CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars WHERE ViewState = 1";
+                string query = "SELECT * FROM Cars WHERE ViewState = 1";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -267,13 +268,14 @@ namespace Renting_Car_Project
 
                 while (reader.Read())
                 {
+                    int carId = Convert.ToInt32(reader["Cars_ID"]);
                     string carName = reader["CarsName"].ToString();
                     string carColor = reader["Color"].ToString();
                     string carModel = reader["YearOfProduction"].ToString();
                     int carPrice = Convert.ToInt32(reader["PriceDay"]);
                     byte[] carImage = reader["Image"] as byte[];
                     string Location = reader["Location"].ToString();
-
+                 
                     UserControl1 carControl = new UserControl1();
 
                     carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location , carId);
@@ -367,6 +369,11 @@ namespace Renting_Car_Project
             guna2Panel14.Visible = true;
         }
 
+        public int GetLoggedInUserId()
+        {
+            var userSession = UserSession.LoadUserSession(); // فرض می‌کنیم که این متد شناسه کاربر را از سشن بارگذاری می‌کند
+            return userSession?.UserId ?? -1; // اگر سشن خالی بود، مقدار -1 بازگشت داده می‌شود
+        }
         private void label16_Click(object sender, EventArgs e )
         {
 
@@ -418,80 +425,266 @@ namespace Renting_Car_Project
 
             //flowLayoutPanel1.Visible = true;
 
-           
-                flowLayoutPanel1.Visible = false;
-                PanleAccount.Visible = false;
-                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-                using (SqlConnection connection = new SqlConnection(connectionString))
+
+
+
+
+            //....
+            //flowLayoutPanel1.Visible = false;
+            //PanleAccount.Visible = false;
+            //string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            //using (SqlConnection connection = new SqlConnection(connectionString))
+            //{
+            //    connection.Open();
+            //    string query = "SELECT * FROM Cars WHERE Sellers_ID = @SellersId"; // فقط آگهی‌های کاربر جاری نمایش داده شود
+            //    SqlCommand command = new SqlCommand(query, connection);
+            //    command.Parameters.AddWithValue("@SellersId", loggedInUserId); // فرض کن که loggedInUserId شناسه کاربری است که وارد شده
+            //    SqlDataReader reader = command.ExecuteReader();
+
+            //    flowLayoutPanel1.Controls.Clear();
+
+            //    while (reader.Read())
+            //    {
+            //        string carName = reader["CarsName"].ToString();
+            //        string carColor = reader["Color"].ToString();
+            //        string carModel = reader["YearOfProduction"].ToString();
+            //        int carPrice = Convert.ToInt32(reader["PriceDay"]);
+            //        byte[] carImage = reader["Image"] as byte[];
+            //        string Location = reader["Location"].ToString();
+            //        int carId = Convert.ToInt32(reader["CarId"]);
+
+            //        UserControl1 carControl = new UserControl1();
+            //        carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
+
+            //        // بررسی اینکه آیا این آگهی متعلق به کاربر جاری است یا خیر
+            //        if (Convert.ToInt32(reader["Sellers_ID"]) == loggedInUserId)
+            //        {
+            //            // اگر آگهی متعلق به کاربر جاری بود، دکمه‌ها نمایش داده شوند
+            //            carControl.ShowUpdateAndDeleteButtons();
+            //        }
+            //        else
+            //        {
+            //            // در غیر این صورت دکمه‌ها مخفی شوند
+            //            carControl.HideUpdateAndDeleteButtons();
+            //        }
+
+            //        flowLayoutPanel1.Controls.Add(carControl);
+            //        flowLayoutPanel1.Visible = true;
+            //    }
+            //    connection.Close();
+            //}
+
+            flowLayoutPanel1.Visible = false;
+            PanleAccount.Visible = false;
+
+            // دریافت شناسه کاربر جاری
+            int loggedInUserId = GetLoggedInUserId();
+
+            if (loggedInUserId == -1)
+            {
+                MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                return;
+            }
+
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Cars WHERE UserId = @UserId"; // فقط آگهی‌های کاربر جاری نمایش داده شود
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserId", loggedInUserId); // شناسه کاربر جاری
+                SqlDataReader reader = command.ExecuteReader();
+
+                flowLayoutPanel1.Controls.Clear();
+
+                while (reader.Read())
                 {
-                    connection.Open();
-                    string query = "SELECT * FROM Cars WHERE Sellers_ID = @SellersId"; // فقط آگهی‌های کاربر جاری نمایش داده شود
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@SellersId", loggedInUserId); // فرض کن که loggedInUserId شناسه کاربری است که وارد شده
-                    SqlDataReader reader = command.ExecuteReader();
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]);
 
-                    flowLayoutPanel1.Controls.Clear();
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
 
-                    while (reader.Read())
+                    // بررسی اینکه آیا این آگهی متعلق به کاربر جاری است یا خیر
+                    if (Convert.ToInt32(reader["UserId"]) == loggedInUserId)
                     {
-                        string carName = reader["CarsName"].ToString();
-                        string carColor = reader["Color"].ToString();
-                        string carModel = reader["YearOfProduction"].ToString();
-                        int carPrice = Convert.ToInt32(reader["PriceDay"]);
-                        byte[] carImage = reader["Image"] as byte[];
-                        string Location = reader["Location"].ToString();
-                        int carId = Convert.ToInt32(reader["CarId"]);
-
-                        UserControl1 carControl = new UserControl1();
-                        carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
-
-                        // بررسی اینکه آیا این آگهی متعلق به کاربر جاری است یا خیر
-                        if (Convert.ToInt32(reader["Sellers_ID"]) == loggedInUserId)
-                        {
-                            // اگر آگهی متعلق به کاربر جاری بود، دکمه‌ها نمایش داده شوند
-                            carControl.ShowUpdateAndDeleteButtons();
-                        }
-                        else
-                        {
-                            // در غیر این صورت دکمه‌ها مخفی شوند
-                            carControl.HideUpdateAndDeleteButtons();
-                        }
-
-                        flowLayoutPanel1.Controls.Add(carControl);
-                        flowLayoutPanel1.Visible = true;
+                        // اگر آگهی متعلق به کاربر جاری بود، دکمه‌ها نمایش داده شوند
+                        carControl.ShowUpdateAndDeleteButtons();
                     }
-                    connection.Close();
+                    else
+                    {
+                        // در غیر این صورت دکمه‌ها مخفی شوند
+                        carControl.HideUpdateAndDeleteButtons();
+                    }
+
+                    flowLayoutPanel1.Controls.Add(carControl);
+                    flowLayoutPanel1.Visible = true;
                 }
-           
+                connection.Close();
+            }
+
+
+
+
+
+
+
+            //flowLayoutPanel1.Visible = false;
+            //    PanleAccount.Visible = false;
+            //    string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            //    using (SqlConnection connection = new SqlConnection(connectionString))
+            //    {
+            //        connection.Open();
+            //        int loggedInUserId = GetLoggedInUserId(); // شناسه کاربر وارد شده
+            //        string query = "SELECT * FROM Cars WHERE UserId = @UserId";
+            //        SqlCommand command = new SqlCommand(query, connection);
+            //        command.Parameters.AddWithValue("@UserId", loggedInUserId);
+
+            //        SqlDataReader reader = command.ExecuteReader();
+            //        flowLayoutPanel1.Controls.Clear();
+
+            //        while (reader.Read())
+            //        {
+            //            string carName = reader["CarsName"].ToString();
+            //            string carColor = reader["Color"].ToString();
+            //            string carModel = reader["YearOfProduction"].ToString();
+            //            int carPrice = Convert.ToInt32(reader["PriceDay"]);
+            //            byte[] carImage = reader["Image"] as byte[];
+            //            string Location = reader["Location"].ToString();
+            //            int carId = Convert.ToInt32(reader["Cars_ID"]);  // آیدی آگهی
+
+            //            // ایجاد UserControl برای نمایش اطلاعات آگهی
+            //            UserControl1 carControl = new UserControl1();
+            //            carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
+            //            carControl.carId = carId;  // تعیین شناسه آگهی برای هر UserControl
+
+            //        //بررسی اینکه آیا این آگهی متعلق به کاربر جاری است یا خیر
+            //                if (Convert.ToInt32(reader["UserId"]) == loggedInUserId)
+            //        {
+            //            // اگر آگهی متعلق به کاربر جاری بود، دکمه‌ها نمایش داده شوند
+            //            carControl.ShowUpdateAndDeleteButtons();
+            //        }
+            //        else
+            //        {
+            //            // در غیر این صورت دکمه‌ها مخفی شوند
+            //            carControl.HideUpdateAndDeleteButtons();
+            //        }
+
+            //        flowLayoutPanel1.Controls.Add(carControl);
+            //            flowLayoutPanel1.Visible = true;
+            //        }
+            //        connection.Close();
+            //    }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         }
-        private int GetSellerIdFromDatabase(string username, string password)
+       
+       
+
+        private void label19_Click(object sender, EventArgs e)
         {
-            int UserId = -1; // اگر شناسه فروشنده پیدا نشد، مقدار پیش‌فرض -1 است.
+
+        }
+        public void LoadAds()
+        {
+          
+            flowLayoutPanel1.Controls.Clear();
+            int userId = GetLoggedInUserId(); // شناسه کاربر وارد شده
 
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Cars WHERE UserId = @UserId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserId", userId); // فیلتر بر اساس شناسه کاربر
+                SqlDataReader reader = command.ExecuteReader();
 
+                while (reader.Read())
+                {
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]); // شناسه آگهی
+
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
+
+                    // نمایش دکمه ویرایش فقط برای آگهی‌های کاربر جاری
+                    carControl.ShowUpdateAndDeleteButtons();
+                    carControl.CarsName = carName;
+                    carControl.carId = carId;
+                    flowLayoutPanel1.Controls.Add(carControl);
+                  
+                }
+                connection.Close();
+            }
+        }
+        public void RefreshAdList()
+        {
+            flowLayoutPanel1.Controls.Clear();  // پاک کردن همه آگهی‌ها
+
+            // بارگذاری مجدد آگهی‌ها از دیتابیس
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string query = "SELECT UserId FROM Users WHERE UserName = @UserName AND Password = @Password";
+                string query = "SELECT * FROM Cars WHERE Cars_ID = @Cars_ID";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@UserName", username);
-                command.Parameters.AddWithValue("@Password", password);
+                command.Parameters.AddWithValue("@Cars_ID", GetLoggedInUserId()); // استفاده از شناسه کاربری وارد شده
 
                 SqlDataReader reader = command.ExecuteReader();
 
-                if (reader.Read())
+                while (reader.Read())
                 {
-                    UserId = Convert.ToInt32(reader["UserId"]);
+                    // بارگذاری اطلاعات آگهی‌ها
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]); // شناسه آگهی
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location,carId);
+                    carControl.CarsName = carName;
+
+                    flowLayoutPanel1.Controls.Add(carControl);
                 }
-
-                connection.Close();
             }
+        }
 
-            return UserId;
+        private void guna2Panel14_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

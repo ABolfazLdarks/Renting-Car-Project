@@ -961,6 +961,7 @@
             this.guna2Panel14.Size = new System.Drawing.Size(754, 605);
             this.guna2Panel14.TabIndex = 0;
             this.guna2Panel14.Visible = false;
+            this.guna2Panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel14_Paint);
             // 
             // guna2Panel16
             // 
@@ -995,6 +996,7 @@
             this.label19.TabIndex = 0;
             this.label19.Text = resources.GetString("label19.Text");
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // guna2Panel17
             // 

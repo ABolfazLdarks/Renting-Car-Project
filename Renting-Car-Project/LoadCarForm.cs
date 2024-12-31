@@ -25,11 +25,11 @@ namespace Renting_Car_Project
 
         private void LoadCarForm_Load(object sender, EventArgs e)
         {
-         if ( string.IsNullOrEmpty(CarsName))
-                {
+            if (string.IsNullOrEmpty(CarsName))
+            {
                 MessageBox.Show("car arsal nashod");
                 return;
-                }
+            }
 
 
 
@@ -39,7 +39,7 @@ namespace Renting_Car_Project
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM Cars WHERE CarsName LIKE @CarsName ";
+                string query = "SELECT * FROM Cars WHERE CarsName = @CarsName ";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@CarsName", CarsName);
 
