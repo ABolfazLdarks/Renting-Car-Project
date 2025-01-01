@@ -129,6 +129,12 @@
     <Compile Include="LoadCarForm.Designer.cs">
       <DependentUpon>LoadCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadUserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadUserData.Designer.cs">
+      <DependentUpon>LoadUserData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl1.cs">
@@ -143,12 +149,16 @@
     <EmbeddedResource Include="LoadCarForm.resx">
       <DependentUpon>LoadCarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoadUserData.resx">
+      <DependentUpon>LoadUserData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\icon.png" />
     <None Include="Resources\icon.ico" />
     <Content Include="icon.ico" />
+    <None Include="Resources\about_us.png" />
     <Content Include="Resources\img\Startup.ico" />
     <None Include="Resources\Loader.png" />
     <None Include="Resources\temp.png" />

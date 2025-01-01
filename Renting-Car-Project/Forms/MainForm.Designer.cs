@@ -51,7 +51,6 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
@@ -90,12 +89,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.Menu_But.SuspendLayout();
@@ -104,7 +103,9 @@
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.PanleAccount.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.guna2Panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessFormMain
@@ -374,20 +375,6 @@
             this.label5.Click += new System.EventHandler(this.label5_Click);
             this.label5.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label5.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
-            // 
-            // Closebtn
-            // 
-            this.Closebtn.AutoScroll = true;
-            this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Closebtn.Location = new System.Drawing.Point(11, 11);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(37, 36);
-            this.Closebtn.TabIndex = 3;
-            this.Closebtn.Tag = "";
-            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click_1);
             // 
             // guna2TextBox1
             // 
@@ -913,6 +900,7 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "حساب کاربری";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -932,6 +920,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.guna2Panel14);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 52);
@@ -941,11 +930,6 @@
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
             // 
-            // Timer_Sidebar_Menu
-            // 
-            this.Timer_Sidebar_Menu.Interval = 10;
-            this.Timer_Sidebar_Menu.Tick += new System.EventHandler(this.Timer_Sidebar_Menu_Tick);
-            // 
             // guna2Panel14
             // 
             this.guna2Panel14.AutoScroll = true;
@@ -953,24 +937,14 @@
             this.guna2Panel14.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel14.BorderRadius = 10;
             this.guna2Panel14.BorderThickness = 2;
-            this.guna2Panel14.Controls.Add(this.guna2Panel16);
             this.guna2Panel14.Controls.Add(this.guna2Panel15);
-            this.guna2Panel14.Controls.Add(this.label19);
-            this.guna2Panel14.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel14.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel14.Location = new System.Drawing.Point(3, 3);
             this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(754, 605);
+            this.guna2Panel14.Size = new System.Drawing.Size(748, 399);
             this.guna2Panel14.TabIndex = 0;
             this.guna2Panel14.Visible = false;
             this.guna2Panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel14_Paint);
-            // 
-            // guna2Panel16
-            // 
-            this.guna2Panel16.BackgroundImage = global::Renting_Car_Project.Properties.Resources.icon;
-            this.guna2Panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel16.Location = new System.Drawing.Point(581, 12);
-            this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel16.TabIndex = 5;
             // 
             // guna2Panel15
             // 
@@ -978,7 +952,7 @@
             this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(6, 11);
+            this.guna2Panel15.Location = new System.Drawing.Point(8, 12);
             this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
@@ -986,17 +960,22 @@
             this.guna2Panel15.Tag = "";
             this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click_1);
             // 
-            // label19
+            // guna2PictureBox1
             // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(53, 9);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(692, 585);
-            this.label19.TabIndex = 0;
-            this.label19.Text = resources.GetString("label19.Text");
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label19.Click += new System.EventHandler(this.label19_Click);
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox1.Image = global::Renting_Car_Project.Properties.Resources.about_us;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(748, 399);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // Timer_Sidebar_Menu
+            // 
+            this.Timer_Sidebar_Menu.Interval = 10;
+            this.Timer_Sidebar_Menu.Tick += new System.EventHandler(this.Timer_Sidebar_Menu_Tick);
             // 
             // guna2Panel17
             // 
@@ -1006,19 +985,32 @@
             this.guna2Panel17.TabIndex = 7;
             this.guna2Panel17.Visible = false;
             // 
+            // Closebtn
+            // 
+            this.Closebtn.AutoScroll = true;
+            this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Closebtn.Location = new System.Drawing.Point(11, 11);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Closebtn.Name = "Closebtn";
+            this.Closebtn.Size = new System.Drawing.Size(37, 36);
+            this.Closebtn.TabIndex = 3;
+            this.Closebtn.Tag = "";
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 603);
+            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.PanleAccount);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar2);
-            this.Controls.Add(this.guna2Panel3);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.guna2Panel14);
             this.Controls.Add(this.guna2Panel17);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -1026,6 +1018,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
             this.guna2Panel10.ResumeLayout(false);
@@ -1038,7 +1031,9 @@
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.PanleAccount.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.guna2Panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1060,7 +1055,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
@@ -1106,10 +1100,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel17;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel Closebtn;
     }
 }
 

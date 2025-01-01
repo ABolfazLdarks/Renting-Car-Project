@@ -76,20 +76,14 @@ namespace Renting_Car_Project
         {
             try
             {
-                // if (string.IsNullOrEmpty(CarsName))
-                //{
-                // باز کردن فرم جدید
+             
+              
                 LoadCarForm loadCarForm = new LoadCarForm
                 {
                     CarsName = this.CarsName // ارسال نام خودرو به فرم
                 };
                 loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
-                                          //}
-                                          //else
-                                          //{
-                                          // نمایش مقدار فعلی CarsName برای دیباگ
-                                          // MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
-                                          //}
+                                         
             }
             catch (Exception ex)
             {
@@ -108,20 +102,13 @@ namespace Renting_Car_Project
         {
             try
             {
-                // if (string.IsNullOrEmpty(CarsName))
-                // {
-                // باز کردن فرم جدید
+               
                 LoadCarForm loadCarForm = new LoadCarForm
                 {
                     CarsName = this.CarsName // ارسال نام خودرو به فرم
                 };
                 loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
-                                          //}
-                                          // else
-                                          // {
-                                          // نمایش مقدار فعلی CarsName برای دیباگ
-                                          //MessageBox.Show("نام خودرو تنظیم نشده است! مقدار فعلی CarsName: " + (CarsName ?? "null"));
-                                          //}
+                                         
             }
             catch (Exception ex)
             {
@@ -130,16 +117,7 @@ namespace Renting_Car_Project
             }
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             int editCount = GetCarEditCount(carId);
@@ -256,14 +234,6 @@ namespace Renting_Car_Project
             MessageBox.Show("اگهی با موفقیت حذف شد");
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

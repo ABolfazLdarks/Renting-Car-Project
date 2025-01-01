@@ -36,8 +36,9 @@ namespace Renting_Car_Project
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+    
 
-      
+
 
         public EditCarForm(int carId)
         {
