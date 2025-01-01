@@ -95,12 +95,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarRepository.cs" />
     <Compile Include="Class\LoginFormClasses\Login.cs" />
     <Compile Include="Class\ProjectClasses\DatabaseConfig.cs" />
     <Compile Include="Class\ProjectClasses\FontManager.cs" />
     <Compile Include="Class\LoginFormClasses\SignUp.cs" />
     <Compile Include="Class\ProjectClasses\TokenManager.cs" />
     <Compile Include="Class\ProjectClasses\UserSession.cs" />
+    <Compile Include="EditCarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\StartupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +129,12 @@
     <Compile Include="LoadCarForm.Designer.cs">
       <DependentUpon>LoadCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoadUserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadUserData.Designer.cs">
+      <DependentUpon>LoadUserData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl1.cs">
@@ -133,8 +143,14 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditCarForm.resx">
+      <DependentUpon>EditCarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoadCarForm.resx">
       <DependentUpon>LoadCarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoadUserData.resx">
+      <DependentUpon>LoadUserData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
@@ -142,6 +158,7 @@
     <None Include="Resources\icon.png" />
     <None Include="Resources\icon.ico" />
     <Content Include="icon.ico" />
+    <None Include="Resources\about_us.png" />
     <Content Include="Resources\img\Startup.ico" />
     <None Include="Resources\Loader.png" />
     <None Include="Resources\temp.png" />
@@ -149,6 +166,9 @@
     <None Include="Resources\white_plus.png" />
     <None Include="Resources\white_user_profile.png" />
     <None Include="Resources\setting.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Startup.ico" />
     <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />

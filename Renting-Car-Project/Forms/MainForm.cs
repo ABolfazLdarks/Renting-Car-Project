@@ -6,6 +6,10 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
+
+
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Renting_Car_Project
@@ -17,7 +21,7 @@ namespace Renting_Car_Project
         private string imageFilePath = "";
 
         private int _userId;
-        
+
         private Timer hoverTimer;
         bool sideBar_Expand = true;
         private Control currentHoverControl;
@@ -88,10 +92,31 @@ namespace Renting_Car_Project
         {
             Application.Exit();
         }
-
+        private bool IsNullOrWhiteSpace(string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
+        }
         private void btnRegistration_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            if (IsNullOrWhiteSpace(txtCarName.Text) ||
+               IsNullOrWhiteSpace(txtBrand.Text) ||
+               IsNullOrWhiteSpace(txtModelYear.Text) || IsNullOrWhiteSpace(txtColor.Text) || IsNullOrWhiteSpace(txtStateofCar.Text)
+               || IsNullOrWhiteSpace(txtDescription.Text)
+               || IsNullOrWhiteSpace(txtImage.Text) || IsNullOrWhiteSpace(txtLocation.Text) || IsNullOrWhiteSpace(txtMileage.Text)
+               || IsNullOrWhiteSpace(txtPrice.Text)
+
+
+               )
+            {
+                lblFillFields.Visible = true;
+                txtCarName.BorderColor = txtBrand.BorderColor = txtModelYear.BorderColor = txtColor.BorderColor = txtStateofCar.BorderColor = txtDescription.BorderColor = txtImage.BorderColor = txtLocation.BorderColor = txtMileage.BorderColor = txtPrice.BorderColor = Color.Red;
+            }
+            else
+            {
+                lblFillFields.Visible = false;
+                txtCarName.BorderColor = txtBrand.BorderColor = txtModelYear.BorderColor = txtColor.BorderColor = txtStateofCar.BorderColor = txtDescription.BorderColor = txtImage.BorderColor = txtLocation.BorderColor = txtMileage.BorderColor = txtPrice.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -107,11 +132,11 @@ namespace Renting_Car_Project
                         imageBytes = File.ReadAllBytes(imageFilePath); // تبدیل تصویر به بایت‌ها
                     }
 
-                    string query = "INSERT INTO Cars(Sellers_ID,CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@Sellers_ID,@CarsName,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
+                    string query = "INSERT INTO Cars(UserId,CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay,ViewState) " + "VALUES (@UserId,@CarsName,@brand,@YearOfProduction,@Color,@StateOfCar,@Description,@Image,@Location,@CarOperation,@PriceDay,@ViewState)";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@Sellers_ID", _userId);
+                        command.Parameters.AddWithValue("@UserId", _userId);
                         command.Parameters.AddWithValue("@CarsName", txtCarName.Text);
                         command.Parameters.AddWithValue("@brand", txtBrand.Text);
                         command.Parameters.AddWithValue("@YearOfProduction", int.Parse(txtModelYear.Text));
@@ -132,7 +157,7 @@ namespace Renting_Car_Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("خطا: " + ex.Message);
+                   
                 }
             }
         }
@@ -170,6 +195,7 @@ namespace Renting_Car_Project
 
                         while (reader.Read())
                         {
+                            int carId = Convert.ToInt32(reader["UserId"]);
                             string carName = reader["CarsName"].ToString();
                             string carColor = reader["Color"].ToString();
                             string carModel = reader["YearOfProduction"].ToString();
@@ -178,8 +204,8 @@ namespace Renting_Car_Project
                             string Location = reader["Location"].ToString();
 
                             UserControl1 carControl1 = new UserControl1();
-                            carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
-                            carControl1.CarsName=carName;
+                            carControl1.SetCarData(carName, carColor, carModel, carPrice, carImage, Location , carId);
+                            carControl1.CarsName = carName;
                             flowLayoutPanel1.Controls.Add(carControl1);
                         }
                         connection.Close();
@@ -202,6 +228,7 @@ namespace Renting_Car_Project
             guna2TextBox1.Text = "جستجو در همه آگهی ها";
             guna2TextBox1.ForeColor = Color.Gray;
             guna2TextBox1.ReadOnly = true;
+            guna2Panel16.Visible = true;
         }
 
         private void guna2TextBox1_MouseClick(object sender, MouseEventArgs e)
@@ -209,6 +236,7 @@ namespace Renting_Car_Project
             guna2TextBox1.Text = "";
             guna2TextBox1.ForeColor = Color.Gray;
             guna2TextBox1.ReadOnly = false;
+            guna2Panel16.Visible = false;
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -244,10 +272,7 @@ namespace Renting_Car_Project
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
-
             loaddata();
-
-
 
         }
 
@@ -259,7 +284,7 @@ namespace Renting_Car_Project
             {
                 connection.Open();
 
-                string query = "SELECT CarsName,brand,YearOfProduction,Color,StateOfCar,Description,Image,Location,CarOperation,PriceDay FROM Cars WHERE ViewState = 1";
+                string query = "SELECT * FROM Cars WHERE ViewState = 1";
                 SqlCommand command = new SqlCommand(query, connection);
                 SqlDataReader reader = command.ExecuteReader();
 
@@ -267,16 +292,17 @@ namespace Renting_Car_Project
 
                 while (reader.Read())
                 {
+                    int carId = Convert.ToInt32(reader["Cars_ID"]);
                     string carName = reader["CarsName"].ToString();
                     string carColor = reader["Color"].ToString();
                     string carModel = reader["YearOfProduction"].ToString();
                     int carPrice = Convert.ToInt32(reader["PriceDay"]);
                     byte[] carImage = reader["Image"] as byte[];
                     string Location = reader["Location"].ToString();
-
+                 
                     UserControl1 carControl = new UserControl1();
 
-                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location);
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location , carId);
                     carControl.CarsName = carName;
                     flowLayoutPanel1.Controls.Add(carControl);
 
@@ -287,26 +313,14 @@ namespace Renting_Car_Project
             }
         }
 
+
         public void ShowDetailPanel()
         {
-          
-          
             loaddata();
             flowLayoutPanel1.Visible = false;
-            
-            
-            
-
-           
-            
-      
-
         }
-        
-      
-     
 
-                private void guna2Panel2_Click(object sender, EventArgs e)
+        private void guna2Panel2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
             PanleAccount.Visible = false;
@@ -325,10 +339,6 @@ namespace Renting_Car_Project
             PanleAccount.Visible = true;
         }
 
-
-
-
-
         private void guna2Panel13_Click(object sender, EventArgs e)
         {
             UserSession.Logout();
@@ -339,43 +349,16 @@ namespace Renting_Car_Project
         }
 
 
-       
-        private void guna2Panel15_Click(object sender, EventArgs e )
+
+        private void guna2Panel15_Click(object sender, EventArgs e)
         {
-           
-          
-           
-
-
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
             loaddata();
-           
-
-
-
-
-
-
-
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Panel14_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
-        private void guna2Panel15_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void guna2Panel15_Click_1(object sender, EventArgs e)
         {
@@ -395,6 +378,154 @@ namespace Renting_Car_Project
         {
             PanleAccount.Visible = false;
             guna2Panel14.Visible = true;
+        }
+
+        public int GetLoggedInUserId()
+        {
+            var userSession = UserSession.LoadUserSession(); // فرض می‌کنیم که این متد شناسه کاربر را از سشن بارگذاری می‌کند
+            return userSession?.UserId ?? -1; // اگر سشن خالی بود، مقدار -1 بازگشت داده می‌شود
+        }
+        private void label16_Click(object sender, EventArgs e )
+        {
+            flowLayoutPanel1.Visible = false;
+            PanleAccount.Visible = false;
+
+            // دریافت شناسه کاربر جاری
+            int loggedInUserId = GetLoggedInUserId();
+
+            if (loggedInUserId == -1)
+            {
+                MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                return;
+            }
+
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Cars WHERE UserId = @UserId"; // فقط آگهی‌های کاربر جاری نمایش داده شود
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserId", loggedInUserId); // شناسه کاربر جاری
+                SqlDataReader reader = command.ExecuteReader();
+
+                flowLayoutPanel1.Controls.Clear();
+
+                while (reader.Read())
+                {
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]);
+
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
+
+                    // بررسی اینکه آیا این آگهی متعلق به کاربر جاری است یا خیر
+                    if (Convert.ToInt32(reader["UserId"]) == loggedInUserId)
+                    {
+                        // اگر آگهی متعلق به کاربر جاری بود، دکمه‌ها نمایش داده شوند
+                        carControl.ShowUpdateAndDeleteButtons();
+                    }
+                    else
+                    {
+                        // در غیر این صورت دکمه‌ها مخفی شوند
+                        carControl.HideUpdateAndDeleteButtons();
+                    }
+
+                    flowLayoutPanel1.Controls.Add(carControl);
+                    flowLayoutPanel1.Visible = true;
+                }
+                connection.Close();
+            }
+                   
+         }
+       
+            
+        public void LoadAds()
+        {
+          
+            flowLayoutPanel1.Controls.Clear();
+            int userId = GetLoggedInUserId(); // شناسه کاربر وارد شده
+
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT * FROM Cars WHERE UserId = @UserId";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserId", userId); // فیلتر بر اساس شناسه کاربر
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]); // شناسه آگهی
+
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location, carId);
+
+                    // نمایش دکمه ویرایش فقط برای آگهی‌های کاربر جاری
+                    carControl.ShowUpdateAndDeleteButtons();
+                    carControl.CarsName = carName;
+                    carControl.carId = carId;
+                    flowLayoutPanel1.Controls.Add(carControl);
+                  
+                }
+                connection.Close();
+            }
+        }
+        public void RefreshAdList()
+        {
+            flowLayoutPanel1.Controls.Clear();  // پاک کردن همه آگهی‌ها
+
+            // بارگذاری مجدد آگهی‌ها از دیتابیس
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Cars WHERE Cars_ID = @Cars_ID";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Cars_ID", GetLoggedInUserId()); // استفاده از شناسه کاربری وارد شده
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    // بارگذاری اطلاعات آگهی‌ها
+                    string carName = reader["CarsName"].ToString();
+                    string carColor = reader["Color"].ToString();
+                    string carModel = reader["YearOfProduction"].ToString();
+                    int carPrice = Convert.ToInt32(reader["PriceDay"]);
+                    byte[] carImage = reader["Image"] as byte[];
+                    string Location = reader["Location"].ToString();
+                    int carId = Convert.ToInt32(reader["Cars_ID"]); // شناسه آگهی
+                    UserControl1 carControl = new UserControl1();
+                    carControl.SetCarData(carName, carColor, carModel, carPrice, carImage, Location,carId);
+                    carControl.CarsName = carName;
+
+                    flowLayoutPanel1.Controls.Add(carControl);
+                }
+            }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            LoadUserData ali = new LoadUserData();
+            ali.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

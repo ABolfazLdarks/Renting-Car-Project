@@ -70,15 +70,7 @@ namespace Renting_Car_Project.Forms
             Timer_Sidebar_Menu.Start();
         }
 
-        private void guna2Panel4_MouseEnter(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void guna2Panel4_MouseLeave(object sender, EventArgs e)
-        {
-           
-        }
+      
 
         private void HoverTimer_Tick(object sender, EventArgs e)
         {
@@ -164,6 +156,8 @@ namespace Renting_Car_Project.Forms
 
                 guna2Panel7.Visible = true;
                 guna2Panel5.Visible = false;
+                txtUserLog.Text = userName;
+                txtPassLog.Text = password;
             }
         }
 
@@ -176,7 +170,8 @@ namespace Renting_Car_Project.Forms
         {
             string userName = txtUserLog.Text;
             string password = txtPassLog.Text;
-            int userId = loginRepository.LoginUser(userName, password); 
+            int userId = loginRepository.LoginUser(userName, password);
+         
 
             if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(password))
             {
@@ -199,7 +194,9 @@ namespace Renting_Car_Project.Forms
                 else
                 {
                     lblFillFields.Visible = true;
-                    lblFillFields.Text = "نام کاربری یا رمز عبور اشتباه است.";
+                    lblFillFields.Text = "نام کاربری یا رمز عبور اشتباه است";
+                    txtUserLog.Clear();
+                    txtPassLog.Clear();
                 }
             }
         }
@@ -219,26 +216,14 @@ namespace Renting_Car_Project.Forms
             }
         }
 
-        private void lblFillField_Click(object sender, EventArgs e)
-        {
-        }
-
+      
         private void guna2Panel3_Click(object sender, EventArgs e)
         {
             guna2Panel7.Visible = true;
             guna2Panel5.Visible = false;
         }
 
-        private void guna2Panel4_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void guna2Panel8_MouseEnter(object sender, EventArgs e)
         {
             Control control = sender as Control;

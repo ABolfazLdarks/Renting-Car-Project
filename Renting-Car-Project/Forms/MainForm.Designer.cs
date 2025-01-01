@@ -51,9 +51,9 @@
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel13 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblFillFields = new System.Windows.Forms.Label();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -90,10 +90,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label19 = new System.Windows.Forms.Label();
             this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Timer_Sidebar_Menu = new System.Windows.Forms.Timer(this.components);
+            this.guna2Panel17 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Closebtn = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel16 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
@@ -104,6 +106,7 @@
             this.guna2Panel3.SuspendLayout();
             this.PanleAccount.SuspendLayout();
             this.guna2Panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // BorderlessFormMain
@@ -374,20 +377,6 @@
             this.label5.MouseEnter += new System.EventHandler(this.Menu_But_MouseEnter);
             this.label5.MouseLeave += new System.EventHandler(this.Menu_But_MouseLeave);
             // 
-            // Closebtn
-            // 
-            this.Closebtn.AutoScroll = true;
-            this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Closebtn.Location = new System.Drawing.Point(11, 11);
-            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
-            this.Closebtn.Name = "Closebtn";
-            this.Closebtn.Size = new System.Drawing.Size(37, 36);
-            this.Closebtn.TabIndex = 3;
-            this.Closebtn.Tag = "";
-            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click_1);
-            // 
             // guna2TextBox1
             // 
             this.guna2TextBox1.BorderRadius = 15;
@@ -422,6 +411,7 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.lblFillFields);
             this.guna2Panel3.Controls.Add(this.btnImage);
             this.guna2Panel3.Controls.Add(this.label15);
             this.guna2Panel3.Controls.Add(this.txtPrice);
@@ -450,11 +440,24 @@
             this.guna2Panel3.TabIndex = 5;
             this.guna2Panel3.Visible = false;
             // 
+            // lblFillFields
+            // 
+            this.lblFillFields.AutoSize = true;
+            this.lblFillFields.ForeColor = System.Drawing.Color.Red;
+            this.lblFillFields.Location = new System.Drawing.Point(128, 14);
+            this.lblFillFields.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFillFields.Name = "lblFillFields";
+            this.lblFillFields.Size = new System.Drawing.Size(144, 13);
+            this.lblFillFields.TabIndex = 21;
+            this.lblFillFields.Text = "لطفا فیلد های خالی را پر کنید";
+            this.lblFillFields.Visible = false;
+            // 
             // btnImage
             // 
             this.btnImage.Animated = true;
             this.btnImage.AnimatedGIF = true;
             this.btnImage.BorderRadius = 10;
+            this.btnImage.BorderThickness = 2;
             this.btnImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -465,23 +468,25 @@
             this.btnImage.Location = new System.Drawing.Point(227, 283);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(116, 36);
-            this.btnImage.TabIndex = 21;
+            this.btnImage.TabIndex = 7;
             this.btnImage.Text = "انتخاب تصویر";
             this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(387, 367);
+            this.label15.Location = new System.Drawing.Point(353, 367);
             this.label15.Name = "label15";
+            this.label15.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label15.Size = new System.Drawing.Size(68, 23);
             this.label15.TabIndex = 20;
             this.label15.Text = ":کارکرد";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtPrice
             // 
             this.txtPrice.BorderRadius = 10;
+            this.txtPrice.BorderThickness = 2;
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPrice.DefaultText = "";
             this.txtPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -499,51 +504,56 @@
             this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPrice.SelectedText = "";
             this.txtPrice.Size = new System.Drawing.Size(286, 36);
-            this.txtPrice.TabIndex = 19;
+            this.txtPrice.TabIndex = 11;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(387, 325);
+            this.label14.Location = new System.Drawing.Point(353, 328);
             this.label14.Name = "label14";
+            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label14.Size = new System.Drawing.Size(68, 23);
             this.label14.TabIndex = 18;
             this.label14.Text = ":مکان";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(387, 283);
+            this.label13.Location = new System.Drawing.Point(353, 283);
             this.label13.Name = "label13";
+            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(68, 23);
             this.label13.TabIndex = 17;
             this.label13.Text = ":تصویر";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(349, 241);
             this.label12.Name = "label12";
+            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label12.Size = new System.Drawing.Size(106, 23);
             this.label12.TabIndex = 16;
             this.label12.Text = ":توضیحات خودرو";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(350, 199);
             this.label11.Name = "label11";
+            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label11.Size = new System.Drawing.Size(105, 23);
             this.label11.TabIndex = 15;
             this.label11.Text = ":وضعیت خودرو";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtMileage
             // 
             this.txtMileage.BorderRadius = 10;
+            this.txtMileage.BorderThickness = 2;
             this.txtMileage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMileage.DefaultText = "";
             this.txtMileage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -561,11 +571,12 @@
             this.txtMileage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMileage.SelectedText = "";
             this.txtMileage.Size = new System.Drawing.Size(286, 36);
-            this.txtMileage.TabIndex = 14;
+            this.txtMileage.TabIndex = 10;
             // 
             // txtLocation
             // 
             this.txtLocation.BorderRadius = 10;
+            this.txtLocation.BorderThickness = 2;
             this.txtLocation.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLocation.DefaultText = "";
             this.txtLocation.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -583,11 +594,12 @@
             this.txtLocation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtLocation.SelectedText = "";
             this.txtLocation.Size = new System.Drawing.Size(286, 36);
-            this.txtLocation.TabIndex = 13;
+            this.txtLocation.TabIndex = 9;
             // 
             // txtImage
             // 
             this.txtImage.BorderRadius = 10;
+            this.txtImage.BorderThickness = 2;
             this.txtImage.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtImage.DefaultText = "";
             this.txtImage.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -604,11 +616,12 @@
             this.txtImage.PlaceholderText = "";
             this.txtImage.SelectedText = "";
             this.txtImage.Size = new System.Drawing.Size(164, 36);
-            this.txtImage.TabIndex = 12;
+            this.txtImage.TabIndex = 8;
             // 
             // txtDescription
             // 
             this.txtDescription.BorderRadius = 10;
+            this.txtDescription.BorderThickness = 2;
             this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDescription.DefaultText = "";
             this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -626,13 +639,14 @@
             this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtDescription.SelectedText = "";
             this.txtDescription.Size = new System.Drawing.Size(286, 36);
-            this.txtDescription.TabIndex = 11;
+            this.txtDescription.TabIndex = 6;
             // 
             // btnRegistration
             // 
             this.btnRegistration.Animated = true;
             this.btnRegistration.AnimatedGIF = true;
             this.btnRegistration.BorderRadius = 20;
+            this.btnRegistration.BorderThickness = 2;
             this.btnRegistration.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRegistration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -643,13 +657,14 @@
             this.btnRegistration.Location = new System.Drawing.Point(164, 468);
             this.btnRegistration.Name = "btnRegistration";
             this.btnRegistration.Size = new System.Drawing.Size(180, 45);
-            this.btnRegistration.TabIndex = 10;
+            this.btnRegistration.TabIndex = 12;
             this.btnRegistration.Text = "ثبت آگهی";
             this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
             // 
             // txtStateofCar
             // 
             this.txtStateofCar.BorderRadius = 10;
+            this.txtStateofCar.BorderThickness = 2;
             this.txtStateofCar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtStateofCar.DefaultText = "";
             this.txtStateofCar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -667,11 +682,12 @@
             this.txtStateofCar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtStateofCar.SelectedText = "";
             this.txtStateofCar.Size = new System.Drawing.Size(286, 36);
-            this.txtStateofCar.TabIndex = 9;
+            this.txtStateofCar.TabIndex = 5;
             // 
             // txtColor
             // 
             this.txtColor.BorderRadius = 10;
+            this.txtColor.BorderThickness = 2;
             this.txtColor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtColor.DefaultText = "";
             this.txtColor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -689,11 +705,12 @@
             this.txtColor.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtColor.SelectedText = "";
             this.txtColor.Size = new System.Drawing.Size(286, 36);
-            this.txtColor.TabIndex = 8;
+            this.txtColor.TabIndex = 4;
             // 
             // txtModelYear
             // 
             this.txtModelYear.BorderRadius = 10;
+            this.txtModelYear.BorderThickness = 2;
             this.txtModelYear.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtModelYear.DefaultText = "";
             this.txtModelYear.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -711,11 +728,12 @@
             this.txtModelYear.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtModelYear.SelectedText = "";
             this.txtModelYear.Size = new System.Drawing.Size(286, 36);
-            this.txtModelYear.TabIndex = 7;
+            this.txtModelYear.TabIndex = 3;
             // 
             // txtBrand
             // 
             this.txtBrand.BorderRadius = 10;
+            this.txtBrand.BorderThickness = 2;
             this.txtBrand.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBrand.DefaultText = "";
             this.txtBrand.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -733,11 +751,12 @@
             this.txtBrand.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBrand.SelectedText = "";
             this.txtBrand.Size = new System.Drawing.Size(286, 36);
-            this.txtBrand.TabIndex = 6;
+            this.txtBrand.TabIndex = 2;
             // 
             // txtCarName
             // 
             this.txtCarName.BorderRadius = 10;
+            this.txtCarName.BorderThickness = 2;
             this.txtCarName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCarName.DefaultText = "";
             this.txtCarName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -755,57 +774,62 @@
             this.txtCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCarName.SelectedText = "";
             this.txtCarName.Size = new System.Drawing.Size(286, 36);
-            this.txtCarName.TabIndex = 5;
+            this.txtCarName.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(387, 409);
+            this.label10.Location = new System.Drawing.Point(353, 409);
             this.label10.Name = "label10";
+            this.label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label10.Size = new System.Drawing.Size(68, 23);
             this.label10.TabIndex = 4;
             this.label10.Text = ":قیمت";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(391, 157);
+            this.label9.Location = new System.Drawing.Point(353, 160);
             this.label9.Name = "label9";
+            this.label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label9.Size = new System.Drawing.Size(68, 23);
             this.label9.TabIndex = 3;
             this.label9.Text = ":رنگ";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(387, 115);
+            this.label8.Location = new System.Drawing.Point(353, 115);
             this.label8.Name = "label8";
+            this.label8.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label8.Size = new System.Drawing.Size(68, 23);
             this.label8.TabIndex = 2;
             this.label8.Text = ":مدل";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(387, 73);
+            this.label7.Location = new System.Drawing.Point(353, 79);
             this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label7.Size = new System.Drawing.Size(68, 23);
             this.label7.TabIndex = 1;
             this.label7.Text = ":برند";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(353, 31);
+            this.label6.Location = new System.Drawing.Point(353, 40);
             this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label6.Size = new System.Drawing.Size(102, 23);
             this.label6.TabIndex = 0;
             this.label6.Text = ":نام خودرو";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PanleAccount
             // 
@@ -912,6 +936,7 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "حساب کاربری";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label16
             // 
@@ -922,6 +947,7 @@
             this.label16.TabIndex = 0;
             this.label16.Text = "آگهی های من";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // openFileDialog1
             // 
@@ -939,11 +965,6 @@
             this.flowLayoutPanel1.TabIndex = 6;
             this.flowLayoutPanel1.Visible = false;
             // 
-            // Timer_Sidebar_Menu
-            // 
-            this.Timer_Sidebar_Menu.Interval = 10;
-            this.Timer_Sidebar_Menu.Tick += new System.EventHandler(this.Timer_Sidebar_Menu_Tick);
-            // 
             // guna2Panel14
             // 
             this.guna2Panel14.AutoScroll = true;
@@ -951,26 +972,13 @@
             this.guna2Panel14.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel14.BorderRadius = 10;
             this.guna2Panel14.BorderThickness = 2;
-            this.guna2Panel14.Controls.Add(this.guna2Panel16);
             this.guna2Panel14.Controls.Add(this.guna2Panel15);
-            this.guna2Panel14.Controls.Add(this.label19);
-            this.guna2Panel14.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel14.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel14.Location = new System.Drawing.Point(3, 120);
             this.guna2Panel14.Name = "guna2Panel14";
-            this.guna2Panel14.Size = new System.Drawing.Size(754, 605);
+            this.guna2Panel14.Size = new System.Drawing.Size(748, 399);
             this.guna2Panel14.TabIndex = 0;
             this.guna2Panel14.Visible = false;
-            this.guna2Panel14.Click += new System.EventHandler(this.guna2Panel14_Click);
-            // 
-            // label19
-            // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(53, 9);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label19.Size = new System.Drawing.Size(692, 585);
-            this.label19.TabIndex = 0;
-            this.label19.Text = resources.GetString("label19.Text");
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2Panel15
             // 
@@ -978,35 +986,79 @@
             this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
             this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(6, 11);
+            this.guna2Panel15.Location = new System.Drawing.Point(8, 12);
             this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
             this.guna2Panel15.TabIndex = 4;
             this.guna2Panel15.Tag = "";
             this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click_1);
-            this.guna2Panel15.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel15_Paint);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2PictureBox1.Image = global::Renting_Car_Project.Properties.Resources.about_us;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(748, 399);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 5;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // Timer_Sidebar_Menu
+            // 
+            this.Timer_Sidebar_Menu.Interval = 10;
+            this.Timer_Sidebar_Menu.Tick += new System.EventHandler(this.Timer_Sidebar_Menu_Tick);
+            // 
+            // guna2Panel17
+            // 
+            this.guna2Panel17.Location = new System.Drawing.Point(32, 105);
+            this.guna2Panel17.Name = "guna2Panel17";
+            this.guna2Panel17.Size = new System.Drawing.Size(542, 436);
+            this.guna2Panel17.TabIndex = 7;
+            this.guna2Panel17.Visible = false;
+            // 
+            // Closebtn
+            // 
+            this.Closebtn.AutoScroll = true;
+            this.Closebtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Closebtn.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.Closebtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Closebtn.Location = new System.Drawing.Point(11, 11);
+            this.Closebtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Closebtn.Name = "Closebtn";
+            this.Closebtn.Size = new System.Drawing.Size(37, 36);
+            this.Closebtn.TabIndex = 3;
+            this.Closebtn.Tag = "";
+            this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click_1);
             // 
             // guna2Panel16
             // 
-            this.guna2Panel16.BackgroundImage = global::Renting_Car_Project.Properties.Resources.icon;
+            this.guna2Panel16.BackColor = System.Drawing.Color.LightGray;
+            this.guna2Panel16.BackgroundImage = global::Renting_Car_Project.Properties.Resources.search;
             this.guna2Panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel16.Location = new System.Drawing.Point(581, 12);
+            this.guna2Panel16.ForeColor = System.Drawing.Color.LightGray;
+            this.guna2Panel16.Location = new System.Drawing.Point(327, 12);
+            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel16.TabIndex = 5;
+            this.guna2Panel16.Size = new System.Drawing.Size(30, 31);
+            this.guna2Panel16.TabIndex = 9;
+            this.guna2Panel16.Tag = "";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 603);
+            this.Controls.Add(this.guna2Panel16);
+            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel14);
             this.Controls.Add(this.PanleAccount);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar2);
-            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.guna2Panel17);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1027,8 +1079,10 @@
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             this.PanleAccount.ResumeLayout(false);
             this.guna2Panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1050,7 +1104,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
@@ -1096,9 +1149,12 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
-        private System.Windows.Forms.Label label19;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel15;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel17;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
+        private System.Windows.Forms.Label lblFillFields;
     }
 }
 
