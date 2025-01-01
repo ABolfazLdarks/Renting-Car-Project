@@ -1067,7 +1067,6 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
             this.guna2Panel10.ResumeLayout(false);

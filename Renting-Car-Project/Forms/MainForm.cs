@@ -155,7 +155,7 @@ namespace Renting_Car_Project
                     }
                     connection.Close();
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                    
                 }
@@ -523,9 +523,8 @@ namespace Renting_Car_Project
             ali.ShowDialog();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
+       
+        
+       
     }
 }
