@@ -166,6 +166,9 @@
     <None Include="Resources\white_plus.png" />
     <None Include="Resources\white_user_profile.png" />
     <None Include="Resources\setting.png" />
+    <None Include="Resources\telephone.png" />
+    <None Include="Resources\location.png" />
+    <None Include="Resources\search.png" />
     <Content Include="Startup.ico" />
     <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />

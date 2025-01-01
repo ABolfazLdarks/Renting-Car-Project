@@ -203,6 +203,7 @@ namespace Renting_Car_Project
             guna2TextBox1.Text = "جستجو در همه آگهی ها";
             guna2TextBox1.ForeColor = Color.Gray;
             guna2TextBox1.ReadOnly = true;
+            guna2Panel16.Visible = true;
         }
 
         private void guna2TextBox1_MouseClick(object sender, MouseEventArgs e)
@@ -210,6 +211,7 @@ namespace Renting_Car_Project
             guna2TextBox1.Text = "";
             guna2TextBox1.ForeColor = Color.Gray;
             guna2TextBox1.ReadOnly = false;
+            guna2Panel16.Visible = false;
         }
 
         private void Timer_Sidebar_Menu_Tick(object sender, EventArgs e)
@@ -245,10 +247,7 @@ namespace Renting_Car_Project
             guna2Panel3.Visible = false;
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
-
             loaddata();
-
-
 
         }
 
@@ -292,18 +291,9 @@ namespace Renting_Car_Project
 
         public void ShowDetailPanel()
         {
-
-
             loaddata();
             flowLayoutPanel1.Visible = false;
-
-
-
-
         }
-
-
-
 
         private void guna2Panel2_Click(object sender, EventArgs e)
         {
@@ -324,10 +314,6 @@ namespace Renting_Car_Project
             PanleAccount.Visible = true;
         }
 
-
-
-
-
         private void guna2Panel13_Click(object sender, EventArgs e)
         {
             UserSession.Logout();
@@ -345,7 +331,7 @@ namespace Renting_Car_Project
             PanleAccount.Visible = false;
             flowLayoutPanel1.Visible = true;
             loaddata();
-                                }
+        }
 
         
 
@@ -376,9 +362,6 @@ namespace Renting_Car_Project
         }
         private void label16_Click(object sender, EventArgs e )
         {
-
-
-
             flowLayoutPanel1.Visible = false;
             PanleAccount.Visible = false;
 
@@ -432,17 +415,10 @@ namespace Renting_Car_Project
                 }
                 connection.Close();
             }
-
-
-       
+                   
          }
        
-       
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
+            
         public void LoadAds()
         {
           
@@ -516,20 +492,10 @@ namespace Renting_Car_Project
             }
         }
 
-        private void guna2Panel14_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void label17_Click(object sender, EventArgs e)
         {
             LoadUserData ali = new LoadUserData();
             ali.ShowDialog();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        }                
     }
 }

@@ -39,12 +39,12 @@ public class UserRepository
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("ثبت نام با موفقیت انجام شد !","عملیات موفق");
+                    MessageBox.Show("ثبت نام با موفقیت انجام شد ","عملیات موفق");
                     
                 }
                 catch (SqlException ex)
                 {
-                    MessageBox.Show($"خطا در ثبت‌نام: {ex.Message}", "مشکلی رخ داد");
+                    MessageBox.Show($"خطا در ثبت ‌نام: {ex.Message}", "مشکلی رخ داد");
                 }
             }
         }

@@ -149,8 +149,6 @@
             this.Menu_Button.Size = new System.Drawing.Size(140, 114);
             this.Menu_Button.TabIndex = 3;
             this.Menu_Button.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.Menu_Button.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.Menu_Button.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // label3
             // 
@@ -165,8 +163,6 @@
             this.label3.Tag = "RPText";
             this.label3.Text = "منو";
             this.label3.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.label3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.label3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel6
             // 
@@ -179,8 +175,6 @@
             this.guna2Panel6.TabIndex = 1;
             this.guna2Panel6.Tag = "";
             this.guna2Panel6.Click += new System.EventHandler(this.Menu_Button_Click);
-            this.guna2Panel6.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel6.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel2
             // 
@@ -191,8 +185,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(141, 139);
             this.guna2Panel2.TabIndex = 3;
-            this.guna2Panel2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel8
             // 
@@ -219,8 +211,6 @@
             this.label2.Text = "ساخت حساب  ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            this.label2.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.label2.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel1
             // 
@@ -231,8 +221,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(140, 114);
             this.guna2Panel1.TabIndex = 0;
-            this.guna2Panel1.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel1.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // label1
             // 
@@ -247,8 +235,6 @@
             this.label1.Tag = "RPText";
             this.label1.Text = "ورود";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            this.label1.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // guna2Panel3
             // 
@@ -261,8 +247,6 @@
             this.guna2Panel3.TabIndex = 1;
             this.guna2Panel3.Tag = "";
             this.guna2Panel3.Click += new System.EventHandler(this.guna2Panel3_Click);
-            this.guna2Panel3.MouseEnter += new System.EventHandler(this.guna2Panel4_MouseEnter);
-            this.guna2Panel3.MouseLeave += new System.EventHandler(this.guna2Panel4_MouseLeave);
             // 
             // HoverTimer
             // 
@@ -306,7 +290,7 @@
             this.guna2CheckBox1.Location = new System.Drawing.Point(52, 189);
             this.guna2CheckBox1.Name = "guna2CheckBox1";
             this.guna2CheckBox1.Size = new System.Drawing.Size(315, 48);
-            this.guna2CheckBox1.TabIndex = 13;
+            this.guna2CheckBox1.TabIndex = 4;
             this.guna2CheckBox1.Text = "نمایش گذرواژه";
             this.guna2CheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.guna2CheckBox1.UncheckedState.BorderRadius = 0;
@@ -360,6 +344,7 @@
             this.btnSignUp.AutoRoundedCorners = true;
             this.btnSignUp.BackColor = System.Drawing.SystemColors.Control;
             this.btnSignUp.BorderRadius = 30;
+            this.btnSignUp.BorderThickness = 2;
             this.btnSignUp.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSignUp.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -378,6 +363,7 @@
             // 
             this.txtRPTpass.Animated = true;
             this.txtRPTpass.BorderRadius = 10;
+            this.txtRPTpass.BorderThickness = 2;
             this.txtRPTpass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRPTpass.DefaultText = "";
             this.txtRPTpass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -402,6 +388,7 @@
             // 
             this.txtUserSignUp.Animated = true;
             this.txtUserSignUp.BorderRadius = 10;
+            this.txtUserSignUp.BorderThickness = 2;
             this.txtUserSignUp.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserSignUp.DefaultText = "";
             this.txtUserSignUp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -425,6 +412,7 @@
             // 
             this.txtPassSignUp.Animated = true;
             this.txtPassSignUp.BorderRadius = 10;
+            this.txtPassSignUp.BorderThickness = 2;
             this.txtPassSignUp.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassSignUp.DefaultText = "";
             this.txtPassSignUp.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -456,7 +444,6 @@
             this.lblFillField.TabIndex = 10;
             this.lblFillField.Text = "لطفا فیلد های خالی را پر کنید";
             this.lblFillField.Visible = false;
-            this.lblFillField.Click += new System.EventHandler(this.lblFillField_Click);
             // 
             // label12
             // 
@@ -560,6 +547,7 @@
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.BorderRadius = 30;
+            this.btnLogin.BorderThickness = 2;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -578,6 +566,7 @@
             // 
             this.txtUserLog.Animated = true;
             this.txtUserLog.BorderRadius = 10;
+            this.txtUserLog.BorderThickness = 2;
             this.txtUserLog.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUserLog.DefaultText = "";
             this.txtUserLog.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -601,6 +590,7 @@
             // 
             this.txtPassLog.Animated = true;
             this.txtPassLog.BorderRadius = 10;
+            this.txtPassLog.BorderThickness = 2;
             this.txtPassLog.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassLog.DefaultText = "";
             this.txtPassLog.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -641,8 +631,8 @@
             this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.guna2Panel7);
             this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -55,6 +55,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+           
             // 
             // label2
             // 
@@ -66,7 +67,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+       
             // 
             // label3
             // 
@@ -171,7 +172,7 @@
             this.Closebtn.TabIndex = 12;
             this.Closebtn.Tag = "";
             this.Closebtn.Click += new System.EventHandler(this.Closebtn_Click);
-            this.Closebtn.Paint += new System.Windows.Forms.PaintEventHandler(this.Closebtn_Paint);
+
             // 
             // guna2BorderlessForm1
             // 

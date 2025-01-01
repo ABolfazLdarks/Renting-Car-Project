@@ -30,7 +30,7 @@ namespace Renting_Car_Project
             InitializeComponent();
             FontManager.ApplyCustomFont(this.Controls);
         }
-        private string imageFilePath = "";
+       
         private int GetLoggedInUserId()
         {
             var userSession = UserSession.LoadUserSession(); // فرض می‌کنیم که این متد شناسه کاربر را از سشن بارگذاری می‌کند
@@ -42,7 +42,7 @@ namespace Renting_Car_Project
 
             if (loggedInUserId == -1)
             {
-                MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                MessageBox.Show("لطفاً وارد حساب خود شوید");
                 return;
             }
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
@@ -89,16 +89,10 @@ namespace Renting_Car_Project
 
             if (loggedInUserId == -1)
             {
-                MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                MessageBox.Show("لطفاً وارد حساب خود شوید");
                 return;
             }
-            // خواندن تصویر به صورت باینری از مسیر کامل فایل
-            byte[] imageBytes = null;
-            if (!string.IsNullOrEmpty(imageFilePath))
-            {
-                // خواندن فایل تصویر از مسیر کامل
-                imageBytes = File.ReadAllBytes(imageFilePath); // تبدیل تصویر به بایت‌ها
-            }
+         
             string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -152,7 +146,7 @@ namespace Renting_Car_Project
 
                 if (loggedInUserId == -1)
                 {
-                    MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                    MessageBox.Show("لطفاً وارد حساب خود شوید");
                     return;
                 }
                 // اتصال به پایگاه داده

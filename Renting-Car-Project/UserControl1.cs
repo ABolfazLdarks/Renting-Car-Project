@@ -18,6 +18,7 @@ namespace Renting_Car_Project
     {
         public string CarsName { get; set; }
         public int carId { get; set; }
+      
         public UserControl1()
         {
             InitializeComponent();
@@ -69,46 +70,40 @@ namespace Renting_Car_Project
 
             lblLocation.Text = $"در  {Location}";
             this.carId = carId;
-            
+
         }
 
         private void guna2Panel1_Click(object sender, EventArgs e)
         {
             try
             {
-             
-              
+
+
                 LoadCarForm loadCarForm = new LoadCarForm
                 {
                     CarsName = this.CarsName // ارسال نام خودرو به فرم
                 };
                 loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
-                                         
+
             }
             catch (Exception ex)
             {
                 // نمایش شرح خطا
                 MessageBox.Show("خطا هنگام کلیک روی یوزرکنترل: " + ex.Message);
             }
-
-
-
-
-
-
         }
         //رویداد کلیک برای نشان دادن پنل جزئیات
         private void UserControl1_Click(object sender, EventArgs e)
         {
             try
             {
-               
+
                 LoadCarForm loadCarForm = new LoadCarForm
                 {
                     CarsName = this.CarsName // ارسال نام خودرو به فرم
                 };
                 loadCarForm.ShowDialog(); // باز کردن فرم به صورت Dialog
-                                         
+
             }
             catch (Exception ex)
             {
@@ -117,74 +112,68 @@ namespace Renting_Car_Project
             }
         }
 
-       
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int editCount = GetCarEditCount(carId);
-            if (editCount >= 1)
-            {
-                MessageBox.Show("شما تنها یکبار می‌توانید این آگهی را ویرایش کنید.");
-            }
-            else
-            {
+           
 
-               
-                    // به صفحه ویرایش هدایت کنیم
-                    EditCarForm editForm = new EditCarForm(carId);
+
+                // به صفحه ویرایش هدایت کنیم
+                EditCarForm editForm = new EditCarForm(carId);
                 editForm.ShowDialog();
-                    // پس از ویرایش، تعداد ویرایش را به روز می‌کنیم
-                    IncrementEditCount(carId);
-                    MainForm mainForm = (MainForm)Application.OpenForms["MainForm"];
-                    mainForm.LoadAds(); // بارگذاری آگهی‌ها مجدد
-                
-              
-               
+                // پس از ویرایش، تعداد ویرایش را به روز می‌کنیم
+                //IncrementEditCount(carId);
+                MainForm mainForm = (MainForm)Application.OpenForms["MainForm"];
+                mainForm.LoadAds(); // بارگذاری آگهی‌ها مجدد
 
-               
-             
-            }
+
+
+
+
+
+           
             // فراخوانی مجدد متد LoadAds برای بارگذاری آگهی‌ها و رفرش کردن FlowLayoutPanel
-          
-        }
-        private int GetCarEditCount(int carId)
-        {
-            int count = 0;
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT EditCount FROM CarEdits WHERE Cars_ID = @Cars_ID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Cars_ID", carId);
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
-                {
-                    count = Convert.ToInt32(reader["EditCount"]);
-                }
-                connection.Close();
-            }
-            return count;
-        }
 
-        private void IncrementEditCount(int carId)
-        {
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "UPDATE CarEdits SET EditCount = EditCount + 1 WHERE Cars_ID = @Cars_ID";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Cars_ID", carId);
-                command.ExecuteNonQuery();
-                connection.Close();
-            }
         }
+        //private int GetCarEditCount(int carId)
+        //{
+        //    //int count = 0;
+        //    //string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+        //    //using (SqlConnection connection = new SqlConnection(connectionString))
+        //    //{
+        //    //    connection.Open();
+        //    //    string query = "SELECT EditCount FROM CarEdits WHERE Cars_ID = @Cars_ID";
+        //    //    SqlCommand command = new SqlCommand(query, connection);
+        //    //    command.Parameters.AddWithValue("@Cars_ID", carId);
+        //    //    SqlDataReader reader = command.ExecuteReader();
+        //    //    if (reader.Read())
+        //    //    {
+        //    //        count = Convert.ToInt32(reader["EditCount"]);
+        //    //    }
+        //    //    connection.Close();
+        //    //}
+        //    //return count;
+        //}
+
+        //private void IncrementEditCount(int carId)
+        //{
+        //    //string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+        //    //using (SqlConnection connection = new SqlConnection(connectionString))
+        //    //{
+        //    //    connection.Open();
+        //    //    string query = "UPDATE CarEdits SET EditCount = EditCount + 1 WHERE Cars_ID = @Cars_ID";
+        //    //    SqlCommand command = new SqlCommand(query, connection);
+        //    //    command.Parameters.AddWithValue("@Cars_ID", carId);
+        //    //    command.ExecuteNonQuery();
+        //    //    connection.Close();
+        //    //}
+        //}
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             guna2Panel2.Visible = true;
-            
-           
+
+
         }
         private void DeleteAdFromDatabase()
         {
@@ -207,7 +196,7 @@ namespace Renting_Car_Project
         {
 
             string deleteReason = null;
-          
+
 
             if (guna2RadioButton1.Checked)
                 deleteReason = "منصرف شدم";
@@ -219,8 +208,8 @@ namespace Renting_Car_Project
 
             if (string.IsNullOrEmpty(deleteReason))
             {
-                
-               
+
+
             }
 
 
@@ -231,9 +220,82 @@ namespace Renting_Car_Project
             guna2Panel2.Visible = false;
             MainForm mainForm1 = (MainForm)Application.OpenForms["MainForm"];
             mainForm1.RefreshAdList(); // بارگذاری آگهی‌ها مجدد
-            MessageBox.Show("اگهی با موفقیت حذف شد");
+            MessageBox.Show("آگهی با موفقیت حذف شد");
+        }
+      
+    
+
+        private void guna2Panel15_Click(object sender, EventArgs e)
+        {
+            guna2Panel3.Visible = false;
         }
 
-       
+        private void guna2Panel4_Click(object sender, EventArgs e)
+        {
+            guna2Panel2.Visible = false;
+        }
+
+        
+
+        private void btndetial_Click(object sender, EventArgs e)
+        {
+            
+
+
+            guna2Panel3.Visible = true;
+
+            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                // ابتدا UserId مربوط به carId را پیدا می‌کنیم
+                string getUserIdQuery = "SELECT UserId FROM Cars WHERE Cars_ID = @Cars_ID";
+                SqlCommand getUserIdCommand = new SqlCommand(getUserIdQuery, connection);
+                getUserIdCommand.Parameters.AddWithValue("@Cars_ID", carId);
+
+                object userIdObj = getUserIdCommand.ExecuteScalar(); // گرفتن UserId
+                if (userIdObj == null)
+                {
+                    MessageBox.Show("اطلاعاتی برای این آگهی یافت نشد");
+                    return;
+                }
+
+                int userId = Convert.ToInt32(userIdObj);
+
+                // حالا اطلاعات تماس کاربر را پیدا می‌کنیم
+                string getPhoneQuery = "SELECT PhoneNumber FROM Users WHERE UserId = @UserId";
+                SqlCommand getPhoneCommand = new SqlCommand(getPhoneQuery, connection);
+                getPhoneCommand.Parameters.AddWithValue("@UserId", userId);
+
+                SqlDataReader reader = getPhoneCommand.ExecuteReader();
+                if (reader.Read())
+                {
+                    lblphone.Text = reader["PhoneNumber"].ToString(); // نمایش شماره تماس
+                }
+                else
+                {
+                    lblphone.Text = "اطلاعات تماس یافت نشد";
+                }
+
+                connection.Close();
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
     }
 }

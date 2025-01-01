@@ -67,13 +67,14 @@
             this.guna2Button1.Location = new System.Drawing.Point(263, 367);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(134, 45);
-            this.guna2Button1.TabIndex = 26;
+            this.guna2Button1.TabIndex = 9;
             this.guna2Button1.Text = "ثبت";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // txtemail
             // 
             this.txtemail.BorderRadius = 10;
+            this.txtemail.BorderThickness = 2;
             this.txtemail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtemail.DefaultText = "";
             this.txtemail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -89,11 +90,12 @@
             this.txtemail.PlaceholderText = "";
             this.txtemail.SelectedText = "";
             this.txtemail.Size = new System.Drawing.Size(200, 36);
-            this.txtemail.TabIndex = 24;
+            this.txtemail.TabIndex = 7;
             // 
             // txtphonenumber
             // 
             this.txtphonenumber.BorderRadius = 10;
+            this.txtphonenumber.BorderThickness = 2;
             this.txtphonenumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtphonenumber.DefaultText = "";
             this.txtphonenumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -109,11 +111,12 @@
             this.txtphonenumber.PlaceholderText = "";
             this.txtphonenumber.SelectedText = "";
             this.txtphonenumber.Size = new System.Drawing.Size(200, 36);
-            this.txtphonenumber.TabIndex = 25;
+            this.txtphonenumber.TabIndex = 6;
             // 
             // txtfname
             // 
             this.txtfname.BorderRadius = 10;
+            this.txtfname.BorderThickness = 2;
             this.txtfname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtfname.DefaultText = "";
             this.txtfname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -127,13 +130,15 @@
             this.txtfname.Name = "txtfname";
             this.txtfname.PasswordChar = '\0';
             this.txtfname.PlaceholderText = "";
+            this.txtfname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtfname.SelectedText = "";
             this.txtfname.Size = new System.Drawing.Size(200, 36);
-            this.txtfname.TabIndex = 23;
+            this.txtfname.TabIndex = 2;
             // 
             // txtname
             // 
             this.txtname.BorderRadius = 10;
+            this.txtname.BorderThickness = 2;
             this.txtname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtname.DefaultText = "";
             this.txtname.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -147,9 +152,10 @@
             this.txtname.Name = "txtname";
             this.txtname.PasswordChar = '\0';
             this.txtname.PlaceholderText = "";
+            this.txtname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtname.SelectedText = "";
             this.txtname.Size = new System.Drawing.Size(200, 36);
-            this.txtname.TabIndex = 22;
+            this.txtname.TabIndex = 1;
             // 
             // lblCarName
             // 
@@ -160,7 +166,7 @@
             this.lblCarName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblCarName.Size = new System.Drawing.Size(99, 35);
             this.lblCarName.TabIndex = 27;
-            this.lblCarName.Text = "نام";
+            this.lblCarName.Text = "نام:";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
@@ -172,31 +178,31 @@
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(137, 35);
             this.label1.TabIndex = 28;
-            this.label1.Text = "نام خانوادگی";
+            this.label1.Text = "نام خانوادگی:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(477, 273);
+            this.label2.Location = new System.Drawing.Point(431, 273);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(99, 35);
+            this.label2.Size = new System.Drawing.Size(145, 35);
             this.label2.TabIndex = 29;
-            this.label2.Text = "تلفن همراه";
+            this.label2.Text = "تلفن همراه:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(469, 316);
+            this.label3.Location = new System.Drawing.Point(431, 316);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label3.Size = new System.Drawing.Size(99, 35);
+            this.label3.Size = new System.Drawing.Size(137, 35);
             this.label3.TabIndex = 30;
-            this.label3.Text = "ایمیل";
+            this.label3.Text = "ایمیل:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2CirclePictureBox1
@@ -224,13 +230,14 @@
             this.guna2Button2.Location = new System.Drawing.Point(37, 229);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(125, 41);
-            this.guna2Button2.TabIndex = 32;
+            this.guna2Button2.TabIndex = 8;
             this.guna2Button2.Text = "تغییر تصویر";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // txtusername
             // 
             this.txtusername.BorderRadius = 10;
+            this.txtusername.BorderThickness = 2;
             this.txtusername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtusername.DefaultText = "";
             this.txtusername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -248,11 +255,12 @@
             this.txtusername.ReadOnly = true;
             this.txtusername.SelectedText = "";
             this.txtusername.Size = new System.Drawing.Size(200, 36);
-            this.txtusername.TabIndex = 25;
+            this.txtusername.TabIndex = 3;
             // 
             // txtpassword
             // 
             this.txtpassword.BorderRadius = 10;
+            this.txtpassword.BorderThickness = 2;
             this.txtpassword.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtpassword.DefaultText = "";
             this.txtpassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -270,18 +278,18 @@
             this.txtpassword.ReadOnly = true;
             this.txtpassword.SelectedText = "";
             this.txtpassword.Size = new System.Drawing.Size(200, 36);
-            this.txtpassword.TabIndex = 24;
+            this.txtpassword.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(477, 145);
+            this.label4.Location = new System.Drawing.Point(456, 145);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(99, 35);
+            this.label4.Size = new System.Drawing.Size(120, 35);
             this.label4.TabIndex = 29;
-            this.label4.Text = "نام کاربری";
+            this.label4.Text = "نام کاربری:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -293,12 +301,13 @@
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(99, 35);
             this.label5.TabIndex = 30;
-            this.label5.Text = "کلمه عبور";
+            this.label5.Text = "کلمه عبور:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtcodemeli
             // 
             this.txtcodemeli.BorderRadius = 10;
+            this.txtcodemeli.BorderThickness = 2;
             this.txtcodemeli.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtcodemeli.DefaultText = "";
             this.txtcodemeli.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -314,7 +323,7 @@
             this.txtcodemeli.PlaceholderText = "";
             this.txtcodemeli.SelectedText = "";
             this.txtcodemeli.Size = new System.Drawing.Size(200, 36);
-            this.txtcodemeli.TabIndex = 25;
+            this.txtcodemeli.TabIndex = 5;
             // 
             // label6
             // 
@@ -325,7 +334,7 @@
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(99, 35);
             this.label6.TabIndex = 29;
-            this.label6.Text = "کدملی";
+            this.label6.Text = "کدملی:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // guna2HtmlLabel1

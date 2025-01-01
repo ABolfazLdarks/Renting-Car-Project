@@ -27,9 +27,10 @@ namespace Renting_Car_Project
         {
             if (string.IsNullOrEmpty(CarsName))
             {
-                MessageBox.Show("car arsal nashod");
+                MessageBox.Show("ماشین ارسال نشد");
                 return;
             }
+
 
 
 
@@ -90,7 +91,7 @@ namespace Renting_Car_Project
 
                     else
                     {
-                        MessageBox.Show("asas");
+                        MessageBox.Show("خطا در ارسال ماشین");
                     }
 
 
@@ -98,7 +99,7 @@ namespace Renting_Car_Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("" + ex.Message);
+                    MessageBox.Show("شرح خطا" + ex.Message);
                 }
 
 
@@ -106,19 +107,11 @@ namespace Renting_Car_Project
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void Closebtn_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-        }
-
-        private void Closebtn_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
+        }             
     }
 }
