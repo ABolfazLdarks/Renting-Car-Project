@@ -31,11 +31,14 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblphone = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -48,11 +51,8 @@
             this.lblCarModel = new System.Windows.Forms.Label();
             this.lblCarColor = new System.Windows.Forms.Label();
             this.lblCarName = new System.Windows.Forms.Label();
-            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -80,12 +80,12 @@
             this.guna2Panel1.Controls.Add(this.btnUpdate);
             this.guna2Panel1.Controls.Add(this.lblLocation);
             this.guna2Panel1.Controls.Add(this.lblCarPrice);
+            this.guna2Panel1.Controls.Add(this.btndetial);
             this.guna2Panel1.Controls.Add(this.lblCarModel);
             this.guna2Panel1.Controls.Add(this.lblCarColor);
             this.guna2Panel1.Controls.Add(this.lblCarName);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Controls.Add(this.btndetial);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -111,6 +111,17 @@
             this.guna2Panel3.TabIndex = 15;
             this.guna2Panel3.Visible = false;
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.telephone;
+            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel6.Location = new System.Drawing.Point(464, 52);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(35, 31);
+            this.guna2Panel6.TabIndex = 8;
+            this.guna2Panel6.Tag = "";
+            // 
             // lblphone
             // 
             this.lblphone.Location = new System.Drawing.Point(101, 56);
@@ -127,6 +138,20 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(499, 10);
             this.guna2Separator1.TabIndex = 6;
+            // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.AutoScroll = true;
+            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel15.Location = new System.Drawing.Point(16, 6);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel15.TabIndex = 5;
+            this.guna2Panel15.Tag = "";
+            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
             // 
             // label4
             // 
@@ -163,6 +188,20 @@
             this.guna2Panel2.Size = new System.Drawing.Size(283, 198);
             this.guna2Panel2.TabIndex = 13;
             this.guna2Panel2.Visible = false;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.AutoScroll = true;
+            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel4.Location = new System.Drawing.Point(10, 14);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel4.TabIndex = 10;
+            this.guna2Panel4.Tag = "";
+            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
             // 
             // guna2RadioButton3
             // 
@@ -349,61 +388,6 @@
             this.lblCarName.Text = "label1";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btndetial
-            // 
-            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btndetial.ForeColor = System.Drawing.Color.White;
-            this.btndetial.Location = new System.Drawing.Point(31, 212);
-            this.btndetial.Name = "btndetial";
-            this.btndetial.Size = new System.Drawing.Size(163, 45);
-            this.btndetial.TabIndex = 16;
-            this.btndetial.Text = "اطلاعات تماس";
-            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.telephone;
-            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(464, 52);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(35, 31);
-            this.guna2Panel6.TabIndex = 8;
-            this.guna2Panel6.Tag = "";
-            // 
-            // guna2Panel15
-            // 
-            this.guna2Panel15.AutoScroll = true;
-            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(16, 6);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel15.TabIndex = 5;
-            this.guna2Panel15.Tag = "";
-            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.AutoScroll = true;
-            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel4.Location = new System.Drawing.Point(10, 14);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel4.TabIndex = 10;
-            this.guna2Panel4.Tag = "";
-            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -416,6 +400,24 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // btndetial
+            // 
+            this.btndetial.BorderRadius = 10;
+            this.btndetial.BorderThickness = 2;
+            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btndetial.ForeColor = System.Drawing.Color.White;
+            this.btndetial.Location = new System.Drawing.Point(47, 215);
+            this.btndetial.Name = "btndetial";
+            this.btndetial.Size = new System.Drawing.Size(163, 45);
+            this.btndetial.TabIndex = 16;
+            this.btndetial.Text = "اطلاعات تماس";
+            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
             // 
             // UserControl1
             // 

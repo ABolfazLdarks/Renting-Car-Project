@@ -10,7 +10,12 @@
       "ProjectGuid": "51f75f0b-237b-4362-b058-895fcc352d0d",
       "DisplayName": "ClassLibrary1",
       "ColorIndex": 1
+    },
+    "af974751-c69f-4aa0-a331-5ebd2c9e6c66": {
+      "ProjectGuid": "af974751-c69f-4aa0-a331-5ebd2c9e6c66",
+      "DisplayName": "SetupCar",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
