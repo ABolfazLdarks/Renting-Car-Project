@@ -27,7 +27,7 @@ public class LoginRepository
 
                     else
                     {
-                        MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا در ورود");
+                       // MessageBox.Show("نام کاربری یا رمز عبور اشتباه است", "خطا در ورود");
                         return -1;
                     }
                 }

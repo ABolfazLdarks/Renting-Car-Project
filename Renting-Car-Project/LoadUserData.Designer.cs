@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoadUserData));
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtemail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtphonenumber = new Guna.UI2.WinForms.Guna2TextBox();
@@ -397,6 +398,7 @@
             this.Controls.Add(this.txtfname);
             this.Controls.Add(this.txtname);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoadUserData";

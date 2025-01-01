@@ -156,6 +156,8 @@ namespace Renting_Car_Project.Forms
 
                 guna2Panel7.Visible = true;
                 guna2Panel5.Visible = false;
+                txtUserLog.Text = userName;
+                txtPassLog.Text = password;
             }
         }
 
@@ -193,6 +195,8 @@ namespace Renting_Car_Project.Forms
                 {
                     lblFillFields.Visible = true;
                     lblFillFields.Text = "نام کاربری یا رمز عبور اشتباه است";
+                    txtUserLog.Clear();
+                    txtPassLog.Clear();
                 }
             }
         }

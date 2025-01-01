@@ -496,7 +496,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Assertive;
-            this.label7.Location = new System.Drawing.Point(208, 6);
+            this.label7.Location = new System.Drawing.Point(208, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 32);
             this.label7.TabIndex = 7;
@@ -631,8 +631,8 @@
             this.ClientSize = new System.Drawing.Size(754, 576);
             this.Controls.Add(this.Closebtn);
             this.Controls.Add(this.SideBar);
-            this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.guna2Panel7);
+            this.Controls.Add(this.guna2Panel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);

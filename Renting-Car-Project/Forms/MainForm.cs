@@ -6,6 +6,10 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Windows.Forms;
+using Guna.UI2.WinForms;
+
+
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Renting_Car_Project
@@ -88,10 +92,31 @@ namespace Renting_Car_Project
         {
             Application.Exit();
         }
-
+        private bool IsNullOrWhiteSpace(string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
+        }
         private void btnRegistration_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
+            if (IsNullOrWhiteSpace(txtCarName.Text) ||
+               IsNullOrWhiteSpace(txtBrand.Text) ||
+               IsNullOrWhiteSpace(txtModelYear.Text) || IsNullOrWhiteSpace(txtColor.Text) || IsNullOrWhiteSpace(txtStateofCar.Text)
+               || IsNullOrWhiteSpace(txtDescription.Text)
+               || IsNullOrWhiteSpace(txtImage.Text) || IsNullOrWhiteSpace(txtLocation.Text) || IsNullOrWhiteSpace(txtMileage.Text)
+               || IsNullOrWhiteSpace(txtPrice.Text)
+
+
+               )
+            {
+                lblFillFields.Visible = true;
+                txtCarName.BorderColor = txtBrand.BorderColor = txtModelYear.BorderColor = txtColor.BorderColor = txtStateofCar.BorderColor = txtDescription.BorderColor = txtImage.BorderColor = txtLocation.BorderColor = txtMileage.BorderColor = txtPrice.BorderColor = Color.Red;
+            }
+            else
+            {
+                lblFillFields.Visible = false;
+                txtCarName.BorderColor = txtBrand.BorderColor = txtModelYear.BorderColor = txtColor.BorderColor = txtStateofCar.BorderColor = txtDescription.BorderColor = txtImage.BorderColor = txtLocation.BorderColor = txtMileage.BorderColor = txtPrice.BorderColor = Color.FromArgb(213, 218, 223);
+            }
+                string connectionString = @"Server=Localhost;Database=RentingCARDB;Integrated Security=True;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -132,7 +157,7 @@ namespace Renting_Car_Project
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("خطا: " + ex.Message);
+                   
                 }
             }
         }
@@ -496,6 +521,11 @@ namespace Renting_Car_Project
         {
             LoadUserData ali = new LoadUserData();
             ali.ShowDialog();
-        }                
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

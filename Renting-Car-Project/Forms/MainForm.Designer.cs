@@ -53,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblFillFields = new System.Windows.Forms.Label();
             this.btnImage = new Guna.UI2.WinForms.Guna2Button();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -410,6 +411,7 @@
             this.guna2Panel3.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.BorderThickness = 2;
+            this.guna2Panel3.Controls.Add(this.lblFillFields);
             this.guna2Panel3.Controls.Add(this.btnImage);
             this.guna2Panel3.Controls.Add(this.label15);
             this.guna2Panel3.Controls.Add(this.txtPrice);
@@ -437,6 +439,18 @@
             this.guna2Panel3.Size = new System.Drawing.Size(478, 524);
             this.guna2Panel3.TabIndex = 5;
             this.guna2Panel3.Visible = false;
+            // 
+            // lblFillFields
+            // 
+            this.lblFillFields.AutoSize = true;
+            this.lblFillFields.ForeColor = System.Drawing.Color.Red;
+            this.lblFillFields.Location = new System.Drawing.Point(128, 14);
+            this.lblFillFields.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFillFields.Name = "lblFillFields";
+            this.lblFillFields.Size = new System.Drawing.Size(144, 13);
+            this.lblFillFields.TabIndex = 21;
+            this.lblFillFields.Text = "لطفا فیلد های خالی را پر کنید";
+            this.lblFillFields.Visible = false;
             // 
             // btnImage
             // 
@@ -1053,6 +1067,7 @@
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel9.ResumeLayout(false);
             this.guna2Panel9.PerformLayout();
             this.guna2Panel10.ResumeLayout(false);
@@ -1064,6 +1079,7 @@
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
             this.PanleAccount.ResumeLayout(false);
             this.guna2Panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -1138,6 +1154,7 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel Closebtn;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel16;
+        private System.Windows.Forms.Label lblFillFields;
     }
 }
 
