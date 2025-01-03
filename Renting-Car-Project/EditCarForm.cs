@@ -556,12 +556,12 @@ namespace Renting_Car_Project
 
         private void Closebtn_Click(object sender, EventArgs e)
         {
-           // پاک کردن تکست باکس‌ها و بستن فرم
-            txtCarName.Clear();
-            txtbrand.Clear();
-            txtCarModel.Clear();
-            txtstatecar.Clear();
-            guna2PictureBox1.Image = null;  // تصویر را پاک می‌کنیم
+            //// پاک کردن تکست باکس‌ها و بستن فرم
+            // txtCarName.Clear();
+            // txtbrand.Clear();
+            // txtCarModel.Clear();
+            // txtstatecar.Clear();
+           // guna2PictureBox1.Image = null;  // تصویر را پاک می‌کنیم
             this.Close();
         }
 
@@ -573,7 +573,7 @@ namespace Renting_Car_Project
                 connection.Open();
                 string query = "SELECT * FROM Cars WHERE Cars_ID = @Cars_ID";  // دریافت اطلاعات آگهی از پایگاه داده
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Cars_ID", CarId);  // ارسال شناسه آگهی به دیتابیس
+                command.Parameters.AddWithValue("@Cars_ID", CarId);  // ارسال شناسه کاربر به دیتابیس
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
@@ -621,6 +621,7 @@ namespace Renting_Car_Project
                 // ذخیره تصویر در پایگاه داده
                 SaveImageToDatabase(openFileDialog.FileName);
             }
+
         }
         private void SaveImageToDatabase(string filePath)
         {
@@ -632,7 +633,7 @@ namespace Renting_Car_Project
 
                 if (loggedInUserId == -1)
                 {
-                    MessageBox.Show("لطفاً وارد حساب خود شوید.");
+                    MessageBox.Show("لطفاً وارد حساب خود شوید");
                     return;
                 }
                 // اتصال به پایگاه داده

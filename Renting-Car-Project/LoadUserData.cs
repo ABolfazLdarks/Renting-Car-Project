@@ -7,18 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 using System.Data.SqlClient;
-
-
 using System.IO;
 using Renting_Car_Project.Forms;
-
-
-
-
 using System.Drawing.Text;
-
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace Renting_Car_Project
 {
@@ -49,14 +41,14 @@ namespace Renting_Car_Project
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT * FROM Users WHERE UserId = @UserId";  // دریافت اطلاعات آگهی از پایگاه داده
+                string query = "SELECT * FROM Users WHERE UserId = @UserId";  // دریافت اطلاعات کاربر از پایگاه داده
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@UserId", loggedInUserId);  // ارسال شناسه آگهی به دیتابیس
+                command.Parameters.AddWithValue("@UserId", loggedInUserId);  // ارسال شناسه کاربر به دیتابیس
 
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    // بارگذاری اطلاعات آگهی به تکست باکس‌ها
+                    // بارگذاری اطلاعات کاربر به تکست باکس‌ها
                     txtusername.Text = reader["UserName"].ToString();
                     txtpassword.Text = reader["Password"].ToString();
                     txtphonenumber.Text = reader["PhoneNumber"].ToString();
@@ -107,7 +99,7 @@ namespace Renting_Car_Project
                
                 command.Parameters.AddWithValue("@codemelli", txtcodemeli.Text);
 
-                command.Parameters.AddWithValue("@UserId", loggedInUserId);  // شناسه آگهی برای به‌روزرسانی
+                command.Parameters.AddWithValue("@UserId", loggedInUserId);  // شناسه کاربر برای به‌روزرسانی
 
                 command.ExecuteNonQuery();  // اجرای دستورات به روز رسانی
 
@@ -125,6 +117,7 @@ namespace Renting_Car_Project
             {
                 Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif",
                 Title = "Select an Image"
+                
             };
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)

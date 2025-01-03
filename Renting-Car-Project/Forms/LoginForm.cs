@@ -129,9 +129,9 @@ namespace Renting_Car_Project.Forms
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (IsNullOrWhiteSpace(txtRPTpass.Text) ||
+            if (IsNullOrWhiteSpace(txtUserSignUp.Text) ||
                 IsNullOrWhiteSpace(txtPassSignUp.Text) ||
-                IsNullOrWhiteSpace(txtUserSignUp.Text))
+                IsNullOrWhiteSpace(txtRPTpass.Text))
             {
                 lblFillField.Visible = true;
                 txtUserSignUp.BorderColor = txtPassSignUp.BorderColor = txtRPTpass.BorderColor = Color.Red;
@@ -250,6 +250,76 @@ namespace Renting_Car_Project.Forms
         {
             guna2Panel5.Visible = true;
             guna2Panel7.Visible = false;
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                currentHoverControl = control;
+                currentColorValue = 40;
+                hoverTimer.Start();
+            }
+        }
+
+       
+
+        private void label2_MouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                currentHoverControl = control;
+                currentColorValue = 40;
+                hoverTimer.Start();
+            }
+        }
+
+        private void label2_MouseLeave(object sender, EventArgs e)
+        {
+            hoverTimer.Stop();
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                control.ForeColor = SystemColors.ButtonFace;
+                control.BackColor = Color.FromArgb(35, 40, 45);
+            }
+        }
+
+      
+
+        private void label3_MouseLeave(object sender, EventArgs e)
+        {
+            hoverTimer.Stop();
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                control.ForeColor = SystemColors.ButtonFace;
+                control.BackColor = Color.FromArgb(35, 40, 45);
+            }
+        }
+
+        private void label3_MouseEnter(object sender, EventArgs e)
+        {
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                currentHoverControl = control;
+                currentColorValue = 40;
+                hoverTimer.Start();
+            }
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            hoverTimer.Stop();
+            Control control = sender as Control;
+            if (control != null && control.Tag != null && control.Tag.ToString() == "RPText")
+            {
+                control.ForeColor = SystemColors.ButtonFace;
+                control.BackColor = Color.FromArgb(35, 40, 45);
+            }
         }
     }
 }

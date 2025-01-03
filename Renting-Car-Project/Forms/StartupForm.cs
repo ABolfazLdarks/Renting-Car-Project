@@ -12,7 +12,7 @@ namespace Renting_Car_Project.Forms
             InitializeComponent();
 
             timer = new Timer();
-            timer.Interval = 2000;
+            timer.Interval = 1500;
             timer.Tick += Timer_Tick;
             timer.Start();
 

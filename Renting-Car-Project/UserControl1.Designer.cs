@@ -48,11 +48,11 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblCarPrice = new System.Windows.Forms.Label();
+            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
             this.lblCarModel = new System.Windows.Forms.Label();
             this.lblCarColor = new System.Windows.Forms.Label();
             this.lblCarName = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -124,7 +124,7 @@
             // 
             // lblphone
             // 
-            this.lblphone.Location = new System.Drawing.Point(101, 56);
+            this.lblphone.Location = new System.Drawing.Point(116, 57);
             this.lblphone.Name = "lblphone";
             this.lblphone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblphone.Size = new System.Drawing.Size(243, 23);
@@ -155,7 +155,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(416, 19);
+            this.label4.Location = new System.Drawing.Point(230, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 2;
@@ -211,10 +211,11 @@
             this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(97, 99);
+            this.guna2RadioButton3.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton3.Location = new System.Drawing.Point(99, 106);
             this.guna2RadioButton3.Name = "guna2RadioButton3";
             this.guna2RadioButton3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton3.Size = new System.Drawing.Size(115, 17);
+            this.guna2RadioButton3.Size = new System.Drawing.Size(110, 21);
             this.guna2RadioButton3.TabIndex = 3;
             this.guna2RadioButton3.Text = "آگهی به فروش رفت";
             this.guna2RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -257,10 +258,11 @@
             this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(114, 79);
+            this.guna2RadioButton2.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton2.Location = new System.Drawing.Point(114, 81);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton2.Size = new System.Drawing.Size(98, 17);
+            this.guna2RadioButton2.Size = new System.Drawing.Size(95, 21);
             this.guna2RadioButton2.TabIndex = 2;
             this.guna2RadioButton2.Text = "مشتری پیدا نشد";
             this.guna2RadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,11 +279,11 @@
             this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2RadioButton1.Location = new System.Drawing.Point(133, 56);
+            this.guna2RadioButton1.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton1.Location = new System.Drawing.Point(129, 54);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton1.Size = new System.Drawing.Size(79, 17);
+            this.guna2RadioButton1.Size = new System.Drawing.Size(80, 21);
             this.guna2RadioButton1.TabIndex = 1;
             this.guna2RadioButton1.Text = "منصرف شدم";
             this.guna2RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -352,6 +354,24 @@
             this.lblCarPrice.Text = "label3";
             this.lblCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btndetial
+            // 
+            this.btndetial.BorderRadius = 10;
+            this.btndetial.BorderThickness = 2;
+            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btndetial.ForeColor = System.Drawing.Color.White;
+            this.btndetial.Location = new System.Drawing.Point(47, 215);
+            this.btndetial.Name = "btndetial";
+            this.btndetial.Size = new System.Drawing.Size(163, 45);
+            this.btndetial.TabIndex = 16;
+            this.btndetial.Text = "اطلاعات تماس";
+            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
+            // 
             // lblCarModel
             // 
             this.lblCarModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -400,24 +420,6 @@
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 6;
             this.guna2PictureBox1.TabStop = false;
-            // 
-            // btndetial
-            // 
-            this.btndetial.BorderRadius = 10;
-            this.btndetial.BorderThickness = 2;
-            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btndetial.ForeColor = System.Drawing.Color.White;
-            this.btndetial.Location = new System.Drawing.Point(47, 215);
-            this.btndetial.Name = "btndetial";
-            this.btndetial.Size = new System.Drawing.Size(163, 45);
-            this.btndetial.TabIndex = 16;
-            this.btndetial.Text = "اطلاعات تماس";
-            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
             // 
             // UserControl1
             // 

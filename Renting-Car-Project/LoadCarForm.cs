@@ -25,11 +25,11 @@ namespace Renting_Car_Project
 
         private void LoadCarForm_Load(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(CarsName))
-            {
-                MessageBox.Show("ماشین ارسال نشد");
-                return;
-            }
+            //if (string.IsNullOrEmpty(CarsName))
+            //{
+            //    MessageBox.Show("ماشین ارسال نشد");
+            //    return;
+            //}
 
 
 
@@ -42,7 +42,7 @@ namespace Renting_Car_Project
             {
                 string query = "SELECT * FROM Cars WHERE CarsName = @CarsName ";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@CarsName", CarsName);
+                command.Parameters.AddWithValue("@CarsName",CarsName );
 
 
 

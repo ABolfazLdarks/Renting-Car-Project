@@ -48,10 +48,13 @@
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.HoverTimer = new System.Windows.Forms.Timer(this.components);
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2CheckBox1 = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSignUp = new Guna.UI2.WinForms.Guna2Button();
             this.txtRPTpass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,6 +63,8 @@
             this.lblFillField = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblFillFields = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2CheckBox2 = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -163,6 +168,8 @@
             this.label3.Tag = "RPText";
             this.label3.Text = "منو";
             this.label3.Click += new System.EventHandler(this.Menu_Button_Click);
+            this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
+            this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
             // guna2Panel6
             // 
@@ -211,6 +218,8 @@
             this.label2.Text = "ساخت حساب  ";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.MouseEnter += new System.EventHandler(this.label2_MouseEnter);
+            this.label2.MouseLeave += new System.EventHandler(this.label2_MouseLeave);
             // 
             // guna2Panel1
             // 
@@ -235,6 +244,8 @@
             this.label1.Tag = "RPText";
             this.label1.Text = "ورود";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // guna2Panel3
             // 
@@ -260,10 +271,13 @@
             this.guna2Panel5.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel5.BorderRadius = 15;
             this.guna2Panel5.BorderThickness = 2;
+            this.guna2Panel5.Controls.Add(this.label5);
+            this.guna2Panel5.Controls.Add(this.label14);
+            this.guna2Panel5.Controls.Add(this.label13);
+            this.guna2Panel5.Controls.Add(this.label10);
             this.guna2Panel5.Controls.Add(this.guna2CheckBox1);
             this.guna2Panel5.Controls.Add(this.label11);
             this.guna2Panel5.Controls.Add(this.label6);
-            this.guna2Panel5.Controls.Add(this.label5);
             this.guna2Panel5.Controls.Add(this.label4);
             this.guna2Panel5.Controls.Add(this.btnSignUp);
             this.guna2Panel5.Controls.Add(this.txtRPTpass);
@@ -278,6 +292,49 @@
             this.guna2Panel5.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel5.TabIndex = 0;
             this.guna2Panel5.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(412, 116);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 29);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "کلمه عبور";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("B Yekan", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(372, 141);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(25, 46);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "*";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("B Yekan", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(372, 102);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 46);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "*";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("B Yekan", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(372, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(25, 46);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "*";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CheckBox1
             // 
@@ -313,29 +370,22 @@
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(373, 153);
+            this.label6.Location = new System.Drawing.Point(399, 155);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 29);
+            this.label6.Size = new System.Drawing.Size(108, 29);
             this.label6.TabIndex = 6;
-            this.label6.Text = " تکرار کلمه عبور: ";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(373, 116);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 29);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "کلمه عبور: ";
+            this.label6.Text = " تکرار کلمه عبور ";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(373, 79);
+            this.label4.Location = new System.Drawing.Point(399, 82);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 29);
+            this.label4.Size = new System.Drawing.Size(111, 29);
             this.label4.TabIndex = 5;
-            this.label4.Text = "نام کاربری:";
+            this.label4.Text = "نام کاربری";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSignUp
             // 
@@ -465,6 +515,8 @@
             this.guna2Panel7.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel7.BorderRadius = 15;
             this.guna2Panel7.BorderThickness = 2;
+            this.guna2Panel7.Controls.Add(this.label16);
+            this.guna2Panel7.Controls.Add(this.label15);
             this.guna2Panel7.Controls.Add(this.lblFillFields);
             this.guna2Panel7.Controls.Add(this.label7);
             this.guna2Panel7.Controls.Add(this.guna2CheckBox2);
@@ -479,6 +531,28 @@
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(530, 319);
             this.guna2Panel7.TabIndex = 7;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("B Yekan", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(381, 123);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(25, 46);
+            this.label16.TabIndex = 30;
+            this.label16.Text = "*";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("B Yekan", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label15.ForeColor = System.Drawing.Color.Red;
+            this.label15.Location = new System.Drawing.Point(381, 80);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(25, 46);
+            this.label15.TabIndex = 29;
+            this.label15.Text = "*";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFillFields
             // 
@@ -525,20 +599,21 @@
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(381, 129);
+            this.label8.Location = new System.Drawing.Point(403, 129);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 29);
+            this.label8.Size = new System.Drawing.Size(87, 29);
             this.label8.TabIndex = 6;
-            this.label8.Text = "کلمه عبور: ";
+            this.label8.Text = "کلمه عبور";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(381, 92);
+            this.label9.Location = new System.Drawing.Point(399, 94);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(126, 29);
+            this.label9.Size = new System.Drawing.Size(79, 29);
             this.label9.TabIndex = 5;
-            this.label9.Text = "نام کاربری:";
+            this.label9.Text = "نام کاربری";
             // 
             // btnLogin
             // 
@@ -678,7 +753,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassSignUp;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtRPTpass;
         private Guna.UI2.WinForms.Guna2TextBox txtUserSignUp;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
@@ -697,5 +771,11 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label5;
     }
 }
