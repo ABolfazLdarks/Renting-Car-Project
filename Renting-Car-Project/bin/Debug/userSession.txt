@@ -1,2 +1,0 @@
-UserId=11
-IsLoggedIn=True

@@ -150,14 +150,14 @@ namespace Renting_Car_Project
                         command.Parameters.AddWithValue("@ViewState", 1);
 
                         command.ExecuteNonQuery(); // اجرا کردن دستور
-                        MessageBox.Show("آگهی با موفقیت ذخیره شد", "عملیات موفق");
+                        MessageBox.Show("آگهی شما با موفقیت ذخیره شد");
                         txtCarName.Clear(); txtBrand.Clear(); txtModelYear.Clear(); txtColor.Clear(); txtStateofCar.Clear(); txtDescription.Clear(); txtImage.Clear(); txtLocation.Clear(); txtMileage.Clear(); txtPrice.Clear();
                     }
                     connection.Close();
                 }
-                catch (Exception )
+                catch (Exception ex )
                 {
-                   
+                    MessageBox.Show("شرح خطا: " + ex.Message);
                 }
             }
         }
@@ -213,7 +213,7 @@ namespace Renting_Car_Project
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error: " + ex.Message);
+                        MessageBox.Show("شرح خطا: " + ex.Message);
                     }
                 }
             }
@@ -312,14 +312,11 @@ namespace Renting_Car_Project
 
             }
         }
-
-
         public void ShowDetailPanel()
         {
             loaddata();
             flowLayoutPanel1.Visible = false;
         }
-
         private void guna2Panel2_Click(object sender, EventArgs e)
         {
             flowLayoutPanel1.Visible = false;
@@ -516,15 +513,10 @@ namespace Renting_Car_Project
                 }
             }
         }
-
         private void label17_Click(object sender, EventArgs e)
         {
-            LoadUserData ali = new LoadUserData();
-            ali.ShowDialog();
-        }
-
-       
-        
-       
+            LoadUserData LoadUserData = new LoadUserData();
+            LoadUserData.ShowDialog();
+        }     
     }
 }
