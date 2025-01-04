@@ -95,7 +95,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CarRepository.cs" />
     <Compile Include="Class\LoginFormClasses\Login.cs" />
     <Compile Include="Class\ProjectClasses\DatabaseConfig.cs" />
     <Compile Include="Class\ProjectClasses\FontManager.cs" />

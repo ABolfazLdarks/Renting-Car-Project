@@ -31,11 +31,14 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblphone = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -45,13 +48,10 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.lblLocation = new System.Windows.Forms.Label();
             this.lblCarPrice = new System.Windows.Forms.Label();
+            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
             this.lblCarModel = new System.Windows.Forms.Label();
             this.lblCarColor = new System.Windows.Forms.Label();
             this.lblCarName = new System.Windows.Forms.Label();
-            this.btndetial = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel15 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -80,12 +80,12 @@
             this.guna2Panel1.Controls.Add(this.btnUpdate);
             this.guna2Panel1.Controls.Add(this.lblLocation);
             this.guna2Panel1.Controls.Add(this.lblCarPrice);
+            this.guna2Panel1.Controls.Add(this.btndetial);
             this.guna2Panel1.Controls.Add(this.lblCarModel);
             this.guna2Panel1.Controls.Add(this.lblCarColor);
             this.guna2Panel1.Controls.Add(this.lblCarName);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel1.Controls.Add(this.btndetial);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -111,9 +111,20 @@
             this.guna2Panel3.TabIndex = 15;
             this.guna2Panel3.Visible = false;
             // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.telephone;
+            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel6.Location = new System.Drawing.Point(464, 52);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(35, 31);
+            this.guna2Panel6.TabIndex = 8;
+            this.guna2Panel6.Tag = "";
+            // 
             // lblphone
             // 
-            this.lblphone.Location = new System.Drawing.Point(101, 56);
+            this.lblphone.Location = new System.Drawing.Point(116, 57);
             this.lblphone.Name = "lblphone";
             this.lblphone.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblphone.Size = new System.Drawing.Size(243, 23);
@@ -128,9 +139,23 @@
             this.guna2Separator1.Size = new System.Drawing.Size(499, 10);
             this.guna2Separator1.TabIndex = 6;
             // 
+            // guna2Panel15
+            // 
+            this.guna2Panel15.AutoScroll = true;
+            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel15.Location = new System.Drawing.Point(16, 6);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel15.Name = "guna2Panel15";
+            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel15.TabIndex = 5;
+            this.guna2Panel15.Tag = "";
+            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
+            // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(416, 19);
+            this.label4.Location = new System.Drawing.Point(230, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 18);
             this.label4.TabIndex = 2;
@@ -164,6 +189,20 @@
             this.guna2Panel2.TabIndex = 13;
             this.guna2Panel2.Visible = false;
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.AutoScroll = true;
+            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
+            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Panel4.Location = new System.Drawing.Point(10, 14);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
+            this.guna2Panel4.TabIndex = 10;
+            this.guna2Panel4.Tag = "";
+            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
+            // 
             // guna2RadioButton3
             // 
             this.guna2RadioButton3.AutoSize = true;
@@ -172,10 +211,11 @@
             this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(97, 99);
+            this.guna2RadioButton3.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton3.Location = new System.Drawing.Point(99, 106);
             this.guna2RadioButton3.Name = "guna2RadioButton3";
             this.guna2RadioButton3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton3.Size = new System.Drawing.Size(115, 17);
+            this.guna2RadioButton3.Size = new System.Drawing.Size(110, 21);
             this.guna2RadioButton3.TabIndex = 3;
             this.guna2RadioButton3.Text = "آگهی به فروش رفت";
             this.guna2RadioButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -218,10 +258,11 @@
             this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(114, 79);
+            this.guna2RadioButton2.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton2.Location = new System.Drawing.Point(114, 81);
             this.guna2RadioButton2.Name = "guna2RadioButton2";
             this.guna2RadioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton2.Size = new System.Drawing.Size(98, 17);
+            this.guna2RadioButton2.Size = new System.Drawing.Size(95, 21);
             this.guna2RadioButton2.TabIndex = 2;
             this.guna2RadioButton2.Text = "مشتری پیدا نشد";
             this.guna2RadioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -238,11 +279,11 @@
             this.guna2RadioButton1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2RadioButton1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2RadioButton1.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.guna2RadioButton1.Location = new System.Drawing.Point(133, 56);
+            this.guna2RadioButton1.Font = new System.Drawing.Font("B Yekan", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.guna2RadioButton1.Location = new System.Drawing.Point(129, 54);
             this.guna2RadioButton1.Name = "guna2RadioButton1";
             this.guna2RadioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.guna2RadioButton1.Size = new System.Drawing.Size(79, 17);
+            this.guna2RadioButton1.Size = new System.Drawing.Size(80, 21);
             this.guna2RadioButton1.TabIndex = 1;
             this.guna2RadioButton1.Text = "منصرف شدم";
             this.guna2RadioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -313,6 +354,24 @@
             this.lblCarPrice.Text = "label3";
             this.lblCarPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btndetial
+            // 
+            this.btndetial.BorderRadius = 10;
+            this.btndetial.BorderThickness = 2;
+            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btndetial.ForeColor = System.Drawing.Color.White;
+            this.btndetial.Location = new System.Drawing.Point(47, 215);
+            this.btndetial.Name = "btndetial";
+            this.btndetial.Size = new System.Drawing.Size(163, 45);
+            this.btndetial.TabIndex = 16;
+            this.btndetial.Text = "اطلاعات تماس";
+            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
+            // 
             // lblCarModel
             // 
             this.lblCarModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -348,61 +407,6 @@
             this.lblCarName.TabIndex = 7;
             this.lblCarName.Text = "label1";
             this.lblCarName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btndetial
-            // 
-            this.btndetial.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btndetial.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btndetial.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btndetial.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btndetial.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btndetial.ForeColor = System.Drawing.Color.White;
-            this.btndetial.Location = new System.Drawing.Point(31, 212);
-            this.btndetial.Name = "btndetial";
-            this.btndetial.Size = new System.Drawing.Size(163, 45);
-            this.btndetial.TabIndex = 16;
-            this.btndetial.Text = "اطلاعات تماس";
-            this.btndetial.Click += new System.EventHandler(this.btndetial_Click);
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.BackgroundImage = global::Renting_Car_Project.Properties.Resources.telephone;
-            this.guna2Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel6.Location = new System.Drawing.Point(464, 52);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(35, 31);
-            this.guna2Panel6.TabIndex = 8;
-            this.guna2Panel6.Tag = "";
-            // 
-            // guna2Panel15
-            // 
-            this.guna2Panel15.AutoScroll = true;
-            this.guna2Panel15.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel15.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel15.Location = new System.Drawing.Point(16, 6);
-            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel15.TabIndex = 5;
-            this.guna2Panel15.Tag = "";
-            this.guna2Panel15.Click += new System.EventHandler(this.guna2Panel15_Click);
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.AutoScroll = true;
-            this.guna2Panel4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2Panel4.BackgroundImage = global::Renting_Car_Project.Properties.Resources.multiply_48px_____;
-            this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Panel4.Location = new System.Drawing.Point(10, 14);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(37, 36);
-            this.guna2Panel4.TabIndex = 10;
-            this.guna2Panel4.Tag = "";
-            this.guna2Panel4.Click += new System.EventHandler(this.guna2Panel4_Click);
             // 
             // guna2PictureBox1
             // 
