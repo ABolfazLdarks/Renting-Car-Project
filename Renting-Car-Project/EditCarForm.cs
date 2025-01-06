@@ -643,11 +643,13 @@ namespace Renting_Car_Project
                     connection.Open();
 
                     // دستور SQL برای درج داده
-                    string query = "UPDATE Cars SET Image=@Image WHERE UserId = @UserId";
+                    string query = "UPDATE Cars SET Image=@Image WHERE UserId = @UserId AND Cars_ID=@Cars_ID";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@Image", imageBytes);
                         command.Parameters.AddWithValue("@UserId", loggedInUserId);
+command.Parameters.AddWithValue("@Cars_ID", CarId);
+               
                         command.ExecuteNonQuery();
                     }
 
