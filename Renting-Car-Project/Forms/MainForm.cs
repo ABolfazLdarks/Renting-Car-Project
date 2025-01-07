@@ -369,6 +369,7 @@ namespace Renting_Car_Project
             PanleAccount.Visible = false;
             SideBar2.Visible = false;
             guna2Panel14.Visible = true;
+            label29.Visible = true;
         }
 
         private void guna2Panel12_Click(object sender, EventArgs e)
@@ -517,6 +518,19 @@ namespace Renting_Car_Project
         {
             LoadUserData LoadUserData = new LoadUserData();
             LoadUserData.ShowDialog();
-        }     
+        }
+
+        private void guna2Panel18_Click(object sender, EventArgs e)
+        {
+            guna2Panel14.Visible=false;
+            label29.Visible = false;
+            PanleAccount.Visible = true;
+            SideBar2.Visible = true;
+        }
+
+        private void guna2Panel18_ChangeUICues(object sender, UICuesEventArgs e)
+        {
+
+        }
     }
 }

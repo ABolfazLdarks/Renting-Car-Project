@@ -1,0 +1,2 @@
+UserId=17
+IsLoggedIn=True

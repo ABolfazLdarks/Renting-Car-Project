@@ -648,7 +648,7 @@ namespace Renting_Car_Project
                     {
                         command.Parameters.AddWithValue("@Image", imageBytes);
                         command.Parameters.AddWithValue("@UserId", loggedInUserId);
-command.Parameters.AddWithValue("@Cars_ID", CarId);
+                        command.Parameters.AddWithValue("@Cars_ID", CarId);
                
                         command.ExecuteNonQuery();
                     }

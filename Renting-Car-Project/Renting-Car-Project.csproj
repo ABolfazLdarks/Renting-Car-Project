@@ -158,6 +158,8 @@
     <None Include="Resources\icon.ico" />
     <Content Include="icon.ico" />
     <None Include="Resources\about_us.png" />
+    <None Include="Resources\car2.jpg" />
+    <None Include="Resources\car1.jpg" />
     <Content Include="Resources\img\Startup.ico" />
     <None Include="Resources\Loader.png" />
     <None Include="Resources\temp.png" />
@@ -168,6 +170,9 @@
     <None Include="Resources\telephone.png" />
     <None Include="Resources\location.png" />
     <None Include="Resources\search.png" />
+    <None Include="Resources\pic2.jpg" />
+    <None Include="Resources\pic3.jpg" />
+    <None Include="Resources\pic1.jpg" />
     <Content Include="Startup.ico" />
     <None Include="Resources\img\Startup.jpg" />
     <None Include="Resources\material-symbols--logout %281%29.png" />
